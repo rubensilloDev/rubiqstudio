@@ -1,0 +1,216 @@
+/* =========================================
+   ESTILOS GENERALES DE LA PÁGINA
+   ========================================= */
+
+/* =========================================
+   VARIABLES GLOBALES
+   ========================================= */
+:root {
+  /* Paleta de colores */
+  --paleta-de-colores-neutral-bg: #FFFFFF;
+  --paleta-de-colores-azul-marino: #0A192F;
+  --paleta-de-colores-accent: #2DD4BF;
+  --paleta-de-colores-azul-normal: #204F95;
+  --color-texto: #D1D5DB;
+
+  /* Tipografía */
+  --text-sizes-titulo-principal: 65.7px;
+  --text-sizes-h2: 54.9px;
+  --text-sizes-heading-3: 43.2px;
+  --text-sizes-text-large: 20px;
+  --text-sizes-text-medium: 18px;
+  --text-sizes-text-regular: 16px;
+  --text-sizes-text-small: 14px;
+  --text-sizes-text-tiny: 12px;
+
+  /* Espaciados */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+
+  /* Sombras de botón */
+  --sombra-boton: 0px 5px 5px rgba(10, 25, 47, 0.25);
+
+  /* Degradados */
+  --degradado-azul-turquesa: linear-gradient(to right, #2DD4BF 30%, rgba(1, 120, 255, 0.5) 100%);
+  --degradado-blanco-azul-normal: linear-gradient(to bottom, #FFFFFF 70%, #193E74 100%);
+  --degradado-blanco-azul-turquesa: linear-gradient(to right, #FFFFFF 0%, #2DD4BF 100%);
+  --degradado-blanco-turquesa-abajo: linear-gradient(to bottom, #FFFFFF 20%, #2DD4BF 100%);
+  --degradado-blanco-y-azul: linear-gradient(to right, #FFFFFF 50%, #204F95 100%);
+
+  /* FAQ */
+  --degradado-fondo-faq: radial-gradient(circle, rgba(32, 79, 149, 1) 0%, rgba(10, 25, 47, 1) 86%);
+}
+
+/* =========================================
+   RESET Y BASE
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  line-height: 1.6;
+  color: var(--color-texto);
+  background: radial-gradient(circle, rgba(32, 79, 149, 1) 0%, rgba(10, 25, 47, 1) 86%);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fondo con imagen a 5% de opacidad */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url(../img/img-hero-fondo.jpeg);
+  background-repeat: repeat;
+  background-size: 500px 300px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================================
+   CONTENEDOR DE CONTENIDO
+   ========================================= */
+.contenedor {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================================
+   TIPOGRAFÍA
+   ========================================= */
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-titulo-principal);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 90%;
+}
+
+h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  text-transform: uppercase;
+  max-width: 90%;
+  letter-spacing: 1.2px;
+  line-height: 90%;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-heading-3);
+  text-transform: uppercase;
+}
+
+/* Texto destacado con gradiente */
+.destacado {
+  background: #2DD4BF;
+  background: linear-gradient(90deg, rgba(45, 212, 191, 1) 28%, rgba(255, 255, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.destacado--turquesa {
+  background: var(--degradado-azul-turquesa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.boton {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-sizes-text-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  border-radius: 20px;
+  box-shadow: var(--sombra-boton);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 15px rgba(10, 25, 47, 1);
+  scale: 1.03;
+}
+
+/* Botón blanco */
+.boton--blanco {
+  background: var(--paleta-de-colores-neutral-bg);
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+.boton--blanco:hover {
+  background: #FFFFFF;
+}
+
+/* Botón turquesa */
+.boton--turquesa {
+  background: var(--paleta-de-colores-accent);
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+/* Botón azul marino (inverso del blanco) */
+.boton--azul-marino {
+  background: var(--paleta-de-colores-azul-marino);
+  color: var(--paleta-de-colores-neutral-bg);
+}
+
+.boton--azul-marino:hover {
+  background: #0d2b4f;
+}
+
+/* Botón blanco con borde azul marino */
+.boton--blanco-borde {
+  background: #FFFFFF;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 22%, rgba(204, 245, 240, 0.95) 41%, rgba(45, 212, 191, 0.89) 100%);
+  color: var(--paleta-de-colores-azul-marino);
+  box-shadow: 0px 5px 15px rgba(10, 25, 47, 0.2);
+}
+
+.boton--blanco-borde:hover {
+  box-shadow: 0px 8px 20px rgba(10, 25, 47, 0.3);
+}
