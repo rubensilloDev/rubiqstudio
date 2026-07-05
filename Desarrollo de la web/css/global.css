@@ -13,15 +13,23 @@
   --paleta-de-colores-azul-normal: #204F95;
   --color-texto: #D1D5DB;
 
-  /* Tipografía */
-  --text-sizes-titulo-principal: 65.7px;
-  --text-sizes-h2: 54.9px;
-  --text-sizes-heading-3: 43.2px;
-  --text-sizes-text-large: 20px;
-  --text-sizes-text-medium: 18px;
-  --text-sizes-text-regular: 16px;
-  --text-sizes-text-small: 14px;
-  --text-sizes-text-tiny: 12px;
+  /* Tipografía en REM (Base 16px) */
+  --text-sizes-titulo-principal: 4.10625rem;
+  /* 65.7px */
+  --text-sizes-h2: 3.43125rem;
+  /* 54.9px */
+  --text-sizes-heading-3: 2.7rem;
+  /* 43.2px */
+  --text-sizes-text-large: 1.25rem;
+  /* 20px */
+  --text-sizes-text-medium: 1.125rem;
+  /* 18px */
+  --text-sizes-text-regular: 1rem;
+  /* 16px */
+  --text-sizes-text-small: 0.875rem;
+  /* 14px */
+  --text-sizes-text-tiny: 0.75rem;
+  /* 12px */
 
   /* Espaciados */
   --spacing-xs: 8px;
@@ -43,6 +51,36 @@
 
   /* FAQ */
   --degradado-fondo-faq: radial-gradient(circle, rgba(32, 79, 149, 1) 0%, rgba(10, 25, 47, 1) 86%);
+
+  /* Tipografía responsive para móvil (se activa con media query) */
+}
+
+/* Tablets y móviles */
+@media (max-width: 764px) {
+  :root {
+    --text-sizes-titulo-principal: 2.5rem;   /* 40px */
+    --text-sizes-h2: 2rem;                   /* 32px */
+    --text-sizes-heading-3: 1.5rem;          /* 24px */
+    --text-sizes-text-large: 1.125rem;       /* 18px */
+    --text-sizes-text-medium: 1rem;          /* 16px */
+    --text-sizes-text-regular: 0.9375rem;    /* 15px */
+    --text-sizes-text-small: 0.8125rem;      /* 13px */
+    --text-sizes-text-tiny: 0.6875rem;       /* 11px */
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 320px) {
+  :root {
+    --text-sizes-titulo-principal: 1.75rem;  /* 28px */
+    --text-sizes-h2: 1.5rem;                 /* 24px */
+    --text-sizes-heading-3: 1.25rem;         /* 20px */
+    --text-sizes-text-large: 1rem;           /* 16px */
+    --text-sizes-text-medium: 0.875rem;      /* 14px */
+    --text-sizes-text-regular: 0.8125rem;    /* 13px */
+    --text-sizes-text-small: 0.75rem;        /* 12px */
+    --text-sizes-text-tiny: 0.625rem;        /* 10px */
+  }
 }
 
 /* =========================================
@@ -213,4 +251,15 @@ h3 {
 
 .boton--blanco-borde:hover {
   box-shadow: 0px 8px 20px rgba(10, 25, 47, 0.3);
+}
+
+/* =========================================
+   CLASES GENERALES
+   ========================================= */
+
+/* Clase para secciones con padding estándar y ancho máximo */
+.contenido-seccion {
+  padding: 96px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
