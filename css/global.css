@@ -58,28 +58,52 @@
 /* Tablets y móviles */
 @media (max-width: 764px) {
   :root {
-    --text-sizes-titulo-principal: 2.5rem;   /* 40px */
-    --text-sizes-h2: 2rem;                   /* 32px */
-    --text-sizes-heading-3: 1.5rem;          /* 24px */
-    --text-sizes-text-large: 1.125rem;       /* 18px */
-    --text-sizes-text-medium: 1rem;          /* 16px */
-    --text-sizes-text-regular: 0.9375rem;    /* 15px */
-    --text-sizes-text-small: 0.8125rem;      /* 13px */
-    --text-sizes-text-tiny: 0.6875rem;       /* 11px */
+    --text-sizes-titulo-principal: 3rem;
+    /* 40px */
+    --text-sizes-h2: 2rem;
+    /* 32px */
+    --text-sizes-heading-3: 1.5rem;
+    /* 24px */
+    --text-sizes-text-large: 1.125rem;
+    /* 18px */
+    --text-sizes-text-medium: 1rem;
+    /* 16px */
+    --text-sizes-text-regular: 0.9375rem;
+    /* 15px */
+    --text-sizes-text-small: 0.8125rem;
+    /* 13px */
+    --text-sizes-text-tiny: 0.6875rem;
+    /* 11px */
   }
 }
 
 /* Móviles pequeños */
 @media (max-width: 320px) {
   :root {
-    --text-sizes-titulo-principal: 1.75rem;  /* 28px */
-    --text-sizes-h2: 1.5rem;                 /* 24px */
-    --text-sizes-heading-3: 1.25rem;         /* 20px */
-    --text-sizes-text-large: 1rem;           /* 16px */
-    --text-sizes-text-medium: 0.875rem;      /* 14px */
-    --text-sizes-text-regular: 0.8125rem;    /* 13px */
-    --text-sizes-text-small: 0.75rem;        /* 12px */
-    --text-sizes-text-tiny: 0.625rem;        /* 10px */
+    --text-sizes-titulo-principal: 2rem;
+    /* 28px */
+    --text-sizes-h2: 1.5rem;
+    /* 24px */
+    --text-sizes-heading-3: 1.25rem;
+    /* 20px */
+    --text-sizes-text-large: 1rem;
+    /* 16px */
+    --text-sizes-text-medium: 0.875rem;
+    /* 14px */
+    --text-sizes-text-regular: 0.8125rem;
+    /* 13px */
+    --text-sizes-text-small: 0.75rem;
+    /* 12px */
+    --text-sizes-text-tiny: 0.625rem;
+    /* 10px */
+  }
+}
+
+/* Móviles y tablets — padding reducido en secciones */
+@media (max-width: 764px) {
+  .contenido-seccion {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -153,7 +177,6 @@ h1 {
   font-size: var(--text-sizes-titulo-principal);
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 90%;
 }
 
 h2 {

@@ -100,6 +100,8 @@ El CSS debe estar dividido por secciones claras:
 
 ## 📌 Ejemplo de organización obligatoria - IMPORTANTE 
 
+Dentro de cada seccón antes decad bloque de codigo debe haber un comentario para saber perfectamente a que parte de esa seccion se le esta dando estilos.
+
 ```css
 /* =========================================
    HERO - SECCIÓN PRINCIPAL
@@ -130,7 +132,7 @@ El CSS debe estar dividido por secciones claras:
 
 ---
 
-## 📌 Estructura recomendada dentro de cada bloque
+## 📌 Ejemplo de estructura que se DEBE de hacer dentro de cada bloque
 
 ```css
 /* HERO */

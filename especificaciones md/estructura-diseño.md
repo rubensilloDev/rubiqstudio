@@ -1,3 +1,9 @@
+# NORMAS IMPRESCINDIBLES DEL DISEÑO
+
+* Debe ser jerarquico y consistente entre si.
+* Siempre que se puede y sea optimo usar medidas responsives (%, rem....)
+* Medidas o estilos que se repitan mucho durante la web, meterlas en el .root o hacerlas globales.
+
 # Paleta de colores
 
 ## Degradados CSS
