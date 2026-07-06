@@ -99,13 +99,6 @@
   }
 }
 
-/* Móviles y tablets — padding reducido en secciones */
-@media (max-width: 764px) {
-  .contenido-seccion {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
 
 /* =========================================
    RESET Y BASE
@@ -285,4 +278,12 @@ h3 {
   padding: 96px 40px;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+
+/* Móviles y tablets — padding reducido en secciones */
+@media (max-width: 764px) {
+  .contenido-seccion {
+    padding: 96px 20px;
+  }
 }

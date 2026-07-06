@@ -876,7 +876,6 @@
   }
 
   .navegacion-enlaces {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -888,10 +887,19 @@
     border-radius: 0 0 20px 20px;
     z-index: 1000;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* Animación slide-down */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
   }
 
   .navegacion-abierto .navegacion-enlaces {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0s;
   }
 
   .navegacion-enlaces li {
@@ -945,15 +953,40 @@
 
   .navegacion-hamburguesa {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
     background: none;
     border: none;
-    color: var(--paleta-de-colores-neutral-bg);
-    font-size: 28px;
     cursor: pointer;
     padding: 8px;
     z-index: 1001;
+  }
+
+  /* Líneas del icono hamburguesa */
+  .hamburguesa-linea {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--paleta-de-colores-neutral-bg);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Estado abierto: línea superior más corta, línea central se funde */
+  .navegacion-abierto .hamburguesa-linea:nth-child(1) {
+    width: 20px;
+    /* ~70% de 28px → 30% más corta */
+  }
+
+  .navegacion-abierto .hamburguesa-linea:nth-child(2) {
+    opacity: 0;
+    display: none;
+
+  }
+
+  .navegacion-abierto .hamburguesa-linea:nth-child(3) {
+    width: 28px;
   }
 
   /* hero */
@@ -968,11 +1001,6 @@
 
   .hero-contenido {
     font-size: var(--text-sizes-text-small);
-  }
-
-  .hero-mockup img {
-    max-width: 100%;
-    height: auto;
   }
 
   /* seccion 1 - problema */
