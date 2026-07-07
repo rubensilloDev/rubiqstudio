@@ -180,7 +180,7 @@ h2 {
   letter-spacing: 1.2px;
   line-height: 90%;
   color: var(--paleta-de-colores-neutral-bg);
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
