@@ -47,12 +47,7 @@
   font-family: 'Inter', sans-serif;
   font-size: var(--text-sizes-text-regular);
   color: var(--paleta-de-colores-neutral-bg);
-  transition: color 0.3s ease;
-}
-
-.navegacion-enlaces a:hover,
-.navegacion-enlaces a.activo {
-  color: var(--paleta-de-colores-accent);
+  transition: all 0.3s ease;
 }
 
 /* Botón CTA dentro del menú */
@@ -81,7 +76,7 @@
   border: none;
   text-align: left;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navegacion-dropdown-toggle:hover {
@@ -335,9 +330,6 @@
 /* =========================================
    SECCIÓN 3: SERVICIOS / PRECIOS
    ========================================= */
-.servicios {}
-
-.servicios-contenedor {}
 
 .servicios-encabezado {
   text-align: left;
@@ -367,7 +359,7 @@
 .servicio-tarjeta {
   background: linear-gradient(130deg, rgba(255, 255, 255, 1) 50%, rgba(10, 25, 47, 1) 100%);
   border-radius: 20px;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -391,7 +383,7 @@
   border: 2px solid var(--paleta-de-colores-accent);
   box-shadow: 0px 15px 40px rgba(45, 212, 191, 0.2);
   color: var(--paleta-de-colores-neutral-bg);
-  padding-top: calc(var(--spacing-xl) + 20px);
+  padding-top: calc(var(--spacing-xl) + 10px);
 }
 
 /* ---- Hover: tarjeta central destacada ---- */
@@ -433,7 +425,7 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   flex-wrap: wrap;
 }
 
@@ -464,6 +456,7 @@
   height: 1px;
   border: none;
   background: currentColor;
+  /* mismo color que el texto de la tarjeta */
   opacity: 0.25;
   margin: 0 auto;
 }
@@ -489,9 +482,8 @@
 }
 
 /* =========================================
-   SECCIÓN 4: METODOLOGÍA
+  SECCIÓN 4: METODOLOGÍA
    ========================================= */
-.metodologia {}
 
 .metodologia-contenedor {
   display: grid;

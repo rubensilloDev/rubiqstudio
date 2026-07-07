@@ -68,7 +68,7 @@
     /* 18px */
     --text-sizes-text-medium: 1rem;
     /* 16px */
-    --text-sizes-text-regular: 0.9375rem;
+    --text-sizes-text-regular: 0.7rem;
     /* 15px */
     --text-sizes-text-small: 0.8125rem;
     /* 13px */
@@ -239,6 +239,7 @@ h3 {
 
 .boton--blanco:hover {
   background: #FFFFFF;
+  color: var(--paleta-de-colores-azul-marino);
 }
 
 /* Botón turquesa */
