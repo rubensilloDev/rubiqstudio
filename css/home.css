@@ -3,176 +3,6 @@
    ========================================= */
 
 /* =========================================
-   NAVEGACIÓN
-   ========================================= */
-
-/* Barra de navegación principal */
-.navegacion {
-  background: rgba(10, 25, 47, 0.5);
-  /* Glassmorphism fondo */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid var(--paleta-de-colores-accent);
-  border-radius: 20px;
-  padding: 0 40px;
-  position: fixed;
-  /* Menú flotante */
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  z-index: 1000;
-}
-
-/* Contenedor interno del menú */
-.navegacion-contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: var(--spacing-xs) 0;
-  position: relative;
-}
-
-/* Logo de la marca */
-.navegacion-logo {
-  flex-shrink: 0;
-}
-
-.navegacion-logo img {
-  width: 60px;
-  height: 60px;
-}
-
-/* Lista de enlaces de navegación */
-.navegacion-enlaces {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-lg);
-}
-
-/* Enlaces individuales del menú */
-.navegacion-enlaces a {
-  font-family: 'Inter', sans-serif;
-  font-size: var(--text-sizes-text-regular);
-  color: var(--paleta-de-colores-neutral-bg);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* subrayado para el hover de los enlaces del menu */
-.navegacion-enlaces a:not(.boton)::before {
-  position: absolute;
-  content: "";
-  width: 0%;
-  top: 20px;
-  left: 0;
-  height: 2px;
-  background-color: var(--paleta-de-colores-accent);
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-
-.navegacion-enlaces a:hover {
-  color: var(--paleta-de-colores-accent);
-}
-
-.navegacion-enlaces a:hover:not(.boton)::before {
-  width: 100%;
-}
-
-/* Botón CTA dentro del menú */
-.navegacion-enlaces-boton {
-  display: flex;
-  align-items: center;
-}
-
-.navegacion-enlaces-boton .boton {
-  padding: 12px 24px;
-  font-size: var(--text-sizes-text-small);
-  color: var(--paleta-de-colores-azul-marino);
-}
-
-.navegacion-enlaces-boton .boton:hover {
-  color: var(--paleta-de-colores-azul-marino);
-}
-
-/* Dropdown de navegación */
-.navegacion-dropdown {
-  position: relative;
-}
-
-/* Botón que abre el submenú Servicios */
-.navegacion-dropdown-toggle {
-  font-family: 'Inter', sans-serif;
-  font-size: var(--text-sizes-text-regular);
-  color: var(--paleta-de-colores-neutral-bg);
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.navegacion-dropdown-toggle:hover {
-  color: var(--paleta-de-colores-accent);
-}
-
-.navegacion-dropdown-toggle i {
-  font-size: 12px;
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.navegacion-dropdown:hover .navegacion-dropdown-toggle i {
-  transform: rotate(180deg);
-}
-
-/* Submenú desplegable de Servicios */
-.navegacion-dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--paleta-de-colores-azul-marino);
-  min-width: 200px;
-  padding: var(--spacing-sm) 0;
-  border-radius: 8px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 100;
-}
-
-/* Submenú visible al hacer hover (solo desktop) */
-@media (min-width: 765px) {
-  .navegacion-dropdown:hover .navegacion-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-/* Enlaces dentro del submenú */
-.navegacion-dropdown-menu li a {
-  display: block;
-  padding: 8px 24px;
-  color: var(--paleta-de-colores-neutral-bg);
-  transition: background 0.3s ease, color 0.3s ease;
-  white-space: nowrap;
-  border-radius: 20px;
-}
-
-.navegacion-dropdown-menu li a:hover {
-  background: rgba(45, 212, 191, 0.1);
-  color: var(--paleta-de-colores-accent);
-  border-radius: 20px;
-}
-
-/* =========================================
    HERO
    ========================================= */
 .hero {
@@ -637,99 +467,6 @@
 }
 
 /* =========================================
-   SECCIÓN 5: FAQ
-   ========================================= */
-
-.faq-contenedor {
-  text-align: center;
-}
-
-.faq-titulo {
-  font-family: 'Anton', sans-serif;
-  margin: 0 auto var(--spacing-md);
-  font-size: var(--text-sizes-h2);
-  color: var(--paleta-de-colores-neutral-bg);
-  max-width: 75%;
-}
-
-.faq-intro {
-  font-size: var(--text-sizes-text-small);
-  line-height: var(--line-height-texto);
-  color: var(--color-texto);
-  margin: 0 auto var(--spacing-xl);
-  max-width: 60%;
-}
-
-.faq-lista {
-  display: flex;
-  max-width: 65%;
-  margin: 0 auto;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  text-align: left;
-}
-
-.faq-item {
-  background: var(--degradado-fondo-faq);
-  border-radius: 16px;
-  padding: var(--spacing-lg);
-  cursor: pointer;
-}
-
-.faq-fila-superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.faq-pregunta {
-  font-family: 'Anton', sans-serif;
-  font-size: var(--text-sizes-text-large);
-  color: var(--paleta-de-colores-neutral-bg);
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.faq-icono {
-  font-size: var(--text-sizes-text-large);
-  color: var(--paleta-de-colores-accent);
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-icono {
-  transform: rotate(45deg);
-}
-
-.faq-divisor {
-  width: 90%;
-  height: 1px;
-  background: rgba(209, 213, 219, 0.2);
-  margin: var(--spacing-sm) auto;
-}
-
-.faq-respuesta {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
-}
-
-.faq-item.active .faq-respuesta {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.faq-respuesta p {
-  font-size: var(--text-sizes-text-regular);
-  line-height: var(--line-height-texto);
-  color: var(--color-texto);
-  padding-top: var(--spacing-xs);
-}
-
-/* =========================================
    CTA FINAL
    ========================================= */
 .cta-final {
@@ -778,96 +515,6 @@
 }
 
 /* =========================================
-   FOOTER
-   ========================================= */
-.footer {
-  background-color: var(--paleta-de-colores-azul-marino);
-  padding: 96px 40px;
-  color: var(--color-texto);
-}
-
-.footer-contenedor {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.footer-superior {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--spacing-2xl);
-  padding-bottom: var(--spacing-xl);
-  border-bottom: 1px solid rgba(209, 213, 219, 0.15);
-}
-
-.footer-columna {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.footer-logo {
-  width: 70px;
-  height: auto;
-}
-
-.footer-descripcion {
-  font-size: var(--text-sizes-text-small);
-  line-height: var(--line-height-texto);
-  max-width: 300px;
-}
-
-.footer-columna-titulo {
-  font-family: 'Inter', sans-serif;
-  font-size: var(--text-sizes-text-large);
-  font-weight: 700;
-  color: var(--paleta-de-colores-neutral-bg);
-  text-transform: uppercase;
-  margin-bottom: var(--spacing-xs);
-}
-
-.footer-lista {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-}
-
-.footer-lista a {
-  color: var(--color-texto);
-  text-decoration: none;
-  font-size: var(--text-sizes-text-small);
-  line-height: var(--line-height-texto);
-  transition: color 0.3s ease;
-}
-
-.footer-lista a:hover {
-  color: var(--paleta-de-colores-accent);
-}
-
-.footer-inferior {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding-top: var(--spacing-lg);
-  text-align: center;
-}
-
-.footer-marca {
-  font-family: 'Anton', sans-serif;
-  font-size: 13rem;
-  line-height: 1;
-  color: var(--paleta-de-colores-neutral-bg);
-  letter-spacing: 4px;
-}
-
-.footer-copyright {
-  font-size: var(--text-sizes-text-tiny);
-  color: var(--color-texto);
-  opacity: 0.7;
-}
-
-/* =========================================
    MEDIA QUERIES - RESPONSIVE
    
    Breakpoints:
@@ -899,144 +546,15 @@
 /* ---- 764px: Menú hamburguesa y hero ajustados ---- */
 @media (max-width: 764px) {
 
-  /* menu */
-  .navegacion {
-    padding: 0 20px;
-  }
-
-  .navegacion-contenedor {
-    position: relative;
-  }
-
-  .navegacion-enlaces {
-    position: absolute;
-    top: calc(100% + 15px);
-    left: 0;
-    right: 0;
-    background: rgba(10, 25, 47, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--paleta-de-colores-accent);
-    flex-direction: column;
-    padding: var(--spacing-md);
-    gap: var(--spacing-sm);
-    border-radius: 20px;
-    z-index: 1000;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-
-    /* Animación slide-down */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-12px);
-    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
-  }
-
-  .navegacion-abierto .navegacion-enlaces {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0s;
-  }
-
-  .navegacion-enlaces li {
-    width: 100%;
-  }
-
-  .navegacion-enlaces a,
-  .navegacion-dropdown-toggle {
-    font-size: var(--text-sizes-text-large);
-    padding: var(--spacing-xs) 0;
-  }
-
-  .navegacion-dropdown-toggle {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .navegacion-dropdown-menu {
-    position: static;
-    transform: none;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
-    display: none;
-    background: transparent;
-    transition: none;
-  }
-
-  .navegacion-dropdown-abierto .navegacion-dropdown-menu {
-    display: block;
-  }
-
-  .navegacion-dropdown-menu li a {
-    padding-left: var(--spacing-lg);
-  }
-
-  .navegacion-enlaces-boton {
-    margin-top: var(--spacing-sm);
-    padding-top: var(--spacing-sm);
-    border-top: 1px solid rgba(209, 213, 219, 0.15);
-    width: 100%;
-    display: block;
-  }
-
-  .navegacion-enlaces-boton .boton {
-    width: 100%;
-    text-align: center;
-    color: var(--paleta-de-colores-azul-marino);
-  }
-
-  .navegacion-enlaces a:hover:not(.boton)::before {
-    width: 0%;
-  }
-
-  .navegacion-hamburguesa {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1001;
-  }
-
-  /* Líneas del icono hamburguesa */
-  .hamburguesa-linea {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: var(--paleta-de-colores-neutral-bg);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  /* Estado abierto: línea superior más corta, línea central se funde */
-  .navegacion-abierto .hamburguesa-linea:nth-child(1) {
-    width: 20px;
-    /* ~70% de 28px → 30% más corta */
-  }
-
-  .navegacion-abierto .hamburguesa-linea:nth-child(2) {
-    opacity: 0;
-    display: none;
-
-  }
-
-  .navegacion-abierto .hamburguesa-linea:nth-child(3) {
-    width: 28px;
-  }
-
   /* hero */
   .hero {
     padding: 120px 20px 40px 20px;
   }
 
   .hero-pretitulo {
-    font-size: 38px;
-    letter-spacing: 2px;
+    font-size:1.5rem;
+    letter-spacing: 1px;
+    line-height: 150%;
   }
 
   .hero-contenido {
@@ -1076,31 +594,12 @@
     order: 1;
   }
 
-  /* seccion 3 - FAQS */
-
-  .faq-titulo {
-    max-width: 100%;
-  }
-
-  .faq-intro {
-    max-width: 75%;
-  }
-
-  .faq-lista {
-    max-width: 95%;
-  }
-
   /* seccion 4 - CTA*/
 
   .cta-contenedor {
     grid-template-columns: 1fr;
     padding: 64px 25px;
     gap: var(--spacing-sm);
-  }
-
-  /* ---- Footer ---- */
-  .footer-marca {
-    font-size: 4rem;
   }
 
   /* ---- Grids a una columna ---- */
@@ -1112,12 +611,6 @@
     grid-template-columns: 1fr;
   }
 
-
-
-  .footer-superior {
-    grid-template-columns: 1fr;
-  }
-
   /* ---- Tarjeta destacada: sin scale en móvil ---- */
   .servicio-tarjeta--destacada {
     transform: none;
@@ -1126,14 +619,6 @@
 
 /* ---- 320px: Ajustes para móviles muy pequeños ---- */
 @media (max-width: 320px) {
-  .navegacion {
-    padding: 0 12px;
-  }
-
-  .navegacion-logo img {
-    width: 45px;
-    height: 45px;
-  }
 
   .hero {
     padding: 112px 12px 32px 12px;
@@ -1151,12 +636,5 @@
   .hero-mockup img {
     max-width: 100%;
     height: auto;
-  }
-}
-
-/* ---- Hamburguesa oculta en desktop ---- */
-@media (min-width: 765px) {
-  .navegacion-hamburguesa {
-    display: none;
   }
 }

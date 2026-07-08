@@ -1,0 +1,528 @@
+/* =========================================
+   DESARROLLO WEB A MEDIDA - ESTILOS
+   ========================================= */
+
+/* =========================================
+   HERO
+   ========================================= */
+
+/* Fondo degradado del hero */
+.hero-desarrollo {
+  background: linear-gradient(180deg, rgba(10, 25, 47, 1) 0%, rgba(10, 25, 47, 0) 100%);
+  padding: 96px 40px;
+  /* Compensar nav fixed */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto glow detrás del contenido */
+.hero-desarrollo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 50%;
+  background: var(--paleta-de-colores-azul-normal);
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Contenedor principal (2 columnas) */
+.hero-desarrollo-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Columna izquierda - texto */
+.hero-desarrollo-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+/* Título principal */
+.hero-desarrollo-texto h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-titulo-principal);
+  line-height: 0.9;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+}
+
+/* Párrafo descriptivo */
+.hero-desarrollo-texto p {
+  font-size: var(--text-sizes-text-regular);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 90%;
+}
+
+/* Columna derecha - imagen */
+.hero-desarrollo-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Tarjetas flotantes del hero */
+.hero-tarjeta {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-small);
+  font-weight: 500;
+  color: var(--paleta-de-colores-neutral-bg);
+  white-space: nowrap;
+  z-index: 2;
+  animation: tarjeta-flotante 3s ease-in-out infinite alternate;
+}
+
+/* Icono verde tick dentro de tarjetas */
+.hero-tarjeta i {
+  color: #22c55e;
+  font-size: 16px;
+}
+
+/* Posición: esquina superior izquierda */
+.hero-tarjeta--superior-izq {
+  top: 50px;
+  left: -10px;
+}
+
+/* Posición: esquina superior derecha */
+.hero-tarjeta--superior-dcha {
+  top: 50px;
+  right: -10px;
+}
+
+/* Posición: esquina inferior izquierda */
+.hero-tarjeta--inferior-izq {
+  bottom: 50px;
+  left: -10px;
+  animation-delay: 0.5s;
+}
+
+/* Posición: esquina inferior derecha */
+.hero-tarjeta--inferior-dcha {
+  bottom: 50px;
+  right: -10px;
+  animation-delay: 1s;
+}
+
+/* Animación sutil de flotación */
+@keyframes tarjeta-flotante {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+.hero-desarrollo-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   SECCIÓN 2: ESTRATEGIA
+   ========================================= */
+
+/* Contenedor centrado */
+.estrategia-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Título con efecto 3D */
+.estrategia-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  text-transform: uppercase;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+}
+
+.estrategia-parrafo {
+  max-width: 60%;
+}
+
+/* =========================================
+   SECCIÓN 3: TARJETAS DE PRECIOS
+   ========================================= */
+
+/* Título de la sección */
+.presupuesto-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Párrafo introductorio */
+.presupuesto-texto {
+  text-align: center;
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 70%;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Grid de tarjetas */
+.presupuesto-tarjetas {
+  max-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: stretch;
+}
+
+/* Tarjeta base */
+.presupuesto-tarjeta {
+  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 50%, rgba(10, 25, 47, 1) 100%);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  color: var(--paleta-de-colores-azul-marino);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover tarjeta base */
+.presupuesto-tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Tarjeta destacada */
+.presupuesto-tarjeta--destacada {
+  transform: scale(1.05);
+  background: linear-gradient(130deg, rgba(45, 212, 191, 1) 22%, rgba(10, 25, 47, 1) 50%);
+  border: 2px solid var(--paleta-de-colores-accent);
+  box-shadow: 0px 15px 40px rgba(45, 212, 191, 0.2);
+  color: var(--paleta-de-colores-neutral-bg);
+  padding-top: calc(var(--spacing-xl) + 10px);
+}
+
+/* Hover tarjeta destacada */
+.presupuesto-tarjeta--destacada:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0px 25px 60px rgba(45, 212, 191, 0.35);
+}
+
+/* Etiqueta "Más popular" */
+.presupuesto-tarjeta-etiqueta {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--paleta-de-colores-accent);
+  color: var(--paleta-de-colores-azul-marino);
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-small);
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Título de tarjeta */
+.presupuesto-tarjeta-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  line-height: 0.9;
+  text-align: center;
+}
+
+/* Bloque de precios */
+.presupuesto-tarjeta-precio {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+/* Precio tachado */
+.precio-anterior {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: inherit;
+}
+
+/* Precio actual */
+.precio-actual {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  color: inherit;
+  line-height: 0.9;
+}
+
+/* Divisor */
+.presupuesto-tarjeta-divisor {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background: currentColor;
+  opacity: 0.25;
+  margin: 0 auto;
+}
+
+/* Divisor en tarjeta destacada */
+.presupuesto-tarjeta--destacada .presupuesto-tarjeta-divisor {
+  background: var(--paleta-de-colores-neutral-bg);
+  opacity: 0.4;
+}
+
+/* Descripción */
+.presupuesto-tarjeta-descripcion {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* Lista de características */
+.presupuesto-tarjeta-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex-grow: 1;
+}
+
+.presupuesto-tarjeta-lista li {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: inherit;
+  padding-left: var(--spacing-sm);
+  position: relative;
+}
+
+.presupuesto-tarjeta-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Botón dentro de tarjeta */
+.presupuesto-tarjeta .boton {
+  margin-top: var(--spacing-sm);
+  align-self: center;
+}
+
+/* Nota inferior */
+.presupuesto-nota {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(10, 25, 47, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+.presupuesto-nota i {
+  color: var(--paleta-de-colores-accent);
+  font-size: var(--text-sizes-text-large);
+}
+
+.presupuesto-nota p {
+  font-size: var(--text-sizes-text-small);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* =========================================
+   SECCIÓN 4: REDISEÑO CTA
+   ========================================= */
+
+/* 2 columnas */
+.rediseño-contenedor {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: left;
+}
+
+/* Columna del texto */
+.rediseño-texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Título con efecto 3D */
+.rediseño-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+}
+
+/* Párrafo */
+.rediseño-parrafo {
+  max-width: 65%;
+}
+
+/* =========================================
+   MEDIA QUERIES - RESPONSIVE
+   ========================================= */
+
+/* ---- 1024px: Ajustes tablet / desktop pequeño ---- */
+@media (max-width: 1024px) {
+  .hero-desarrollo {
+    padding: 120px 40px 60px 40px;
+  }
+}
+
+/* ---- 764px: Menú hamburguesa y hero ajustados ---- */
+@media (max-width: 764px) {
+
+  /* Hero */
+  .hero-desarrollo {
+    padding: 120px 20px 40px 20px;
+  }
+
+  .hero-desarrollo-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-desarrollo-texto {
+    align-items: center;
+  }
+
+  .hero-desarrollo-texto h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-desarrollo-texto p {
+    max-width: 100%;
+  }
+
+  /* Tarjetas flotantes - móvil */
+  .hero-tarjeta {
+    padding: 6px 10px;
+    font-size: var(--text-sizes-text-tiny);
+    gap: 5px;
+  }
+
+  .hero-tarjeta i {
+    font-size: 12px;
+  }
+
+  .hero-tarjeta--superior-izq {
+    top: -5px;
+    left: -5px;
+  }
+
+  .hero-tarjeta--superior-dcha {
+    top: -5px;
+    right: -5px;
+  }
+
+  .hero-tarjeta--inferior-izq {
+    bottom: -5px;
+    left: -5px;
+  }
+
+  .hero-tarjeta--inferior-dcha {
+    bottom: -5px;
+    right: -5px;
+  }
+
+  /* Estrategia */
+  .estrategia-titulo {
+    font-size: var(--text-sizes-h2);
+    max-width: 100%;
+  }
+
+  .estrategia-parrafo {
+    max-width: 80%;
+  }
+
+  /* Tarjetas de precios */
+  .presupuesto-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .presupuesto-tarjeta--destacada {
+    transform: none;
+  }
+
+  .presupuesto-texto {
+    max-width: 100%;
+  }
+
+  /* Rediseño */
+  .rediseño-titulo {
+    font-size: var(--text-sizes-h2);
+    max-width: 100%;
+  }
+
+  .rediseño-parrafo {
+    max-width: 80%;
+  }
+}
+
+/* ---- 320px: Ajustes para móviles muy pequeños ---- */
+@media (max-width: 320px) {
+
+  .hero-desarrollo {
+    padding: 112px 12px 32px 12px;
+  }
+
+  /* Tarjetas de precios */
+  .presupuesto-titulo {
+    font-size: var(--text-sizes-heading-3);
+  }
+
+}

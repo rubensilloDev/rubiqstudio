@@ -47,18 +47,20 @@ Las redes sociales son un terreno alquilado (mañana te pueden cerrar la cuenta 
 Ese es precisamente nuestro mayor valor. Nuestro cliente ideal es el dueño de negocio que está saturado gestionando su empresa y no quiere perder tiempo con tecnicismos informáticos. En Rubiq te hablamos claro, sin jerga rara, y nos encargamos de absolutamente todo el apartado digital. Nos das la información básica de tu empresa y nosotros construimos tu "máquina de ventas" mientras tú sigues facturando.
 
 H2: Escala tus ventas hoy. Contacta con Rubiq Córdoba
-Olvídate de formularios largos o tickets de espera. Escríbenos directamente por WhatsApp y hablemos sobre cómo hacer que tu presencia digital empiece a generar clientes reales. 
+Olvídate de formularios largos o tickets de espera. Escríbenos directamente por WhatsApp y hablemos sobre cómo hacer que tu presencia digital empiece a generar clientes reales.
+
+
 Página Desarrollo web a medida:
-H1: Desarrollo web a medida en Córdoba para captar clientes
-Tu negocio no necesita una web lenta y sin estrategia que espante a tus visitas. Construimos ecosistemas digitales estratégicos y que generan ventas, diseñados para que tu teléfono suene y tus solicitudes de presupuesto se multipliquen.
+H1: Desarrollo web a medida en Córdoba para multiplicar tus clientes
+En Córdoba hay muchas webs bonitas que no generan un
+solo cliente. Rubiq ademas de webs bonitas construye para generar clientes: diseños profesionales, bonitos y orientados a convertir visitas en dinero real para tu negocio.
 [Botón CTA]: Empecemos a trabajar 
 H2: Crear una página web profesional requiere estrategia, no atajos rápidos
-Una web comercial no se hace por hacer ni consiste solo desarrollarla. Crear una página web profesional exige investigar a tu mercado, trazar una estrategia previa y estructurar un sistema enfocado en captar clientes; un proceso técnico que nosotros asumimos para que tú te centres exclusivamente en facturar. 
+Una web  no se hace por hacer ni consiste solo desarrollarla. Crear una página web profesional exige investigar a tu mercado, trazar una estrategia previa y estructurar un sistema enfocado en captar clientes; un proceso técnico que asumimos para que tú te centres exclusivamente en facturar. 
 [Botón CTA]: Quiero mi web profesional
 H2: Presupuesto de desarrollo web a medida
-Huye de las sorpresas: conoce tu presupuesto de desarrollo web a medida desde el primer minuto, con precios cerrados y la propiedad total de tu código (cero "efecto rehén"). 
+Huye de las sorpresas: conoce tu presupuesto de desarrollo web a medida desde el primer minuto, con precios claros y la propiedad total de tu código (cero "efecto rehén").
 H3: Landing Page de alta conversión (250€)
-El servicio ideal para exprimir al máximo el retorno de tu inversión en campañas de publicidad (Google Ads o redes sociales) y captar leads rápidos.
 Landing page:
 Diseño y desarollo profesional y a medida.
 SEO Friendly.
@@ -100,8 +102,9 @@ H2: Rentabiliza tu negocio hoy. Contacta con Rubiq Córdoba
 Delega el caos técnico en manos profesionales y vuelve a enfocarte en gestionar tu empresa. Rellena este breve formulario y en menos de 24 horas evaluaremos tu proyecto para empezar a estructurar tus ventas.
 [Formulario de contacto] Nombre | Email | Teléfono | URL de tu web actual (opcional) | ¿Qué objetivo quieres conseguir en tu negocio?
 
-Página Mantenimiento Web Mensual:
 
+
+Página Mantenimiento Web Mensual:
 H1: Mantenimiento web mensual para estar siempre visible 
 Tu página web es tu comercial trabajando 24/7. Si se cae, carga lento o da errores, estás regalando tus clientes a la competencia. Nosotros nos encargamos de todo el soporte técnico para que tu escaparate digital nunca cierre.
 [Botón CTA]: Proteger mi web hoy
