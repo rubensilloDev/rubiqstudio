@@ -8,7 +8,7 @@
 
 /* Fondo degradado del hero */
 .hero-desarrollo {
-  background: linear-gradient(180deg, rgba(10, 25, 47, 1) 0%, rgba(10, 25, 47, 0) 100%);
+  background: transparent;
   padding: 96px 40px;
   /* Compensar nav fixed */
   position: relative;
@@ -492,14 +492,19 @@
   /* Tarjetas de precios */
   .presupuesto-tarjetas {
     grid-template-columns: 1fr;
+    max-width: 90%;
   }
 
   .presupuesto-tarjeta--destacada {
     transform: none;
   }
 
-  .presupuesto-texto {
+  .presupuesto-titulo {
     max-width: 100%;
+  }
+
+  .presupuesto-texto {
+    max-width: 85%;
   }
 
   /* Rediseño */

@@ -118,7 +118,7 @@
 
 /* Imagen izquierda — parcialmente visible, girada */
 .hero-carrusel-img--izq {
-  width: 400px;
+  width: 520px;
   height: 300px;
   transform: translateX(-350px) translateZ(-150px) rotateY(30deg);
   opacity: 0.8;
@@ -126,7 +126,7 @@
 
 /* Imagen derecha — parcialmente visible, girada */
 .hero-carrusel-img--dcha {
-  width: 400px;
+  width: 520px;
   height: 300px;
   transform: translateX(350px) translateZ(-150px) rotateY(-30deg);
   opacity: 0.8;
