@@ -90,3 +90,96 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 })();
+
+// =========================================
+// FUNCIONALIDAD: CARRUSEL 3D HERO
+// =========================================
+(function () {
+  var carrusel = document.querySelector('.hero-carrusel');
+  var imagenes = document.querySelectorAll('.hero-carrusel-img');
+  
+  // Salida temprana para evitar bloqueos de JS si no estamos en la página del hero
+  if (!carrusel || imagenes.length !== 3) return;
+
+  var intervalo;
+  var tiempoRotacion = 5000;
+
+  // Mapeo de las clases responsables de la distribución 3D en el CSS
+  var clasesPosicion = [
+    'hero-carrusel-img--izq',
+    'hero-carrusel-img--centro',
+    'hero-carrusel-img--dcha'
+  ];
+
+  // Reasigna las clases de posición basándose en la dirección para crear la ilusión de rotación
+  function rotar(direccion) {
+    // Extraemos la distribución actual desde el DOM para mantener el orden correcto
+    var clasesActuales = Array.from(imagenes).map(function(img) {
+      return clasesPosicion.find(function(c) { 
+        return img.classList.contains(c); 
+      });
+    });
+
+    // Modificamos el array de clases de forma circular
+    if (direccion === 'derecha') {
+      // El último elemento pasa al principio
+      clasesActuales.unshift(clasesActuales.pop());
+    } else {
+      // El primer elemento pasa al final
+      clasesActuales.push(clasesActuales.shift());
+    }
+
+    // Inyectamos el nuevo orden en el DOM; CSS se encarga de las transiciones
+    imagenes.forEach(function(img, index) {
+      img.classList.remove(...clasesPosicion);
+      img.classList.add(clasesActuales[index]);
+    });
+  }
+
+  // Interacción manual por clic de usuario
+  imagenes.forEach(function(img) {
+    img.addEventListener('click', function() {
+      // Determinamos el sentido de giro requerido para que la imagen clickeada acabe en el centro
+      if (this.classList.contains('hero-carrusel-img--dcha')) {
+        rotar('derecha');
+        reiniciarIntervalo();
+      } else if (this.classList.contains('hero-carrusel-img--izq')) {
+        rotar('izquierda');
+        reiniciarIntervalo();
+      }
+    });
+    
+    // Feedback visual (pointer) para confirmar al usuario qué elementos son interactivos
+    img.addEventListener('mouseenter', function() {
+      if (!this.classList.contains('hero-carrusel-img--centro')) {
+        this.style.cursor = 'pointer';
+      } else {
+        this.style.cursor = 'default';
+      }
+    });
+  });
+
+  // Autoplay para dar dinamismo a la cabecera
+  function iniciarIntervalo() {
+    intervalo = setInterval(function() {
+      rotar('derecha');
+    }, tiempoRotacion);
+  }
+
+  function detenerIntervalo() {
+    clearInterval(intervalo);
+  }
+
+  // Se resetea el timer para que el autoplay no salte inmediatamente tras un clic manual
+  function reiniciarIntervalo() {
+    detenerIntervalo();
+    iniciarIntervalo();
+  }
+
+  // Se pausa el intervalo para no frustrar al usuario si está leyendo o por interactuar
+  carrusel.addEventListener('mouseenter', detenerIntervalo);
+  carrusel.addEventListener('mouseleave', iniciarIntervalo);
+
+  // Iniciar carrusel
+  iniciarIntervalo();
+})();

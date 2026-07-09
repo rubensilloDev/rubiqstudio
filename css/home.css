@@ -14,6 +14,7 @@
   text-align: center;
   position: relative;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 25%, rgba(13, 39, 78, 0) 100%);
+  overflow: visible;
 }
 
 /* contenedor del contenido del hero */
@@ -26,6 +27,7 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .hero-pretitulo {
@@ -75,6 +77,59 @@
   margin-top: var(--spacing-sm);
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* =========================================
+   HERO - CARRUSEL 3D
+   ========================================= */
+
+/* Contenedor del carrusel con perspectiva 3D */
+.hero-carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: var(--spacing-xl) 10px;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  height: 420px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Estilo base de imágenes del carrusel */
+.hero-carrusel-img {
+  position: absolute;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
+  transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out, width 0.9s ease-in-out, height 0.9s ease-in-out;
+}
+
+/* Imagen central — principal, al frente */
+.hero-carrusel-img--centro {
+  width: 700px;
+  max-width: 90%;
+  height: 400px;
+  transform: translateX(0px) translateZ(50px) rotateY(0deg);
+  opacity: 1;
+}
+
+/* Imagen izquierda — parcialmente visible, girada */
+.hero-carrusel-img--izq {
+  width: 400px;
+  height: 300px;
+  transform: translateX(-350px) translateZ(-150px) rotateY(30deg);
+  opacity: 0.8;
+}
+
+/* Imagen derecha — parcialmente visible, girada */
+.hero-carrusel-img--dcha {
+  width: 400px;
+  height: 300px;
+  transform: translateX(350px) translateZ(-150px) rotateY(-30deg);
+  opacity: 0.8;
 }
 
 /* =========================================
@@ -541,6 +596,31 @@
     font-size: var(--text-sizes-text-regular);
     max-width: 100%;
   }
+
+  /* Carrusel — ajuste tablet */
+  .hero-carrusel {
+    height: 340px;
+  }
+
+  .hero-carrusel-img--centro {
+    width: 500px;
+    height: 320px;
+    transform: translateX(0px) translateZ(50px) rotateY(0deg);
+  }
+
+  .hero-carrusel-img--izq,
+  .hero-carrusel-img--dcha {
+    width: 360px;
+    height: 240px;
+  }
+
+  .hero-carrusel-img--izq {
+    transform: translateX(-300px) translateZ(-150px) rotateY(30deg);
+  }
+
+  .hero-carrusel-img--dcha {
+    transform: translateX(300px) translateZ(-150px) rotateY(-30deg);
+  }
 }
 
 /* ---- 764px: Menú hamburguesa y hero ajustados ---- */
@@ -552,13 +632,29 @@
   }
 
   .hero-pretitulo {
-    font-size:1.5rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     line-height: 150%;
   }
 
   .hero-contenido {
     font-size: var(--text-sizes-text-small);
+  }
+
+  /* Carrusel — solo imagen central en móvil */
+  .hero-carrusel {
+    height: 240px;
+  }
+
+  .hero-carrusel-img--centro {
+    width: 320px;
+    height: 200px;
+    transform: translateX(0px) translateZ(0px) rotateY(0deg);
+  }
+
+  .hero-carrusel-img--izq,
+  .hero-carrusel-img--dcha {
+    display: none;
   }
 
   /* seccion 1 - problema */
