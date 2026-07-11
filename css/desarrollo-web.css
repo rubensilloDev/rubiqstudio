@@ -412,6 +412,87 @@
   max-width: 65%;
 }
 
+/* Columna izq de la seccion */
+.columna-izq-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* T�tulo de formulario */
+.formulario-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+/* Texto de formulario */
+.formulario-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+  text-align: left;
+  max-width: 90%;
+}
+
+/* Contenedor form (Tarjeta Flotante) */
+.formulario-form {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background: var(--degradado-fondo-faq);
+  border-radius: 20px;
+  padding: var(--spacing-xl);
+  box-shadow: var(--sombra-boton);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Inputs y Textarea */
+.formulario-form input,
+.formulario-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-texto);
+  color: var(--paleta-de-colores-neutral-bg);
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  padding: var(--spacing-sm);
+  transition: border-color 0.3s ease, background 0.3s ease;
+  border-radius: 0;
+}
+
+/* Placeholder */
+.formulario-form input::placeholder,
+.formulario-form textarea::placeholder {
+  color: var(--color-texto);
+  opacity: 0.6;
+}
+
+/* Focus en Inputs/Textarea */
+.formulario-form input:focus,
+.formulario-form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--paleta-de-colores-accent);
+}
+
+/* Textarea espec�fico */
+.formulario-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Bot�n del formulario */
+.formulario-form .boton {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
 /* =========================================
    MEDIA QUERIES - RESPONSIVE
    ========================================= */
@@ -508,14 +589,31 @@
   }
 
   /* Rediseño */
+  .rediseño-contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .rediseño-texto {
+    align-items: center;
+  }
+
   .rediseño-titulo {
     font-size: var(--text-sizes-h2);
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .rediseño-parrafo {
     max-width: 80%;
+    margin: 0 auto;
   }
+
+  .container-cta {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 /* ---- 320px: Ajustes para móviles muy pequeños ---- */

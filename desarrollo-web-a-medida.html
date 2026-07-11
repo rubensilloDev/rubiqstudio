@@ -30,20 +30,9 @@
   <!-- AOS se añadirá al final del desarrollo -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/desarrollo-web.css">
-  <link rel="stylesheet" href="css/fondo-animado.css">
 </head>
 
 <body>
-
-  <!-- Fondo animado con cuadrados flotantes -->
-  <div class="fondo-animado">
-    <div class="fondo-cuadrado"></div>
-    <div class="fondo-cuadrado"></div>
-    <div class="fondo-cuadrado"></div>
-    <div class="fondo-cuadrado"></div>
-    <div class="fondo-cuadrado"></div>
-    <div class="fondo-cuadrado"></div>
-  </div>
 
   <!-- ===== HEADER / NAVEGACIÓN ===== -->
   <header class="navegacion">
@@ -348,22 +337,18 @@
       </div>
     </section>
 
-    <!-- ===== SECCIÓN 6: FORMULARIO ===== -->
-    <section class="formulario contenido-seccion" id="contacto">
-      <div class="formulario-contenedor">
-        <h2 class="formulario-titulo">Rentabiliza tu negocio hoy. <span class="destacado">Contacta con Rubiq
+    <!-- ===== SECCIÓN 6: CTA FINAL ===== -->
+    <section class="cta-final contenido-seccion" id="contacto">
+      <div class="cta-final-contenedor">
+        <h2 class="cta-final-titulo">Rentabiliza tu negocio hoy. <span class="destacado">Contacta con Rubiq
             Córdoba</span></h2>
-        <p class="formulario-texto">Delega el caos técnico en manos profesionales y vuelve a enfocarte en gestionar tu
-          empresa. Rellena este breve formulario y en menos de 24 horas evaluaremos tu proyecto para empezar a
+        <p class="cta-final-texto">Delega el caos técnico en manos profesionales y vuelve a enfocarte en gestionar tu
+          empresa. Habla con un experto y en menos de 24 horas evaluaremos tu proyecto para empezar a
           estructurar tus ventas.</p>
-        <form class="formulario-form" action="#" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="telefono" placeholder="Teléfono">
-          <input type="url" name="url" placeholder="URL de tu web actual (opcional)">
-          <textarea name="objetivo" placeholder="¿Qué objetivo quieres conseguir en tu negocio?" rows="4"></textarea>
-          <button type="submit" class="boton boton--azul-marino">Enviar mensaje</button>
-        </form>
+        <div class="cta-final-acciones">
+          <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer"
+            class="boton boton--turquesa">Empecemos con tu web</a>
+        </div>
       </div>
     </section>
 
@@ -411,7 +396,8 @@
   </footer>
   <!-- Botones flotantes -->
   <div class="botones-flotantes">
-    <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer" class="boton-flotante boton-whatsapp" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer" class="boton-flotante boton-whatsapp"
+      aria-label="Contactar por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
     <button class="boton-flotante boton-scroll-top" aria-label="Volver arriba">

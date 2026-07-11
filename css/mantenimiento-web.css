@@ -1,0 +1,529 @@
+/* =========================================
+   MANTENIMIENTO WEB MENSUAL - ESTILOS
+   ========================================= */
+
+/* =========================================
+   HERO - SECCIÓN PRINCIPAL
+   ========================================= */
+
+/* Fondo del hero y padding para compensar nav fixed */
+.hero-mantenimiento {
+  background: linear-gradient(180deg, rgba(10, 25, 47, 1) 0%, rgba(10, 25, 47, 0) 100%);
+  padding: 120px 40px 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto glow detrás del contenido */
+.hero-mantenimiento-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 50%;
+  background: var(--paleta-de-colores-azul-normal);
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Contenedor principal: 2 columnas con flex */
+.hero-mantenimiento-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Columna izquierda: texto */
+.hero-mantenimiento-texto {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+/* Título principal en Anton, mayúsculas */
+.hero-mantenimiento-texto h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-titulo-principal);
+  line-height: 0.9;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+}
+
+/* Párrafo descriptivo */
+.hero-mantenimiento-texto p {
+  font-size: var(--text-sizes-text-regular);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 90%;
+}
+
+/* Columna derecha: imagen con animación flotante */
+.hero-mantenimiento-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flotar-imagen 4s ease-in-out infinite alternate;
+}
+
+.hero-mantenimiento-imagen img {
+  max-width: 100%;
+  height: auto;
+  transform: perspective(1000px) rotateY(-12deg) translateY(-20px);
+  transition: transform 0.4s ease;
+  filter: drop-shadow(-15px 15px 15px rgba(0,0,0,0.4));
+}
+
+/* Animación sutil de flotación para la imagen del hero */
+@keyframes flotar-imagen {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =========================================
+   SECCIÓN 2: POR QUÉ NECESITAS MANTENIMIENTO
+   ========================================= */
+
+/* Contenedor centrado */
+.por-que-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Título */
+.por-que-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  text-transform: uppercase;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+}
+
+/* Párrafo */
+.por-que-parrafo {
+  max-width: 60%;
+}
+
+/* =========================================
+   SECCIÓN 3: ESCUDO TÉCNICO
+   ========================================= */
+
+/* Título centrado */
+.escudo-tecnico-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Intro */
+.escudo-tecnico-intro {
+  text-align: center;
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 70%;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Contenedor de 3 columnas: tarjetas-izq | imagen | tarjetas-dcha */
+.escudo-tecnico-contenido {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* Columnas de tarjetas */
+.escudo-tecnico-tarjetas-izquierda,
+.escudo-tecnico-tarjetas-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Tarjeta individual del escudo */
+.escudo-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/* Icono de la tarjeta */
+.escudo-tarjeta-icono {
+  font-size: 2rem;
+  color: var(--paleta-de-colores-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Título de tarjeta */
+.escudo-tarjeta-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Texto de tarjeta */
+.escudo-tarjeta-texto {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+}
+
+/* Imagen central del escudo */
+.escudo-tecnico-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escudo-tecnico-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botón CTA del escudo centrado */
+.escudo-tecnico-contenedor .boton {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECCIÓN 4: PRECIOS DE MANTENIMIENTO
+   ========================================= */
+
+/* Título centrado */
+.precios-mantenimiento-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Intro */
+.precios-mantenimiento-intro {
+  text-align: center;
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 70%;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Grid de tarjetas de precios */
+.precios-mantenimiento-tarjetas {
+  max-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: stretch;
+}
+
+/* Tarjeta de precio individual */
+.precios-mantenimiento-tarjeta {
+  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 50%, rgba(10, 25, 47, 1) 100%);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  color: var(--paleta-de-colores-azul-marino);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover tarjeta de precio */
+.precios-mantenimiento-tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Título de tarjeta de precio */
+.precios-tarjeta-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  line-height: 0.9;
+  text-align: center;
+}
+
+/* Bloque de precio */
+.precios-tarjeta-precio {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+/* Cantidad del precio */
+.precio-cantidad {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  color: inherit;
+  line-height: 0.9;
+}
+
+/* Período del precio */
+.precio-periodo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  color: inherit;
+  opacity: 0.6;
+}
+
+/* Divisor */
+.precios-tarjeta-divisor {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background: currentColor;
+  opacity: 0.25;
+  margin: 0 auto;
+}
+
+/* Descripción de tarjeta */
+.precios-tarjeta-descripcion {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* Lista de características */
+.precios-tarjeta-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex-grow: 1;
+}
+
+.precios-tarjeta-lista li {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: inherit;
+  padding-left: var(--spacing-sm);
+  position: relative;
+}
+
+.precios-tarjeta-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Botón dentro de tarjeta de precio */
+.precios-mantenimiento-tarjeta .boton {
+  margin-top: var(--spacing-sm);
+  align-self: center;
+}
+
+/* =========================================
+   SECCIÓN 5: RIESGOS DE ABANDONO
+   ========================================= */
+
+/* Título centrado */
+.riesgos-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Intro */
+.riesgos-intro {
+  text-align: center;
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+  max-width: 70%;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Grid de 3 tarjetas de riesgo */
+.riesgos-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 90%;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Tarjeta de riesgo individual */
+.riesgos-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: rgba(10, 25, 47, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  transition: all 0.3s ease;
+}
+
+.riesgos-tarjeta:hover {
+  border-color: var(--paleta-de-colores-accent);
+  transform: translateY(-4px);
+}
+
+/* Icono de tarjeta de riesgo */
+.riesgos-tarjeta-icono {
+  font-size: 2.5rem;
+  color: var(--paleta-de-colores-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Título de riesgo */
+.riesgos-tarjeta-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Texto de riesgo */
+.riesgos-tarjeta-texto {
+  font-size: var(--text-sizes-text-small);
+  line-height: 1.6;
+  color: var(--color-texto);
+}
+
+/* Botón CTA de riesgos centrado */
+.riesgos-contenedor .boton {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* =========================================
+   MEDIA QUERIES - RESPONSIVE
+   ========================================= */
+
+/* ---- 1024px: Ajustes tablet / desktop pequeño ---- */
+@media (max-width: 1024px) {
+  .hero-mantenimiento {
+    padding: 120px 40px 60px 40px;
+  }
+}
+
+/* ---- 764px: Menú hamburguesa y hero ajustados ---- */
+@media (max-width: 764px) {
+
+  /* Hero: pasa a 1 columna */
+  .hero-mantenimiento {
+    padding: 120px 20px 40px 20px;
+  }
+
+  .hero-mantenimiento-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-mantenimiento-texto {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero-mantenimiento-texto h1 {
+    font-size: var(--text-sizes-titulo-principal);
+  }
+
+  .hero-mantenimiento-texto p {
+    max-width: 100%;
+  }
+
+  .hero-mantenimiento-imagen {
+    margin-top: var(--spacing-lg);
+  }
+
+  /* Por qué */
+  .por-que-titulo {
+    font-size: var(--text-sizes-h2);
+    max-width: 100%;
+  }
+
+  .por-que-parrafo {
+    max-width: 80%;
+  }
+
+  /* Escudo técnico: pasa a 1 columna */
+  .escudo-tecnico-contenido {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .escudo-tecnico-titulo {
+    max-width: 100%;
+  }
+
+  .escudo-tecnico-intro {
+    max-width: 85%;
+  }
+
+  /* Precios: pasa a 1 columna */
+  .precios-mantenimiento-tarjetas {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+
+  .precios-mantenimiento-titulo {
+    max-width: 100%;
+  }
+
+  .precios-mantenimiento-intro {
+    max-width: 85%;
+  }
+
+  /* Riesgos: pasa a 1 columna */
+  .riesgos-tarjetas {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .riesgos-titulo {
+    max-width: 100%;
+  }
+
+  .riesgos-intro {
+    max-width: 85%;
+  }
+}
+
+/* ---- 320px: Ajustes para móviles muy pequeños ---- */
+@media (max-width: 320px) {
+
+  .hero-mantenimiento {
+    padding: 112px 12px 32px 12px;
+  }
+
+  .precios-mantenimiento-titulo {
+    font-size: var(--text-sizes-heading-3);
+  }
+}

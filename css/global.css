@@ -178,17 +178,17 @@ body::before {
   background-repeat: repeat;
   pointer-events: none;
   z-index: -1;
-  animation: grid-float 5s ease-in-out infinite alternate;
+  animation: grid-scroll-down 5s linear infinite;
 }
 
-/* Animación sutil del grid */
-@keyframes grid-float {
+/* Animación sutil del grid hacia abajo */
+@keyframes grid-scroll-down {
   0% {
-    transform: translate(0px, 0px);
+    background-position: 0 0;
   }
 
   100% {
-    transform: translate(15px, 15px);
+    background-position: 0 30px;
   }
 }
 
@@ -312,6 +312,53 @@ h3 {
 }
 
 /* =========================================
+   CTA FINAL (COMPARTIDO)
+   ========================================= */
+
+/* Contenedor principal de la sección */
+.cta-final-contenedor {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  border-radius: 24px;
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--paleta-de-colores-accent);
+  box-shadow: 0 20px 50px rgba(45, 212, 191, 0.7), 0 0 30px rgba(45, 212, 191, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título */
+.cta-final-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* Texto */
+.cta-final-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Acciones (botón) */
+.cta-final-acciones {
+  margin-top: var(--spacing-xs);
+}
+
+/* =========================================
    FAQ (ACORDEÓN COMPARTIDO)
    ========================================= */
 
@@ -423,9 +470,12 @@ h3 {
 
 /* Sección del footer */
 .footer {
-  background-color: var(--paleta-de-colores-azul-marino);
+  background: linear-gradient(180deg, var(--paleta-de-colores-azul-marino) 0%, #040A13 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 96px 40px;
   color: var(--color-texto);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Contenedor principal del footer */
@@ -920,6 +970,21 @@ h3 {
   .footer-superior {
     grid-template-columns: 1fr;
   }
+
+  /* CTA Final */
+  .cta-final-contenedor {
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-radius: 20px;
+  }
+
+  .cta-final-titulo {
+    font-size: var(--text-sizes-h2);
+    max-width: 100%;
+  }
+
+  .cta-final-texto {
+    max-width: 100%;
+  }
 }
 
 /* ---- 320px: Ajustes para móviles muy pequeños ---- */
@@ -950,6 +1015,11 @@ h3 {
   .navegacion-logo img {
     width: 45px;
     height: 45px;
+  }
+
+  /* CTA Final */
+  .cta-final-contenedor {
+    padding: var(--spacing-lg) var(--spacing-sm);
   }
 }
 
