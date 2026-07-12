@@ -1,4 +1,14 @@
 // =========================================
+// FUNCIONALIDAD: ANIMACIONES ON SCROLL (AOS)
+// =========================================
+AOS.init({
+    duration: 600,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 0
+});
+
+// =========================================
 // FUNCIONALIDAD: MENÚ HAMBURGUESA
 // =========================================
 document.addEventListener('DOMContentLoaded', function () {
