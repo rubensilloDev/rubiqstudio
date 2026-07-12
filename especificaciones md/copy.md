@@ -157,8 +157,6 @@ H2: Preguntas frecuentes sobre nuestro soporte técnico
 H2: Delega la técnica y céntrate en vender. Activa tu plan de mantenimiento hoy
 Deja de perder mañanas enteras peleándote con errores del servidor o actualizaciones que rompen tu diseño. Rellena el formulario, activa tu escudo técnico y vuelve a enfocarte en lo que de verdad importa: tu negocio.
 [Formulario de contacto] Nombre | Email | Teléfono | URL de tu web | Plan que deseas activar
-
-
 Página Agencia:
 H1: La agencia de desarrollo web en Córdoba enfocada en tu rentabilidad
 (Párrafo descriptivo debajo del título, alineado a la izquierda) No somos artistas digitales, somos tu socio tecnológico. Construimos ecosistemas web rápidos y estructurados para vender, asumiendo todo el caos informático para que tú te desentiendas y te centres exclusivamente en facturar.

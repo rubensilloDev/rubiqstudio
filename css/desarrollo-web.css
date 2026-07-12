@@ -412,6 +412,53 @@
   max-width: 65%;
 }
 
+/* =========================================
+   SECCIÓN 6: CTA FINAL
+   ========================================= */
+
+/* Contenedor principal de la sección */
+.cta-final-contenedor {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  border-radius: 24px;
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--paleta-de-colores-accent);
+  box-shadow: 0 20px 50px rgba(45, 212, 191, 0.7), 0 0 30px rgba(45, 212, 191, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título */
+.cta-final-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* Texto */
+.cta-final-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Acciones (botón) */
+.cta-final-acciones {
+  margin-top: var(--spacing-xs);
+}
+
 /* Columna izq de la seccion */
 .columna-izq-texto {
   display: flex;
@@ -614,6 +661,20 @@
     justify-content: center;
   }
 
+  /* CTA Final */
+  .cta-final-contenedor {
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-radius: 20px;
+  }
+
+  .cta-final-titulo {
+    font-size: var(--text-sizes-h2);
+    max-width: 100%;
+  }
+
+  .cta-final-texto {
+    max-width: 100%;
+  }
 }
 
 /* ---- 320px: Ajustes para móviles muy pequeños ---- */
@@ -626,6 +687,11 @@
   /* Tarjetas de precios */
   .presupuesto-titulo {
     font-size: var(--text-sizes-heading-3);
+  }
+
+  /* CTA Final */
+  .cta-final-contenedor {
+    padding: var(--spacing-lg) var(--spacing-sm);
   }
 
 }

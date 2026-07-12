@@ -82,7 +82,7 @@
   height: auto;
   transform: perspective(1000px) rotateY(-12deg) translateY(-20px);
   transition: transform 0.4s ease;
-  filter: drop-shadow(-15px 15px 15px rgba(0,0,0,0.4));
+  filter: drop-shadow(-15px 15px 15px rgba(0, 0, 0, 0.4));
 }
 
 /* Animación sutil de flotación para la imagen del hero */
@@ -90,6 +90,7 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }
@@ -115,12 +116,14 @@
   line-height: 90%;
   text-transform: uppercase;
   color: var(--paleta-de-colores-neutral-bg);
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   max-width: 70%;
 }
 
 /* Párrafo */
 .por-que-parrafo {
+  font-size: var(--text-sizes-text-regular);
+  line-height: 1.6;
+  color: var(--color-texto);
   max-width: 60%;
 }
 
@@ -128,11 +131,20 @@
    SECCIÓN 3: ESCUDO TÉCNICO
    ========================================= */
 
-/* Título centrado */
+/* Título centrado con sombra 3D */
 .escudo-tecnico-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 90%;
+  text-transform: uppercase;
   text-align: center;
   margin: 0 auto var(--spacing-sm);
+  color: var(--paleta-de-colores-neutral-bg);
 }
+
+/* El .destacado hereda text-shadow: none de global.css
+   para que el degradado (background-clip: text) se vea limpio
+   sin que sombras oscuras se cuelen por detrás */
 
 /* Intro */
 .escudo-tecnico-intro {
@@ -166,12 +178,18 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  background: var(--paleta-de-colores-neutral-bg);
+  border: 2px solid var(--paleta-de-colores-azul-marino);
+  border-radius: 12px;
+  box-shadow: 0 6px 10px var(--paleta-de-colores-azul-marino);
+  padding: var(--spacing-md);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Icono de la tarjeta */
 .escudo-tarjeta-icono {
   font-size: 2rem;
-  color: var(--paleta-de-colores-accent);
+  color: var(--paleta-de-colores-azul-marino);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -179,7 +197,8 @@
 .escudo-tarjeta-titulo {
   font-family: 'Anton', sans-serif;
   font-size: var(--text-sizes-text-large);
-  color: var(--paleta-de-colores-neutral-bg);
+  font-weight: bold;
+  color: var(--paleta-de-colores-azul-marino);
   text-transform: uppercase;
   line-height: 1.2;
   letter-spacing: 1px;
@@ -189,7 +208,23 @@
 .escudo-tarjeta-texto {
   font-size: var(--text-sizes-text-small);
   line-height: 1.6;
-  color: var(--color-texto);
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.6;
+}
+
+/* Perspectiva 3D: tarjetas izquierda rotan hacia la derecha */
+.escudo-tecnico-tarjetas-izquierda .escudo-tarjeta {
+  transform: perspective(1000px) rotateY(8deg);
+}
+
+/* Perspectiva 3D: tarjetas derecha rotan hacia la izquierda */
+.escudo-tecnico-tarjetas-derecha .escudo-tarjeta {
+  transform: perspective(1000px) rotateY(-8deg);
+}
+
+/* Hover: ambas se nivelan y levantan */
+.escudo-tarjeta:hover {
+  transform: perspective(1000px) rotateY(0deg) translateY(-5px);
 }
 
 /* Imagen central del escudo */
@@ -200,25 +235,29 @@
 }
 
 .escudo-tecnico-imagen img {
-  max-width: 100%;
-  height: auto;
+  width: 80%;
+  height: 50%;
 }
 
-/* Botón CTA del escudo centrado */
+/* Botón CTA del escudo centrado con degradado y forma de píldora */
 .escudo-tecnico-contenedor .boton {
   display: block;
   width: fit-content;
   margin: 0 auto;
+  background: var(--degradado-blanco-azul-turquesa);
+  color: var(--paleta-de-colores-azul-marino);
+  border-radius: 50px;
 }
 
 /* =========================================
    SECCIÓN 4: PRECIOS DE MANTENIMIENTO
    ========================================= */
 
-/* Título centrado */
+/* Título centrado con sombra 3D (misma que escudo-técnico) */
 .precios-mantenimiento-titulo {
   text-align: center;
   margin: 0 auto var(--spacing-sm);
+  color: var(--paleta-de-colores-neutral-bg);
 }
 
 /* Intro */
@@ -241,9 +280,9 @@
   align-items: stretch;
 }
 
-/* Tarjeta de precio individual */
+/* Tarjeta de precio individual — degradado turquesa (sup-izq) → blanco (inf-dcha) */
 .precios-mantenimiento-tarjeta {
-  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 50%, rgba(10, 25, 47, 1) 100%);
+  background: linear-gradient(135deg, rgba(45, 212, 191, 1) 0%, var(--paleta-de-colores-neutral-bg) 100%);
   border-radius: 20px;
   padding: var(--spacing-lg);
   display: flex;
@@ -327,12 +366,13 @@
   font-size: var(--text-sizes-text-small);
   line-height: 1.6;
   color: inherit;
+  opacity: 0.6;
   padding-left: var(--spacing-sm);
   position: relative;
 }
 
 .precios-tarjeta-lista li::before {
-  content: "✓";
+  content: "-";
   position: absolute;
   left: 0;
   color: inherit;
@@ -343,6 +383,16 @@
 .precios-mantenimiento-tarjeta .boton {
   margin-top: var(--spacing-sm);
   align-self: center;
+}
+
+/* Botón oscuro (fondo azul marino, texto blanco) */
+.boton--oscuro {
+  background: var(--paleta-de-colores-azul-marino);
+  color: var(--paleta-de-colores-neutral-bg);
+}
+
+.boton--oscuro:hover {
+  background: #0d2b4f;
 }
 
 /* =========================================
@@ -415,7 +465,7 @@
   color: var(--color-texto);
 }
 
-/* Botón CTA de riesgos centrado */
+/* Botón CTA de riesgos centrado — color vibrante, píldora, texto blanco (spec sección 4) */
 .riesgos-contenedor .boton {
   display: block;
   width: fit-content;
@@ -471,6 +521,8 @@
 
   .por-que-parrafo {
     max-width: 80%;
+    font-size: var(--text-sizes-text-regular);
+    line-height: 1.6;
   }
 
   /* Escudo técnico: pasa a 1 columna */
@@ -487,10 +539,19 @@
     max-width: 85%;
   }
 
-  /* Precios: pasa a 1 columna */
+  /* Reset perspectiva 3D en móvil */
+  .escudo-tarjeta {
+    transform: none !important;
+  }
+
+  /* Precios: pasa a 1 columna, tarjetas a ancho completo */
   .precios-mantenimiento-tarjetas {
     grid-template-columns: 1fr;
-    max-width: 90%;
+    max-width: 100%;
+  }
+
+  .precios-mantenimiento-tarjeta {
+    padding: var(--spacing-md);
   }
 
   .precios-mantenimiento-titulo {
@@ -525,5 +586,140 @@
 
   .precios-mantenimiento-titulo {
     font-size: var(--text-sizes-heading-3);
+  }
+
+  /* Por qué */
+  .por-que-titulo {
+    max-width: 100%;
+  }
+
+  .por-que-parrafo {
+    max-width: 95%;
+  }
+}
+
+/* =========================================
+   SECCIÓN 7: CTA MANTENIMIENTO
+   ========================================= */
+
+/* Fondo blanco de la sección */
+.cta-mantenimiento {
+  max-width: 1600px;
+  background: var(--paleta-de-colores-neutral-bg);
+  padding: 40px;
+  position: relative;
+}
+
+/* Contenedor: dos columnas texto | imagen */
+.cta-mantenimiento-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Columna izquierda: bloque de texto */
+.cta-mantenimiento-texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+/* Título grande, oscuro, con sombra sutil */
+.cta-mantenimiento-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-h2);
+  line-height: 0.9;
+  color: var(--paleta-de-colores-azul-marino);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafo explicativo en gris */
+.cta-mantenimiento-parrafo {
+  font-size: var(--text-sizes-text-regular);
+  line-height: 1.6;
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.55;
+}
+
+/* Botón CTA */
+.cta-mantenimiento-acciones {
+  margin-top: var(--spacing-sm);
+}
+
+/* Columna derecha: contenedor de la imagen */
+.cta-mantenimiento-imagen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glow azul decorativo detrás de la sección */
+.cta-mantenimiento-glow {
+  position: absolute;
+  bottom: -200px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: var(--paleta-de-colores-azul-normal);
+  filter: blur(100px);
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Imagen con desborde superior y escala para efecto 3D */
+.cta-mantenimiento-imagen img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin-top: -80px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+  transform: scale(1.25);
+  transform-origin: center bottom;
+}
+
+/* =========================================
+   RESPONSIVE - CTA MANTENIMIENTO
+   ========================================= */
+
+@media (max-width: 764px) {
+  .cta-mantenimiento {
+    padding: 60px 20px;
+  }
+
+  .cta-mantenimiento-contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-xl);
+  }
+
+  .cta-mantenimiento-texto {
+    align-items: center;
+  }
+
+  .cta-mantenimiento-titulo {
+    font-size: var(--text-sizes-h2);
+  }
+
+  .cta-mantenimiento-imagen img {
+    margin: 20px auto 0;
+    max-width: 80%;
+  }
+
+  .cta-mantenimiento-glow {
+    width: 150px;
+    height: 150px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
