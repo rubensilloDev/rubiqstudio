@@ -1,0 +1,873 @@
+/* =========================================
+   AGENCIA - ESTILOS
+   ========================================= */
+
+/* =========================================
+   SECCIÓN 1: HERO
+   ========================================= */
+
+.hero-agencia {
+  padding: 100px 45px;
+  background: linear-gradient(180deg, var(--paleta-de-colores-azul-marino) 10%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-agencia-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-agencia-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.hero-agencia-titulo {
+  color: var(--paleta-de-colores-neutral-bg);
+  margin: 0;
+  line-height: 90%;
+}
+
+.hero-agencia-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+
+/* Columna derecha — imagen + destello */
+.hero-agencia-imagen-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-agencia-destello {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-agencia-img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+
+
+/* =========================================
+   SECCIÓN 2: MISIÓN
+   ========================================= */
+
+.mision-agencia {
+  text-align: center;
+}
+
+.mision-agencia-contenedor {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.mision-agencia-titulo {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mision-agencia-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+  max-width: 75%;
+}
+
+/* =========================================
+   SECCIÓN 3: PRESENTACIÓN
+   ========================================= */
+
+/* Contenedor grid de la sección */
+.presentacion-agencia-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Columna izquierda — Imagen + marco */
+.presentacion-agencia-imagen-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* Marco decorativo detrás de la imagen */
+.presentacion-agencia-marco {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: #030d25;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Imagen de perfil */
+.presentacion-agencia-img {
+  position: relative;
+  z-index: 1;
+  width: 65%;
+  height: 10%;
+  transform: translateY(-30px);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Columna derecha — Contenido */
+.presentacion-agencia-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Título de la sección */
+.presentacion-agencia-titulo {
+  color: var(--paleta-de-colores-neutral-bg);
+  margin: 0;
+}
+
+/* Párrafos de presentación */
+.presentacion-agencia-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* Contenedor de tarjetas de estadísticas */
+.presentacion-agencia-estadisticas {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-right: auto;
+  margin-top: var(--spacing-md);
+}
+
+/* Tarjeta individual glassmorphism premium con degradado sutil */
+.estadistica-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(10, 25, 47, 0.5) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Efecto hover: levanta la tarjeta y resalta el borde con acento */
+.estadistica-tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(45, 212, 191, 0.15);
+  border-color: rgba(45, 212, 191, 0.5);
+}
+
+/* Número grande de la estadística */
+.estadistica-numero {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-heading-3);
+  color: var(--paleta-de-colores-accent);
+  line-height: 1;
+}
+
+/* Texto descriptivo de la estadística */
+.estadistica-texto {
+  font-size: var(--text-sizes-text-small);
+  color: var(--color-texto);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   SECCIÓN 4: 3 PILARES INNEGOCIABLES
+   ========================================= */
+
+/* Contenedor de la sección */
+.pilares-agencia {
+  max-width: 1400px;
+}
+
+/* Contenedor interno centrado */
+.pilares-agencia-contenedor {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Fila del título */
+.pilares-agencia-encabezado {
+  text-align: center;
+}
+
+/* Título principal */
+.pilares-agencia-titulo {
+  max-width: 100%;
+}
+
+/* Grid de 3 columnas */
+.pilares-agencia-grid {
+  margin: 0 auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  align-items: stretch;
+}
+
+/* Tarjeta individual de pilar */
+.pilar-agencia-tarjeta {
+  background: var(--degradado-blanco-turquesa-abajo);
+  border-radius: 20px;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
+  color: var(--paleta-de-colores-azul-marino);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.55);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pilar-agencia-tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 1);
+}
+
+/* Icono de la tarjeta */
+.pilar-agencia-icono {
+  font-size: 2rem;
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+/* Título de la tarjeta */
+.pilar-agencia-tarjeta-titulo {
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-azul-marino);
+  margin: 0;
+}
+
+/* Texto descriptivo de la tarjeta */
+.pilar-agencia-tarjeta-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SECCIÓN 5: METODOLOGÍA — CAMINO ZIGZAG CON POPUP AL CLICK
+   ========================================= */
+
+/* Sección contenedora */
+.metodologia-agencia {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wrapper interno flex */
+.metodologia-agencia-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Encabezado centrado */
+.metodologia-agencia-encabezado {
+  text-align: center;
+}
+
+/* Título */
+.metodologia-agencia-titulo {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* =========================================
+   CAMINO SVG — TRACK DE FONDO
+   ========================================= */
+
+/* Línea heredada — desactivada */
+.metodologia-agencia-linea {
+  display: none;
+}
+
+/* Contenedor del track SVG de fondo */
+.metodologia-agencia-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* =========================================
+   TIMELINE — ÁREA DE LOS PASOS
+   ========================================= */
+
+.metodologia-agencia-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 60px 140px;
+  z-index: 1;
+}
+
+/* =========================================
+   CADA PASO — NODO DEL CAMINO
+   ========================================= */
+
+.metodologia-agencia-paso {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: 80px;
+}
+
+/* Paso impar: nodo en la izquierda */
+.metodologia-agencia-paso--izq {
+  justify-content: flex-start;
+  padding-left: 8%;
+}
+
+/* Paso par: nodo en la derecha */
+.metodologia-agencia-paso--dcha {
+  justify-content: flex-end;
+  padding-right: 8%;
+}
+
+/* =========================================
+   CONECTOR ZIGZAG — SVG dinámico (::after desactivado)
+   Los conectores los dibuja el script inline con SVG bezier.
+   ========================================= */
+
+.metodologia-agencia-paso--izq:not(:last-child)::after,
+.metodologia-agencia-paso--dcha:not(:last-child)::after {
+  display: none;
+}
+
+/* =========================================
+   SVG TRACK — CAMINO CURVO ANIMADO
+   ========================================= */
+
+/* Wrapper SVG posicionado sobre el timeline */
+.metodologia-agencia-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+/* Cada segmento curvo con línea discontinua */
+.metodo-conector {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: metodo-dash-flow 1.8s linear infinite;
+}
+
+/* Animación del flujo de guiones — simula movimiento en el camino */
+@keyframes metodo-dash-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -38;
+  }
+
+  /* -(11+8)*2 = -38 para dos ciclos completos */
+}
+
+/* =========================================
+   NODO NUMÉRICO — BOTÓN DEL PASO
+   ========================================= */
+
+.metodologia-agencia-numero {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--paleta-de-colores-accent) 0%, #5EEAD4 100%);
+  color: var(--paleta-de-colores-azul-marino);
+  font-family: 'Anton', sans-serif;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  border: none;
+  /* Anillo exterior pulsante */
+  box-shadow:
+    0 0 0 0 rgba(45, 212, 191, 0.4),
+    0 4px 24px rgba(45, 212, 191, 0.3);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  animation: nodo-pulso 3s ease-in-out infinite;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes nodo-pulso {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(45, 212, 191, 0),
+      0 4px 24px rgba(45, 212, 191, 0.3);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 10px rgba(45, 212, 191, 0),
+      0 4px 28px rgba(45, 212, 191, 0.5);
+  }
+}
+
+.metodologia-agencia-numero:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 0 0 6px rgba(45, 212, 191, 0.18),
+    0 8px 40px rgba(45, 212, 191, 0.5);
+  background: linear-gradient(135deg, #5EEAD4 0%, var(--paleta-de-colores-accent) 100%);
+}
+
+/* Estado activo (cuando el popup está abierto) */
+.metodologia-agencia-numero.is-active {
+  transform: scale(1.18);
+  background: var(--paleta-de-colores-accent);
+  box-shadow:
+    0 0 0 8px rgba(45, 212, 191, 0.2),
+    0 10px 50px rgba(45, 212, 191, 0.6);
+}
+
+/* Paso final — nodo con icono de destino */
+.metodologia-agencia-paso--final .metodologia-agencia-numero {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  box-shadow: 0 4px 28px rgba(251, 191, 36, 0.4);
+  animation: nodo-final-pulso 2.5s ease-in-out infinite;
+}
+
+@keyframes nodo-final-pulso {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0), 0 4px 28px rgba(251, 191, 36, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(251, 191, 36, 0), 0 6px 38px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.metodologia-agencia-paso--final .metodologia-agencia-numero:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow:
+    0 0 0 8px rgba(251, 191, 36, 0.2),
+    0 12px 50px rgba(251, 191, 36, 0.6);
+}
+
+/* =========================================
+   OVERLAY GLOBAL — FONDO OSCURO AL ABRIR POPUP
+   ========================================= */
+
+.metodologia-agencia-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
+}
+
+.metodologia-agencia-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================
+   TARJETA POP-UP — MODAL AL HACER CLIC
+   ========================================= */
+
+.metodologia-agencia-tarjeta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%) scale(0.88);
+  width: 440px;
+  max-width: 90vw;
+  background: var(--paleta-de-colores-azul-marino);
+  border: 1px solid rgba(45, 212, 191, 0.18);
+  border-top: 3px solid var(--paleta-de-colores-accent);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  z-index: 210;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.75),
+    0 0 50px rgba(45, 212, 191, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Popup visible — clase añadida por JS */
+.metodologia-agencia-tarjeta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Botón cerrar (X) de la tarjeta */
+.metodologia-agencia-tarjeta-cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 50%;
+  color: var(--paleta-de-colores-accent);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.metodologia-agencia-tarjeta-cerrar:hover {
+  background: rgba(45, 212, 191, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Número de fase dentro de la tarjeta */
+.metodologia-agencia-tarjeta-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: rgba(45, 212, 191, 0.12);
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* =========================================
+   CONTENIDO INTERNO DE LA TARJETA
+   ========================================= */
+
+.metodologia-agencia-icono {
+  font-size: 1.6rem;
+  color: var(--paleta-de-colores-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+.metodologia-agencia-tarjeta-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-neutral-bg);
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metodologia-agencia-tarjeta-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.metodologia-agencia-enlace {
+  color: var(--paleta-de-colores-accent);
+  font-weight: 600;
+  font-size: var(--text-sizes-text-regular);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: gap 0.3s ease, opacity 0.3s ease;
+  margin-top: var(--spacing-xs);
+}
+
+.metodologia-agencia-enlace:hover {
+  gap: 12px;
+  opacity: 0.85;
+}
+
+.metodologia-agencia-enlace i {
+  transition: transform 0.3s ease;
+}
+
+.metodologia-agencia-enlace:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   RESPONSIVE — SECCIONES 1, 2 Y 3
+   ========================================= */
+@media (max-width: 764px) {
+
+  /* Hero */
+  .hero-agencia {
+    padding: 200px 20px;
+  }
+
+  .hero-agencia-contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .hero-agencia-contenido {
+    align-items: center;
+  }
+
+  .hero-agencia-imagen-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-agencia-destello {
+    width: 300px;
+    height: 500px;
+    filter: blur(80px);
+  }
+
+  /* Misión */
+  .mision-agencia-contenedor {
+    max-width: 100%;
+  }
+
+  .mision-agencia-texto {
+    max-width: 100%;
+  }
+
+  /* Presentación */
+  .presentacion-agencia-contenedor {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: var(--spacing-lg);
+  }
+
+  .presentacion-agencia-contenido {
+    align-items: center;
+  }
+
+  .presentacion-agencia-imagen-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .presentacion-agencia-marco {
+    left: 2%;
+    width: 96%;
+    height: 75%;
+  }
+
+  .presentacion-agencia-img {
+    max-width: 90%;
+    transform: translateY(-20px);
+  }
+
+  .presentacion-agencia-estadisticas {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Pilares responsive */
+  .pilares-agencia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pilares-agencia-contenedor {
+    gap: var(--spacing-lg);
+  }
+
+  .pilar-agencia-tarjeta {
+    margin: 0 var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  /* =========================================
+     SECCIÓN 5: METODOLOGÍA — CAMINO ZIGZAG (responsive)
+     ========================================= */
+
+  .metodologia-agencia-timeline {
+    gap: 55px;
+    padding: 40px 20px;
+  }
+
+  /* Nodos más pequeños pero siguen siendo circulares */
+  .metodologia-agencia-numero {
+    width: 58px;
+    height: 58px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+  }
+
+  /* Tarjeta popup adapta ancho */
+  .metodologia-agencia-tarjeta {
+    width: 92vw;
+    max-width: 92vw;
+    padding: var(--spacing-md);
+  }
+}
+
+/* =========================================
+   SECCIÓN 6: CTA FINAL
+   ========================================= */
+
+/* Sección contenedora con fondo destacado tipo card */
+.cta-final-agencia {
+  background: var(--degradado-fondo-faq);
+  margin: 100px 50px;
+  border-radius: 40px;
+  padding: 0 20px;
+  overflow: visible;
+  border: 2px solid var(--paleta-de-colores-accent);
+  box-shadow: 0 20px 60px rgba(45, 212, 191, 0.25), 0 0 40px rgba(45, 212, 191, 0.1);
+}
+
+/* Contenedor grid de 2 columnas */
+.cta-final-agencia-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wrapper de la imagen */
+.cta-final-agencia-imagen-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Imagen grande con sombra pronunciada, sobresale por arriba de la sección */
+.cta-final-agencia-img {
+  width: 600px;
+  height: 600px;
+  border-radius: 16px;
+}
+
+/* Columna derecha — contenido textual */
+.cta-final-agencia-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Etiqueta superior tipo badge */
+.cta-final-agencia-etiqueta {
+  font-size: var(--text-sizes-text-small);
+  color: var(--paleta-de-colores-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* Título principal */
+.cta-final-agencia-titulo {
+  margin: 0;
+  color: var(--paleta-de-colores-neutral-bg);
+}
+
+/* Párrafos de texto */
+.cta-final-agencia-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE — CTA FINAL
+   ========================================= */
+@media (max-width: 764px) {
+
+  .cta-final-agencia {
+    border-radius: 24px;
+  }
+
+  .cta-final-agencia-contenedor {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .cta-final-agencia-contenido {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-final-agencia-imagen-wrapper {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .cta-final-agencia-img {
+    transform: translateY(-50px);
+  }
+}

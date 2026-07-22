@@ -1,0 +1,475 @@
+/* =========================================
+   CONTACTO - ESTILOS
+   ========================================= */
+
+/* =========================================
+   SECCIÓN 1: HERO
+   ========================================= */
+
+/* Sección principal — columna única centrada vertical y horizontalmente */
+.hero-contacto {
+  padding: 150px 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contenedor que centra el contenido horizontalmente */
+.hero-contacto-contenedor {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper del contenido en columna vertical centrada */
+.hero-contacto-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-lg);
+  position: relative;
+  max-width: 800px;
+}
+
+/* Destello decorativo con blur detrás del contenido */
+.hero-contacto-destello {
+  position: absolute;
+  width: 1200px;
+  height: 300px;
+  transform: translateY(-50px);
+  background: var(--paleta-de-colores-azul-normal);
+  border-radius: 9999px;
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Título del hero — dos líneas con destacado en la segunda */
+.hero-contacto-titulo {
+  color: var(--paleta-de-colores-neutral-bg);
+  line-height: 90%;
+  margin: 0;
+}
+
+/* Párrafo descriptivo */
+.hero-contacto-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* =========================================
+   SECCIÓN 2: FORMULARIO
+   ========================================= */
+
+/* Contenedor de la sección — hereda padding de .contenido-seccion */
+.formulario-contacto-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* Título con fuerte efecto sombra 3D */
+.formulario-contacto-titulo {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+  text-shadow:
+    0 4px 0 rgba(10, 25, 47, 0.3),
+    0 8px 0 rgba(10, 25, 47, 0.15),
+    0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid 2 columnas: texto explicativo + tarjeta del formulario */
+.formulario-contacto-grid {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Columna izquierda — texto explicativo */
+.formulario-contacto-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  margin: 0 auto 30px auto;
+  text-align: center;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.formulario-contacto-texto p {
+  margin: 0;
+}
+
+/* Tarjeta blanca del formulario — fondo blanco, esquinas redondeadas, sombra suave */
+.formulario-contacto-tarjeta {
+  width: 70%;
+  margin: 0 auto;
+  background: var(--paleta-de-colores-neutral-bg);
+  border-radius: 20px;
+  padding: var(--spacing-xl);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Formulario interno — campos en columna */
+.formulario-contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Fila de email + teléfono en 2 columnas (email ocupa más) */
+.formulario-contacto-fila-contacto {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--spacing-md);
+}
+
+/* Grupo individual de campo */
+.formulario-contacto-campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Labels */
+.formulario-contacto-label {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  font-weight: 600;
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+/* Asterisco de campo obligatorio */
+.obligatorio {
+  color: var(--paleta-de-colores-accent);
+}
+
+/* Campos de texto — bordes sutiles, focus con color accent */
+.formulario-contacto-campo,
+.formulario-contacto-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-regular);
+  color: var(--paleta-de-colores-azul-marino);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-contacto-campo::placeholder,
+.formulario-contacto-textarea::placeholder {
+  color: var(--color-texto);
+}
+
+.formulario-contacto-campo:focus,
+.formulario-contacto-textarea:focus {
+  outline: none;
+  border-color: var(--paleta-de-colores-accent);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+}
+
+/* Texto de ayuda debajo del campo */
+.formulario-contacto-ayuda {
+  font-size: var(--text-sizes-text-tiny);
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.6;
+}
+
+/* Textarea — altura mínima */
+.formulario-contacto-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Checkbox de privacidad */
+.formulario-contacto-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--text-sizes-text-small);
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+.formulario-contacto-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--paleta-de-colores-accent);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.formulario-contacto-checkbox label {
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.formulario-contacto-checkbox a {
+  color: var(--paleta-de-colores-accent);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.formulario-contacto-checkbox a:hover {
+  opacity: 0.8;
+}
+
+/* Botón de envío — ancho completo dentro del formulario */
+.formulario-contacto-boton {
+  width: 100%;
+  justify-content: center;
+  padding: 18px 32px;
+  font-size: var(--text-sizes-text-medium);
+}
+
+/* =========================================
+   SECCIÓN 3: INFO CONTACTO DIRECTO
+   ========================================= */
+
+/* Contenedor de la sección — hereda padding de .contenido-seccion */
+.info-contacto-contenedor {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Título grande de la sección */
+.info-contacto-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+/* Párrafo introductorio */
+.info-contacto-intro {
+  font-size: var(--text-sizes-text-regular);
+  text-align: center;
+  margin: 0 auto var(--spacing-xl);
+  max-width: 70%;
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* Grid 2 columnas: flashes + mapa */
+.info-contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+/* Columna izquierda — flashes de contacto en vertical */
+.info-contacto-flashes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Flash individual — tarjeta con fondo y sombra */
+.info-contacto-flash {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-contacto-flash:hover {
+  border-color: rgba(45, 212, 191, 0.3);
+  box-shadow: 0 8px 30px rgba(45, 212, 191, 0.08);
+}
+
+/* Cabecera del flash — icono + título en fila */
+.info-contacto-flash-cabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Icono del flash */
+.info-contacto-icono {
+  font-size: 1.5rem;
+  color: var(--paleta-de-colores-accent);
+  flex-shrink: 0;
+}
+
+/* Título del flash (h3) */
+.info-contacto-flash-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-neutral-bg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Texto descriptivo del flash */
+.info-contacto-flash-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--color-texto);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Enlaces dentro de los flashes — color accent/turquesa */
+.info-contacto-enlace {
+  color: var(--paleta-de-colores-accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.info-contacto-enlace:hover {
+  opacity: 0.8;
+}
+
+/* Span de dirección dentro del flash de ubicación */
+.info-contacto-direccion {
+  color: var(--paleta-de-colores-neutral-bg);
+  font-weight: 600;
+}
+
+/* Columna derecha — Wrapper del mapa de Google */
+.info-contacto-mapa-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(45, 212, 191, 0.15);
+}
+
+/* iframe del mapa */
+.info-contacto-mapa {
+  display: block;
+  width: 100%;
+  height: 450px;
+}
+
+/* =========================================
+   SECCIÓN 4: PROCESO POST-MENSAJE
+   ========================================= */
+
+/* Contenedor principal de la sección — hereda padding de .contenido-seccion */
+.proceso-contacto {
+}
+
+/* Contenedor interno — centrado */
+.proceso-contacto-contenedor {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Título grande de la sección */
+.proceso-contacto-titulo {
+  text-align: center;
+  margin: 0 auto var(--spacing-xl);
+}
+
+/* Grid de 3 columnas para las tarjetas */
+.proceso-contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* Tarjeta individual de proceso */
+.proceso-contacto-tarjeta {
+  background: linear-gradient(to bottom, var(--paleta-de-colores-neutral-bg) 40%, var(--paleta-de-colores-azul-marino) 100%);
+  border-radius: 20px;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
+  color: var(--paleta-de-colores-azul-marino);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.55);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.proceso-contacto-tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 1);
+}
+
+/* Icono de la tarjeta */
+.proceso-contacto-icono {
+  font-size: 2rem;
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+/* Título de la tarjeta (h3) */
+.proceso-contacto-tarjeta-titulo {
+  font-size: var(--text-sizes-text-large);
+  color: var(--paleta-de-colores-azul-marino);
+  margin: 0;
+}
+
+/* Texto descriptivo de la tarjeta */
+.proceso-contacto-tarjeta-texto {
+  font-size: var(--text-sizes-text-regular);
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE — FORMULARIO
+   ========================================= */
+@media (max-width: 764px) {
+
+  .formulario-contacto-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .formulario-contacto-tarjeta {
+    padding: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .formulario-contacto-texto {
+    width: 95%;
+  }
+
+  .formulario-contacto-boton {
+    padding: 16px 24px;
+    font-size: var(--text-sizes-text-regular);
+  }
+
+  .formulario-contacto-fila-contacto {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — INFO CONTACTO DIRECTO
+   ========================================= */
+@media (max-width: 764px) {
+
+  .info-contacto-intro {
+    max-width: 100%;
+  }
+
+  .info-contacto-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .info-contacto-mapa {
+    height: 300px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — PROCESO POST-MENSAJE
+   ========================================= */
+@media (max-width: 764px) {
+
+  .proceso-contacto-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

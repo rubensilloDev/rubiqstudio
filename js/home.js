@@ -1,12 +1,16 @@
 // =========================================
 // FUNCIONALIDAD: ANIMACIONES ON SCROLL (AOS)
 // =========================================
-AOS.init({
+// Guard: AOS solo se carga en algunas páginas (index.html, agencia.html).
+// Si no está definido, saltamos AOS.init() para no romper el resto del script.
+if (typeof AOS !== 'undefined') {
+  AOS.init({
     duration: 600,
     easing: 'ease-in-out',
     once: true,
     offset: 0
-});
+  });
+}
 
 // =========================================
 // FUNCIONALIDAD: MENÚ HAMBURGUESA
@@ -107,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 (function () {
   var carrusel = document.querySelector('.hero-carrusel');
   var imagenes = document.querySelectorAll('.hero-carrusel-img');
-  
+
   // Salida temprana para evitar bloqueos de JS si no estamos en la página del hero
   if (!carrusel || imagenes.length !== 3) return;
 
@@ -124,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Reasigna las clases de posición basándose en la dirección para crear la ilusión de rotación
   function rotar(direccion) {
     // Extraemos la distribución actual desde el DOM para mantener el orden correcto
-    var clasesActuales = Array.from(imagenes).map(function(img) {
-      return clasesPosicion.find(function(c) { 
-        return img.classList.contains(c); 
+    var clasesActuales = Array.from(imagenes).map(function (img) {
+      return clasesPosicion.find(function (c) {
+        return img.classList.contains(c);
       });
     });
 
@@ -140,15 +144,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Inyectamos el nuevo orden en el DOM; CSS se encarga de las transiciones
-    imagenes.forEach(function(img, index) {
+    imagenes.forEach(function (img, index) {
       img.classList.remove(...clasesPosicion);
       img.classList.add(clasesActuales[index]);
     });
   }
 
   // Interacción manual por clic de usuario
-  imagenes.forEach(function(img) {
-    img.addEventListener('click', function() {
+  imagenes.forEach(function (img) {
+    img.addEventListener('click', function () {
       // Determinamos el sentido de giro requerido para que la imagen clickeada acabe en el centro
       if (this.classList.contains('hero-carrusel-img--dcha')) {
         rotar('derecha');
@@ -158,9 +162,9 @@ document.addEventListener('DOMContentLoaded', function () {
         reiniciarIntervalo();
       }
     });
-    
+
     // Feedback visual (pointer) para confirmar al usuario qué elementos son interactivos
-    img.addEventListener('mouseenter', function() {
+    img.addEventListener('mouseenter', function () {
       if (!this.classList.contains('hero-carrusel-img--centro')) {
         this.style.cursor = 'pointer';
       } else {
@@ -171,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Autoplay para dar dinamismo a la cabecera
   function iniciarIntervalo() {
-    intervalo = setInterval(function() {
+    intervalo = setInterval(function () {
       rotar('derecha');
     }, tiempoRotacion);
   }

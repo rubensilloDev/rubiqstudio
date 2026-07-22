@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon/favicon.ico" sizes="48x48">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <title>Contacto — Rubiq Studio: Hablemos de tu negocio</title>
+  <meta name="description"
+    content="Contacta con Rubiq Studio, tu agencia de desarrollo web en Córdoba. Cuéntanos tu proyecto y recibe una respuesta clara y directa en menos de 24h.">
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome (carga diferida) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </noscript>
+
+  <!-- AOS: Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER / NAVEGACIÓN ===== -->
+  <header class="navegacion">
+    <nav class="navegacion-contenedor">
+      <div class="navegacion-logo">
+        <a href="index.html">
+          <img src="img/logo-rubiqstudio.png" alt="Rubiq Studio" width="70" height="70">
+        </a>
+      </div>
+
+      <ul class="navegacion-enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="navegacion-dropdown">
+          <button class="navegacion-dropdown-toggle">Servicios <i class="fas fa-chevron-down"></i></button>
+          <ul class="navegacion-dropdown-menu">
+            <li><a href="desarrollo-web-a-medida.html">Desarrollo Web</a></li>
+            <li><a href="mantenimiento-web-mensual.html">Mantenimiento Web</a></li>
+          </ul>
+        </li>
+        <li><a href="agencia.html">Agencia</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+        <li class="navegacion-enlaces-boton"><a href="contacto.html" class="boton boton--blanco">Solicitar
+            presupuesto</a></li>
+      </ul>
+
+      <button class="navegacion-hamburguesa" aria-label="Abrir menú">
+        <span class="hamburguesa-linea"></span>
+        <span class="hamburguesa-linea"></span>
+        <span class="hamburguesa-linea"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- ===== SECCIÓN 1: HERO CONTACTO ===== -->
+    <section class="hero-contacto">
+      <div class="hero-contacto-contenedor">
+
+        <div class="hero-contacto-contenido" data-aos="fade-up">
+          <div class="hero-contacto-destello"></div>
+          <h1 class="hero-contacto-titulo">Hablemos de tu negocio.<br><span class="destacado">Contacta con
+              RubiqStudio</span>
+          </h1>
+          <p class="hero-contacto-texto">Deja de perder el tiempo peleándote con la informática y los errores de tu
+            página. Delega todo tu caos digital en nosotros y céntrate exclusivamente en dirigir tu empresa y facturar.
+          </p>
+          <a href="#formulario" class="boton boton--blanco">Cuéntanos qué necesitas</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 2: FORMULARIO ===== -->
+    <section class="formulario-contacto contenido-seccion" id="formulario">
+      <div class="formulario-contacto-contenedor">
+
+        <h2 class="formulario-contacto-titulo" data-aos="fade-up">Cuéntanos tu <span class="destacado">proyecto</span>
+        </h2>
+
+        <div class="formulario-contacto-grid">
+
+          <div class="formulario-contacto-texto" data-aos="fade-right">
+            <p>Rellena este formulario sin jerga técnica ni complicaciones. Da igual si necesitas estructurar una web
+              desde cero para captar clientes o delegar por completo tu servicio de mantenimiento web mensual; te
+              daremos una respuesta clara, directa y orientada a la rentabilidad.</p>
+          </div>
+
+          <div class="formulario-contacto-tarjeta" data-aos="fade-left">
+            <form class="formulario-contacto-form" action="#" method="POST">
+
+              <div class="formulario-contacto-campo-grupo">
+                <label class="formulario-contacto-label" for="contacto-nombre">Nombre <span
+                    class="obligatorio">*</span></label>
+                <input class="formulario-contacto-campo" type="text" id="contacto-nombre" name="nombre" required
+                  placeholder="Tu nombre">
+              </div>
+
+              <div class="formulario-contacto-fila-contacto">
+                <div class="formulario-contacto-campo-grupo">
+                  <label class="formulario-contacto-label" for="contacto-email">Correo Electrónico</label>
+                  <input class="formulario-contacto-campo" type="email" id="contacto-email" name="email"
+                    placeholder="tu@email.com">
+                </div>
+
+                <div class="formulario-contacto-campo-grupo">
+                  <label class="formulario-contacto-label" for="contacto-telefono">Teléfono</label>
+                  <input class="formulario-contacto-campo" type="tel" id="contacto-telefono" name="telefono"
+                    placeholder="+34 600 000 000">
+                  <span class="formulario-contacto-ayuda">Necesitamos al menos un medio de contacto (email o
+                    teléfono)</span>
+                </div>
+              </div>
+
+              <div class="formulario-contacto-campo-grupo">
+                <label class="formulario-contacto-label" for="contacto-objetivo">¿Qué objetivo comercial necesitas
+                  conseguir? <span class="obligatorio">*</span></label>
+                <textarea class="formulario-contacto-textarea" id="contacto-objetivo" name="objetivo" rows="5"
+                  placeholder="Describe tu proyecto o necesidad..." required></textarea>
+              </div>
+
+              <div class="formulario-contacto-checkbox">
+                <input type="checkbox" id="contacto-privacidad" name="privacidad" required>
+                <label for="contacto-privacidad">Acepto los <a href="terminos-legales.html">términos de
+                    privacidad</a></label>
+              </div>
+
+              <button type="submit" class="boton boton--azul-marino formulario-contacto-boton">Enviar solicitud</button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 3: INFO CONTACTO DIRECTO ===== -->
+    <section class="info-contacto contenido-seccion">
+      <div class="info-contacto-contenedor">
+
+        <h2 class="info-contacto-titulo" data-aos="fade-up">Información de contacto directo</h2>
+
+        <p class="info-contacto-intro">Odiamos las agencias fantasma y los tickets de soporte interminables. Si
+          prefieres la vía rápida, aquí tienes nuestros canales directos para hablar de tú a tú.</p>
+
+        <div class="info-contacto-grid">
+
+          <div class="info-contacto-flashes" data-aos="fade-right">
+
+
+
+            <article class="info-contacto-flash">
+              <div class="info-contacto-flash-cabecera">
+                <i class="fas fa-phone-alt info-contacto-icono"></i>
+                <h3 class="info-contacto-flash-titulo">Llámanos</h3>
+              </div>
+              <p class="info-contacto-flash-texto">Línea directa para ir al grano sin esperas.
+                <a href="tel:+34692037526" class="info-contacto-enlace">+34 692 037 526</a>
+                (Lunes a Viernes, de 09:00 a 18:00)
+              </p>
+            </article>
+
+            <article class="info-contacto-flash">
+              <div class="info-contacto-flash-cabecera">
+                <i class="fas fa-envelope info-contacto-icono"></i>
+                <h3 class="info-contacto-flash-titulo">Escríbenos</h3>
+              </div>
+              <p class="info-contacto-flash-texto">Para dudas rápidas o enviarnos los detalles de tu proyecto.
+                <a href="mailto:info@rubiqstudio.com" class="info-contacto-enlace">info@rubiqstudio.com</a>
+                <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer"
+                  class="info-contacto-enlace">Escríbenos por WhatsApp</a>
+              </p>
+            </article>
+
+            <article class="info-contacto-flash">
+              <div class="info-contacto-flash-cabecera">
+                <i class="fas fa-map-marker-alt info-contacto-icono"></i>
+                <h3 class="info-contacto-flash-titulo">Visítanos en Córdoba</h3>
+              </div>
+              <p class="info-contacto-flash-texto">Nuestra base de operaciones. Sin intermediarios.
+                <span class="info-contacto-direccion">Córdoba, España</span>
+              </p>
+            </article>
+
+          </div>
+
+          <div class="info-contacto-mapa-wrapper" data-aos="fade-left">
+            <iframe
+              class="info-contacto-mapa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12702.385677607988!2d-4.7793777!3d37.8881761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d4d0c38e8e0f7%3A0x3b1e7c3b1e7c3b1e!2sC%C3%B3rdoba%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de Rubiq Studio en Córdoba">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: PROCESO POST-MENSAJE ===== -->
+    <section class="proceso-contacto contenido-seccion">
+      <div class="proceso-contacto-contenedor">
+
+        <h2 class="proceso-contacto-titulo" data-aos="fade-up">¿Qué pasará tras enviar <span class="destacado">tu</span>
+          <span class="destacado">mensaje?</span>
+        </h2>
+
+        <div class="proceso-contacto-grid" data-aos="fade-up" data-aos-delay="100">
+
+          <article class="proceso-contacto-tarjeta">
+            <i class="fas fa-clock proceso-contacto-icono"></i>
+            <h3 class="proceso-contacto-tarjeta-titulo">1. Respuesta en menos de 24h</h3>
+            <p class="proceso-contacto-tarjeta-texto">Analizamos tu solicitud de inmediato. No recibirás respuestas
+              automáticas de un robot; hablarás con un profesional técnico real desde el primer minuto.</p>
+          </article>
+
+          <article class="proceso-contacto-tarjeta">
+            <i class="fas fa-search proceso-contacto-icono"></i>
+            <h3 class="proceso-contacto-tarjeta-titulo">2. Auditoría sin rodeos</h3>
+            <p class="proceso-contacto-tarjeta-texto">Evaluamos tu situación para detectar exactamente qué te está
+              haciendo perder dinero y te proponemos la estructura web comercial que tu empresa necesita.</p>
+          </article>
+
+          <article class="proceso-contacto-tarjeta">
+            <i class="fas fa-handshake proceso-contacto-icono"></i>
+            <h3 class="proceso-contacto-tarjeta-titulo">3. Presupuesto cerrado</h3>
+            <p class="proceso-contacto-tarjeta-texto">Te entregamos una propuesta transparente con precios fijos y la
+              garantía de que serás el dueño total de tu web. Cero cuotas ocultas y cero "efecto rehén".</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+
+      <div class="footer-superior">
+
+        <div class="footer-columna footer-columna--info">
+          <img src="img/logo-rubiqstudio.png" alt="Rubiq Studio" width="70" height="70" class="footer-logo">
+          <p class="footer-descripcion">Tu socio tecnológico en Córdoba. Desarrollo web a medida con estrategia y
+            resultados.</p>
+        </div>
+
+        <div class="footer-columna footer-columna--enlaces">
+          <h4 class="footer-columna-titulo">Servicios</h4>
+          <ul class="footer-lista">
+            <li><a href="desarrollo-web-a-medida.html">Desarrollo Web a Medida</a></li>
+            <li><a href="desarrollo-web-a-medida.html#landing">Landing Pages</a></li>
+            <li><a href="desarrollo-web-a-medida.html#corporativa">Web Corporativa</a></li>
+            <li><a href="mantenimiento-web-mensual.html">Mantenimiento Web</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-columna footer-columna--enlaces">
+          <h4 class="footer-columna-titulo">Empresa</h4>
+          <ul class="footer-lista">
+            <li><a href="agencia.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-inferior">
+        <p class="footer-marca">RUBIQ STUDIO</p>
+        <p class="footer-copyright">&copy; 2025 Rubiq Studio. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botones flotantes -->
+  <div class="botones-flotantes">
+    <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer" class="boton-flotante boton-whatsapp"
+      aria-label="Contactar por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="boton-flotante boton-scroll-top" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>
