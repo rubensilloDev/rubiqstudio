@@ -11,7 +11,7 @@
   padding: 150px 45px;
   position: relative;
   overflow: hidden;
-  background: var(--paleta-de-colores-azul-marino);
+  background: transparent;
 }
 
 /* Contenedor que centra el contenido horizontalmente */
@@ -420,6 +420,17 @@
    ========================================= */
 @media (max-width: 764px) {
 
+  .formulario-contacto,
+  .formulario-contacto-contenedor {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .formulario-contacto-titulo {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .formulario-contacto-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
@@ -432,6 +443,7 @@
 
   .formulario-contacto-texto {
     width: 95%;
+    max-width: 95%;
   }
 
   .formulario-contacto-boton {

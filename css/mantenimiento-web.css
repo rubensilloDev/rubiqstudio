@@ -513,30 +513,48 @@
     margin-top: var(--spacing-lg);
   }
 
+  /* Padding lateral 0 para contenedores padres en mobile */
+  .por-que,
+  .escudo-tecnico,
+  .precios-mantenimiento,
+  .riesgos,
+  .por-que-contenedor,
+  .escudo-tecnico-contenedor,
+  .precios-mantenimiento-contenedor,
+  .riesgos-contenedor {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   /* Por qué */
   .por-que-titulo {
     font-size: var(--text-sizes-h2);
+    width: 100%;
     max-width: 100%;
   }
 
   .por-que-parrafo {
-    max-width: 80%;
+    width: 95%;
+    max-width: 95%;
     font-size: var(--text-sizes-text-regular);
     line-height: 1.6;
   }
 
   /* Escudo técnico: pasa a 1 columna */
   .escudo-tecnico-contenido {
+    padding: 0 20px;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
 
   .escudo-tecnico-titulo {
+    width: 100%;
     max-width: 100%;
   }
 
   .escudo-tecnico-intro {
-    max-width: 85%;
+    width: 95%;
+    max-width: 95%;
   }
 
   /* Reset perspectiva 3D en móvil */
@@ -546,6 +564,7 @@
 
   /* Precios: pasa a 1 columna, tarjetas a ancho completo */
   .precios-mantenimiento-tarjetas {
+    padding: 0 20px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
@@ -555,25 +574,30 @@
   }
 
   .precios-mantenimiento-titulo {
+    width: 100%;
     max-width: 100%;
   }
 
   .precios-mantenimiento-intro {
-    max-width: 85%;
+    width: 95%;
+    max-width: 95%;
   }
 
   /* Riesgos: pasa a 1 columna */
   .riesgos-tarjetas {
+    padding: 0 20px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
 
   .riesgos-titulo {
+    width: 100%;
     max-width: 100%;
   }
 
   .riesgos-intro {
-    max-width: 85%;
+    width: 95%;
+    max-width: 95%;
   }
 }
 
@@ -693,13 +717,15 @@
 
 @media (max-width: 764px) {
   .cta-mantenimiento {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
 
   .cta-mantenimiento-contenedor {
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--spacing-xl);
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .cta-mantenimiento-texto {
@@ -708,6 +734,13 @@
 
   .cta-mantenimiento-titulo {
     font-size: var(--text-sizes-h2);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cta-mantenimiento-parrafo {
+    width: 95%;
+    max-width: 95%;
   }
 
   .cta-mantenimiento-imagen img {
