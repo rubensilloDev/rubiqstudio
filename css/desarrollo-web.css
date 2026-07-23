@@ -610,11 +610,13 @@
   /* Estrategia */
   .estrategia-titulo {
     font-size: var(--text-sizes-h2);
-    max-width: 100%;
+    width: 100%;
+    max-width: 100%
   }
 
+
   .estrategia-parrafo {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   /* Tarjetas de precios */
@@ -632,16 +634,21 @@
   }
 
   .presupuesto-texto {
-    max-width: 85%;
+    max-width: 90%;
   }
 
   /* Rediseño */
   .rediseño-contenedor {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
     grid-template-columns: 1fr;
     text-align: center;
   }
 
   .rediseño-texto {
+    max-width: 100%;
+    width: 100%;
     align-items: center;
   }
 
@@ -649,10 +656,11 @@
     font-size: var(--text-sizes-h2);
     max-width: 100%;
     margin: 0 auto;
+    width: 100%;
   }
 
   .rediseño-parrafo {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }
 

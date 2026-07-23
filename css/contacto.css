@@ -11,6 +11,7 @@
   padding: 150px 45px;
   position: relative;
   overflow: hidden;
+  background: var(--paleta-de-colores-azul-marino);
 }
 
 /* Contenedor que centra el contenido horizontalmente */
@@ -352,8 +353,7 @@
    ========================================= */
 
 /* Contenedor principal de la sección — hereda padding de .contenido-seccion */
-.proceso-contacto {
-}
+.proceso-contacto {}
 
 /* Contenedor interno — centrado */
 .proceso-contacto-contenedor {
