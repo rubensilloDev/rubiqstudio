@@ -27,7 +27,6 @@
   </noscript>
 
   <!-- AOS: Animate On Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/contacto.css">
@@ -74,7 +73,7 @@
     <section class="hero-contacto">
       <div class="hero-contacto-contenedor">
 
-        <div class="hero-contacto-contenido" data-aos="fade-up">
+        <div class="hero-contacto-contenido">
           <div class="hero-contacto-destello"></div>
           <h1 class="hero-contacto-titulo">Hablemos de tu negocio.<br><span class="destacado">Contacta con
               RubiqStudio</span>
@@ -92,18 +91,18 @@
     <section class="formulario-contacto contenido-seccion" id="formulario">
       <div class="formulario-contacto-contenedor">
 
-        <h2 class="formulario-contacto-titulo" data-aos="fade-up">Cuéntanos tu <span class="destacado">proyecto</span>
+        <h2 class="formulario-contacto-titulo">Cuéntanos tu <span class="destacado">proyecto</span>
         </h2>
 
         <div class="formulario-contacto-grid">
 
-          <div class="formulario-contacto-texto" data-aos="fade-right">
+          <div class="formulario-contacto-texto">
             <p>Rellena este formulario sin jerga técnica ni complicaciones. Da igual si necesitas estructurar una web
               desde cero para captar clientes o delegar por completo tu servicio de mantenimiento web mensual; te
               daremos una respuesta clara, directa y orientada a la rentabilidad.</p>
           </div>
 
-          <div class="formulario-contacto-tarjeta" data-aos="fade-left">
+          <div class="formulario-contacto-tarjeta">
             <form class="formulario-contacto-form" action="#" method="POST">
 
               <div class="formulario-contacto-campo-grupo">
@@ -155,14 +154,14 @@
     <section class="info-contacto contenido-seccion">
       <div class="info-contacto-contenedor">
 
-        <h2 class="info-contacto-titulo" data-aos="fade-up">Información de contacto directo</h2>
+        <h2 class="info-contacto-titulo">Información de contacto directo</h2>
 
         <p class="info-contacto-intro">Odiamos las agencias fantasma y los tickets de soporte interminables. Si
           prefieres la vía rápida, aquí tienes nuestros canales directos para hablar de tú a tú.</p>
 
         <div class="info-contacto-grid">
 
-          <div class="info-contacto-flashes" data-aos="fade-right">
+          <div class="info-contacto-flashes">
 
 
 
@@ -201,7 +200,7 @@
 
           </div>
 
-          <div class="info-contacto-mapa-wrapper" data-aos="fade-left">
+          <div class="info-contacto-mapa-wrapper">
             <iframe
               class="info-contacto-mapa"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12702.385677607988!2d-4.7793777!3d37.8881761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d4d0c38e8e0f7%3A0x3b1e7c3b1e7c3b1e!2sC%C3%B3rdoba%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
@@ -223,11 +222,11 @@
     <section class="proceso-contacto contenido-seccion">
       <div class="proceso-contacto-contenedor">
 
-        <h2 class="proceso-contacto-titulo" data-aos="fade-up">¿Qué pasará tras enviar <span class="destacado">tu</span>
+        <h2 class="proceso-contacto-titulo">¿Qué pasará tras enviar <span class="destacado">tu</span>
           <span class="destacado">mensaje?</span>
         </h2>
 
-        <div class="proceso-contacto-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="proceso-contacto-grid">
 
           <article class="proceso-contacto-tarjeta">
             <i class="fas fa-clock proceso-contacto-icono"></i>
@@ -311,8 +310,12 @@
     </button>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <script src="js/home.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 
 </html>

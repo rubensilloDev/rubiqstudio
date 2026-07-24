@@ -26,9 +26,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
 
-  <!-- AOS: Animate On Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/agencia.css">
 </head>
@@ -74,7 +71,7 @@
     <section class="hero-agencia">
       <div class="hero-agencia-contenedor">
 
-        <div class="hero-agencia-contenido" data-aos="fade-right">
+        <div class="hero-agencia-contenido">
           <h1 class="hero-agencia-titulo">La agencia de desarrollo web en Córdoba <span class="destacado">enfocada en tu
               rentabilidad</span></h1>
           <p class="hero-agencia-texto">No somos artistas digitales, somos tu socio tecnológico. Construimos ecosistemas
@@ -83,7 +80,7 @@
           <a href="contacto.html" class="boton boton--blanco">Empecemos Hoy</a>
         </div>
 
-        <div class="hero-agencia-imagen-wrapper" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-agencia-imagen-wrapper">
           <div class="hero-agencia-destello"></div>
           <img src="img/img-hero-agencia.png" alt="Desarrollo web a medida en Córdoba" class="hero-agencia-img">
         </div>
@@ -93,7 +90,7 @@
 
     <!-- ===== SECCIÓN 2: MISIÓN ===== -->
     <section class="mision-agencia contenido-seccion" id="mision">
-      <div class="mision-agencia-contenedor" data-aos="fade-up">
+      <div class="mision-agencia-contenedor">
 
         <h2 class="mision-agencia-titulo"><span class="destacado">Nuestra misión</span>: Acabar con las webs que te
           <span class="destacado">hacen perder dinero</span>
@@ -110,13 +107,13 @@
     <section class="presentacion-agencia contenido-seccion" id="ruben">
       <div class="presentacion-agencia-contenedor">
 
-        <div class="presentacion-agencia-imagen-wrapper" data-aos="fade-right">
+        <div class="presentacion-agencia-imagen-wrapper">
           <div class="presentacion-agencia-marco"></div>
           <img src="img/img-ruben.png" alt="Rubén - Desarrollador Web y Fundador de Rubiq"
             class="presentacion-agencia-img presentacion-agencia-img--3d">
         </div>
 
-        <div class="presentacion-agencia-contenido" data-aos="fade-left">
+        <div class="presentacion-agencia-contenido">
           <h2 class="presentacion-agencia-titulo">Rubén: <span class="destacado destacado--subrayado">El desarrollador
               web</span> al frente de tu proyecto</h2>
           <p class="presentacion-agencia-texto">Soy Rubén. Fundé Rubiq al comprobar que, aunque todo negocio necesita
@@ -148,7 +145,7 @@
     <section class="pilares-agencia contenido-seccion" id="pilares">
       <div class="pilares-agencia-contenedor">
 
-        <div class="pilares-agencia-encabezado" data-aos="fade-up">
+        <div class="pilares-agencia-encabezado">
           <h2 class="pilares-agencia-titulo">Los 3 pilares innegociables <span class="destacado">de Rubiq</span></h2>
         </div>
 
@@ -331,11 +328,11 @@
     <section class="cta-final-agencia contenido-seccion" id="contacto">
       <div class="cta-final-agencia-contenedor">
 
-        <div class="cta-final-agencia-imagen-wrapper" data-aos="fade-right">
+        <div class="cta-final-agencia-imagen-wrapper">
           <img src="img/img-cta-agencia.png" alt="Delega la técnica y céntrate en vender" class="cta-final-agencia-img">
         </div>
 
-        <div class="cta-final-agencia-contenido" data-aos="fade-left">
+        <div class="cta-final-agencia-contenido">
           <span class="cta-final-agencia-etiqueta">Tu próximo paso</span>
           <h2 class="cta-final-agencia-titulo">Delega la técnica y céntrate en vender. <span
               class="destacado">Hablemos</span></h2>
@@ -407,7 +404,10 @@
     </button>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <script src="js/home.js"></script>
 
   <script src="js/agencia.js"></script>

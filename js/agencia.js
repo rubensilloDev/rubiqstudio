@@ -1,3 +1,62 @@
+// =========================================
+// FUNCIONALIDAD: Animaciones GSAP con ScrollTrigger
+// =========================================
+
+// Animaciones de entrada al hacer scroll — reemplazan las anteriores animaciones AOS.
+// Cada bloque usa ScrollTrigger para disparar la animación cuando el elemento entra en viewport.
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero: contenido fade-right
+  gsap.from('.hero-agencia-contenido', {
+    scrollTrigger: { trigger: '.hero-agencia-contenido', start: 'top 85%', toggleActions: 'play none none none' },
+    x: -60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // Hero: imagen fade-left con delay
+  gsap.from('.hero-agencia-imagen-wrapper', {
+    scrollTrigger: { trigger: '.hero-agencia-imagen-wrapper', start: 'top 85%', toggleActions: 'play none none none' },
+    x: 60, opacity: 0, duration: 0.8, delay: 0.2, ease: 'power2.out'
+  });
+
+  // Misión: fade-up
+  gsap.from('.mision-agencia-contenedor', {
+    scrollTrigger: { trigger: '.mision-agencia-contenedor', start: 'top 85%', toggleActions: 'play none none none' },
+    y: 60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // Presentación: imagen fade-right
+  gsap.from('.presentacion-agencia-imagen-wrapper', {
+    scrollTrigger: { trigger: '.presentacion-agencia-imagen-wrapper', start: 'top 85%', toggleActions: 'play none none none' },
+    x: -60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // Presentación: contenido fade-left
+  gsap.from('.presentacion-agencia-contenido', {
+    scrollTrigger: { trigger: '.presentacion-agencia-contenido', start: 'top 85%', toggleActions: 'play none none none' },
+    x: 60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // Pilares: encabezado fade-up (solo el encabezado, no las tarjetas individuales)
+  gsap.from('.pilares-agencia-encabezado', {
+    scrollTrigger: { trigger: '.pilares-agencia-encabezado', start: 'top 85%', toggleActions: 'play none none none' },
+    y: 60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // CTA final: imagen fade-right
+  gsap.from('.cta-final-agencia-imagen-wrapper', {
+    scrollTrigger: { trigger: '.cta-final-agencia-imagen-wrapper', start: 'top 85%', toggleActions: 'play none none none' },
+    x: -60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+
+  // CTA final: contenido fade-left
+  gsap.from('.cta-final-agencia-contenido', {
+    scrollTrigger: { trigger: '.cta-final-agencia-contenido', start: 'top 85%', toggleActions: 'play none none none' },
+    x: 60, opacity: 0, duration: 0.8, ease: 'power2.out'
+  });
+});
+
 (function () {
 
   /* ================================================
@@ -128,7 +187,7 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', onReady);
   } else {
-    /* DOM ya listo — pequeño delay para que AOS no desplace el layout */
+    /* DOM ya listo — pequeño delay para asegurar render */
     setTimeout(onReady, 80);
   }
 

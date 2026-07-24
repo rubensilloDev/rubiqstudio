@@ -26,9 +26,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </noscript>
 
-  <!-- AOS: Animate On Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/legales.css">
 </head>
@@ -72,7 +69,7 @@
 
     <!-- ===== HERO POLÍTICA DE PRIVACIDAD ===== -->
     <section class="legal-hero">
-      <div class="legal-hero-contenedor" data-aos="fade-up">
+      <div class="legal-hero-contenedor">
         <h1 class="legal-hero-titulo">Política de Privacidad</h1>
       </div>
     </section>
@@ -81,7 +78,7 @@
     <div class="legal-contenido">
 
       <!-- Sección 1: Responsable del Tratamiento -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">1. Responsable del Tratamiento</h2>
         <p>
           De conformidad con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica
@@ -95,7 +92,7 @@
       </section>
 
       <!-- Sección 2: Datos que Recopilamos -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">2. Datos que Recopilamos</h2>
         <p>En RubiqStudio recopilamos los siguientes datos personales a través de nuestro sitio web:</p>
         <ul class="legal-seccion-lista">
@@ -107,7 +104,7 @@
       </section>
 
       <!-- Sección 3: Finalidad del Tratamiento -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">3. Finalidad del Tratamiento</h2>
         <p>Los datos personales recopilados se tratan con las siguientes finalidades:</p>
         <ul class="legal-seccion-lista">
@@ -118,7 +115,7 @@
       </section>
 
       <!-- Sección 4: Base Legal -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">4. Base Legal</h2>
         <p>El tratamiento de sus datos se basa en las siguientes bases legales:</p>
         <ul class="legal-seccion-lista">
@@ -129,7 +126,7 @@
       </section>
 
       <!-- Sección 5: Conservación de los Datos -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">5. Conservación de los Datos</h2>
         <p>
           Los datos personales se conservarán mientras exista una relación contractual o de prestación
@@ -139,7 +136,7 @@
       </section>
 
       <!-- Sección 6: Derechos del Interesado -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">6. Derechos del Interesado</h2>
         <p>El usuario puede ejercer los siguientes derechos reconocidos por el RGPD:</p>
         <div class="legal-derechos-grid">
@@ -153,7 +150,7 @@
       </section>
 
       <!-- Sección 7: Cómo Ejercer sus Derechos -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">7. Cómo Ejercer sus Derechos</h2>
         <p>
           El usuario puede ejercer sus derechos enviando un email a
@@ -164,7 +161,7 @@
       </section>
 
       <!-- Sección 8: Destinatarios de los Datos -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">8. Destinatarios de los Datos</h2>
         <p>Los datos personales podrán ser comunicados a los siguientes destinatarios:</p>
         <ul class="legal-seccion-lista">
@@ -175,7 +172,7 @@
       </section>
 
       <!-- Sección 9: Cookies -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">9. Cookies</h2>
         <p>
           Este sitio web utiliza cookies para mejorar la experiencia del usuario. Para más información
@@ -185,7 +182,7 @@
       </section>
 
       <!-- Sección 10: Modificaciones -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">10. Modificaciones</h2>
         <p>
           RubiqStudio se reserva el derecho de modificar esta política de privacidad para adaptarla
@@ -195,7 +192,7 @@
       </section>
 
       <!-- Sección 11: Legislación Aplicable -->
-      <section class="legal-seccion" data-aos="fade-up">
+      <section class="legal-seccion">
         <h2 class="legal-seccion-titulo">11. Legislación Aplicable</h2>
         <p>
           La presente política de privacidad se rige por el Reglamento General de Protección de Datos
@@ -263,8 +260,12 @@
     </button>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/home.js"></script>
+
+  <!-- GSAP + ScrollTrigger para animaciones de scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/politica-privacidad.js"></script>
 </body>
 
 </html>

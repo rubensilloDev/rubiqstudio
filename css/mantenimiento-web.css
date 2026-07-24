@@ -513,19 +513,6 @@
     margin-top: var(--spacing-lg);
   }
 
-  /* Padding lateral 0 para contenedores padres en mobile */
-  .por-que,
-  .escudo-tecnico,
-  .precios-mantenimiento,
-  .riesgos,
-  .por-que-contenedor,
-  .escudo-tecnico-contenedor,
-  .precios-mantenimiento-contenedor,
-  .riesgos-contenedor {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   /* Por qué */
   .por-que-titulo {
     font-size: var(--text-sizes-h2);
@@ -542,7 +529,6 @@
 
   /* Escudo técnico: pasa a 1 columna */
   .escudo-tecnico-contenido {
-    padding: 0 20px;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
@@ -564,7 +550,6 @@
 
   /* Precios: pasa a 1 columna, tarjetas a ancho completo */
   .precios-mantenimiento-tarjetas {
-    padding: 0 20px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
@@ -585,7 +570,6 @@
 
   /* Riesgos: pasa a 1 columna */
   .riesgos-tarjetas {
-    padding: 0 20px;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
@@ -724,8 +708,7 @@
     grid-template-columns: 1fr;
     text-align: center;
     gap: var(--spacing-xl);
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 20px;
   }
 
   .cta-mantenimiento-texto {
