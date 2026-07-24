@@ -11,7 +11,7 @@
   padding: 150px 45px;
   position: relative;
   overflow: hidden;
-  background: transparent;
+  background: linear-gradient(180deg, var(--paleta-de-colores-azul-marino) 10%, transparent 100%);
 }
 
 /* Contenedor que centra el contenido horizontalmente */
