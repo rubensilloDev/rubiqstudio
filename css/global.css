@@ -309,7 +309,7 @@ h3 {
 
 /* Clase para secciones con padding estándar y ancho máximo */
 .contenido-seccion {
-  padding: 96px 40px;
+  padding: 65px 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -851,8 +851,12 @@ h3 {
     color: var(--paleta-de-colores-azul-marino);
   }
 
-  .navegacion-enlaces a:hover:not(.boton)::before {
+  .navegacion-enlaces>li>a:hover:not(.boton)::before {
     width: 0%;
+  }
+
+  .navegacion-enlaces>li>a:hover {
+    color: inherit;
   }
 
   .navegacion-hamburguesa {

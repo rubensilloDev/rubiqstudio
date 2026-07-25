@@ -862,13 +862,13 @@
 @media (max-width: 764px) {
 
   .cta-final-agencia {
-    margin: 50px 16px;
-    border-radius: 24px;
+    margin: 30px 16px;
+    border-radius: 20px;
   }
 
   .cta-final-agencia-contenedor {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
   }
 
   .cta-final-agencia-contenido {
@@ -877,12 +877,8 @@
   }
 
   .cta-final-agencia-imagen-wrapper {
-    max-width: 75%;
+    max-width: 100%;
     margin: 0 auto;
-  }
-
-  .cta-final-agencia-img {
-    transform: translateY(-50px);
   }
 
   /* Tarjetas flotantes en móvil — se ocultan porque no caben */

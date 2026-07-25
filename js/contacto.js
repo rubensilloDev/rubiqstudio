@@ -138,4 +138,43 @@
     stagger: 0.1
   });
 
+  // =========================================
+  // ENVÍO DE FORMULARIO A WHATSAPP
+  // =========================================
+  const formContacto = document.getElementById('form-contacto-whatsapp');
+  if (formContacto) {
+    formContacto.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Obtener y limpiar los valores ingresados por el usuario
+      const nombre = document.getElementById('contacto-nombre').value.trim();
+      const email = document.getElementById('contacto-email').value.trim();
+      const telefono = document.getElementById('contacto-telefono').value.trim();
+      const objetivo = document.getElementById('contacto-objetivo').value.trim();
+
+      // Construir la estructura del mensaje de forma natural
+      let mensaje = `Hola Rubén, soy ${nombre}. Te escribo desde el formulario de la web de RubiqStudio.\n\n`;
+      mensaje += `Mis datos de contacto son:\n`;
+      mensaje += `- Email: ${email}\n`;
+      mensaje += `- Teléfono: ${telefono}`;
+
+      // Incluir la sección del proyecto únicamente si contiene texto
+      if (objetivo) {
+        mensaje += `\n\nTe cuento un poco sobre mi proyecto:\n${objetivo}`;
+      }
+
+      // Despedida final natural al cierre del mensaje
+      mensaje += `\n\n¡Un saludo!`;
+
+      // Número de WhatsApp destino de la agencia
+      const numeroTelefono = '34692037526';
+
+      // Codificar el texto para la URL de la API de WhatsApp
+      const mensajeCodificado = encodeURIComponent(mensaje);
+
+      // Redirigir al chat de WhatsApp en una nueva pestaña
+      window.open(`https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`, '_blank');
+    });
+  }
+
 })();

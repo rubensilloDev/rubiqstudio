@@ -165,30 +165,34 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ===== SECCIÓN FAQ =====
-  gsap.from('.faq-titulo', {
-    scrollTrigger: {
-      trigger: '.faq-titulo',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    },
-    y: 60,
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power2.out'
-  });
+  // NOTA: en desarrollo-web.js ya se animan estos elementos.
+  // Solo animamos si NO existe la sección hero-desarrollo (página de servicios).
+  if (!document.querySelector('.hero-desarrollo')) {
+    gsap.from('.faq-titulo', {
+      scrollTrigger: {
+        trigger: '.faq-titulo',
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
 
-  gsap.from('.faq-intro', {
-    scrollTrigger: {
-      trigger: '.faq-intro',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    },
-    y: 60,
-    opacity: 0,
-    duration: 0.8,
-    delay: 0.1,
-    ease: 'power2.out'
-  });
+    gsap.from('.faq-intro', {
+      scrollTrigger: {
+        trigger: '.faq-intro',
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.1,
+      ease: 'power2.out'
+    });
+  }
 
   // ===== SECCIÓN CTA FINAL =====
   gsap.from('.cta-contenido', {

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /openspec/
+Disallow: /SKILLS/
+Disallow: /Ficheros Proyecto/
+
+Sitemap: https://rubiqstudio.com/sitemap.xml
