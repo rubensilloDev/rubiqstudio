@@ -818,6 +818,15 @@
   border-radius: 16px;
 }
 
+/* =========================================
+   TARJETAS FLOTANTES CTA — ALREDEDOR DE IMAGEN
+   ========================================= */
+
+/* Base de cada tarjeta flotante — Ocultadas por petición */
+.cta-flotante {
+  display: none;
+}
+
 /* Columna derecha — contenido textual */
 .cta-final-agencia-contenido {
   display: flex;
@@ -874,5 +883,10 @@
 
   .cta-final-agencia-img {
     transform: translateY(-50px);
+  }
+
+  /* Tarjetas flotantes en móvil — se ocultan porque no caben */
+  .cta-flotante {
+    display: none;
   }
 }

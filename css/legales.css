@@ -1,5 +1,5 @@
 /* =========================================
-   LEGALES - PÁGINAS LEGALES
+   LEGALES - PÁGINAS LEGALES (RUBIQ STUDIO)
    ========================================= */
 
 /* =========================================
@@ -7,26 +7,26 @@
    ========================================= */
 
 .legal-hero {
-  padding: 200px 40px 100px;
+  padding: 180px 40px 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: transparent;
+  background: radial-gradient(circle at 50% 30%, rgba(45, 212, 191, 0.12) 0%, rgba(10, 25, 47, 0) 70%);
 }
 
-/* Destello decorativo con blur */
+/* Destello decorativo de fondo con blur */
 .legal-hero::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  height: 350px;
-  background: var(--paleta-de-colores-azul-normal);
+  width: 700px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.2) 0%, rgba(2, 132, 199, 0.15) 50%, transparent 80%);
   border-radius: 9999px;
-  filter: blur(120px);
-  opacity: 0.55;
+  filter: blur(90px);
+  opacity: 0.75;
   z-index: 0;
   pointer-events: none;
 }
@@ -38,81 +38,92 @@
   z-index: 1;
 }
 
+/* Título principal con degradado metálico */
 .legal-hero-titulo {
   font-family: 'Anton', sans-serif;
-  font-size: var(--text-sizes-titulo-principal);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   text-transform: uppercase;
   color: var(--paleta-de-colores-neutral-bg);
-  letter-spacing: 3px;
-  line-height: 90%;
-  text-shadow:
-    0 2px 20px rgba(0, 0, 0, 0.3),
-    0 4px 40px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 60%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  line-height: 1.1;
   position: relative;
   display: inline-block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Línea decorativa turquesa bajo el título del hero */
+/* Línea decorativa turquesa bajo el título */
 .legal-hero-titulo::after {
   content: "";
   display: block;
-  width: 100px;
+  width: 80px;
   height: 4px;
-  background: var(--degradado-azul-turquesa);
+  background: linear-gradient(90deg, var(--paleta-de-colores-accent) 0%, #0284C7 100%);
   border-radius: 4px;
   margin: var(--spacing-md) auto 0;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.5);
 }
 
 /* =========================================
-   CONTENIDO PRINCIPAL
+   CONTENEDOR PRINCIPAL GLASSMORPHIC ÚNICO
    ========================================= */
 
 .legal-contenido {
-  padding: 0 40px 96px;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 48px 44px;
+  max-width: 920px;
+  margin: 0 auto 96px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.035) 0%, rgba(15, 23, 42, 0.6) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+/* Destello sutil en el borde superior del contenedor principal */
+.legal-contenido::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.4), transparent);
 }
 
 /* =========================================
-   SECCIONES - TARJETAS GLASSMORPHISM
+   SECCIONES DENTRO DEL CONTENEDOR ÚNICO
    ========================================= */
 
 .legal-seccion {
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
-  padding: var(--spacing-lg) var(--spacing-xl);
-  margin-bottom: var(--spacing-lg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  box-shadow: none;
+  backdrop-filter: none;
   position: relative;
 }
 
-.legal-seccion:hover {
-  border-color: rgba(45, 212, 191, 0.2);
-  box-shadow: 0 8px 40px rgba(45, 212, 191, 0.06);
-  transform: translateY(-2px);
+.legal-seccion:last-child {
+  margin-bottom: 0;
 }
 
-/* Separador degradado entre secciones */
-.legal-seccion::after {
+/* Separador elegante entre secciones internas */
+.legal-seccion:not(:last-child)::after {
   content: "";
   display: block;
-  width: 60%;
+  width: 100%;
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(45, 212, 191, 0.25),
-    transparent
-  );
-  margin: var(--spacing-xl) auto 0;
-}
-
-/* Ocultar separador en la última sección */
-.legal-seccion:last-child::after {
-  display: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin-top: 40px;
 }
 
 /* =========================================
@@ -122,26 +133,29 @@
 .legal-seccion-titulo {
   font-family: 'Anton', sans-serif;
   font-size: var(--text-sizes-h2);
-  color: var(--paleta-de-colores-neutral-bg);
+  color: #F8FAFC;
   text-transform: uppercase;
-  line-height: 90%;
+  line-height: 1.15;
+  margin-top: 0;
   margin-bottom: var(--spacing-md);
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
   position: relative;
-  padding-left: var(--spacing-md);
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
 }
 
-/* Barra lateral turquesa en los títulos */
+/* Barra lateral neón en los títulos */
 .legal-seccion-titulo::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 2px;
   width: 5px;
-  height: calc(100% - 8px);
-  background: var(--degradado-azul-turquesa);
+  height: calc(100% - 4px);
+  background: linear-gradient(180deg, var(--paleta-de-colores-accent) 0%, #0284C7 100%);
   border-radius: 4px;
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
 }
 
 /* =========================================
@@ -149,14 +163,15 @@
    ========================================= */
 
 .legal-seccion-subtitulo {
-  font-family: 'Anton', sans-serif;
-  font-size: var(--text-sizes-heading-3);
-  color: var(--paleta-de-colores-neutral-bg);
-  text-transform: uppercase;
-  line-height: 90%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  text-transform: none;
+  line-height: 1.3;
   margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.3px;
   position: relative;
   display: inline-block;
 }
@@ -164,22 +179,23 @@
 .legal-seccion-subtitulo::after {
   content: "";
   display: block;
-  width: 50%;
-  height: 3px;
-  background: var(--degradado-azul-turquesa);
-  border-radius: 4px;
-  margin-top: var(--spacing-xs);
+  width: 36px;
+  height: 2px;
+  background: var(--paleta-de-colores-accent);
+  border-radius: 2px;
+  margin-top: 6px;
+  box-shadow: 0 0 6px rgba(45, 212, 191, 0.4);
 }
 
 /* =========================================
-   PÁRRAFOS
+   PÁRRAFOS Y TEXTO
    ========================================= */
 
 .legal-seccion p,
 .legal-seccion-texto {
-  font-size: var(--text-sizes-text-regular);
-  line-height: 1.75;
-  color: var(--color-texto);
+  font-size: 15px;
+  line-height: 1.8;
+  color: #CBD5E1;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -187,55 +203,71 @@
   margin-bottom: 0;
 }
 
-/* Texto en negrita dentro de listas */
-.legal-seccion-lista strong {
-  color: var(--paleta-de-colores-neutral-bg);
+.legal-seccion strong,
+.legal-seccion-texto strong {
+  color: #F8FAFC;
   font-weight: 600;
 }
 
 /* =========================================
-   LISTAS - TARJETAS INDIVIDUALES
+   LISTAS - TARJETAS INTERACTIVAS
    ========================================= */
 
 .legal-seccion-lista {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 10px;
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
+  padding-left: 0;
 }
 
-/* Cada li como mini tarjeta */
+/* Cada ítem como tarjeta interactiva */
 .legal-seccion-lista li {
-  font-size: var(--text-sizes-text-regular);
-  line-height: 1.6;
-  color: var(--color-texto);
-  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-xl);
+  font-size: 14px;
+  line-height: 1.65;
+  color: #CBD5E1;
+  padding: 12px 16px 12px 42px;
   position: relative;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(15, 23, 42, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .legal-seccion-lista li:hover {
-  background: rgba(45, 212, 191, 0.05);
-  border-color: rgba(45, 212, 191, 0.18);
-  transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.05);
+  background: rgba(45, 212, 191, 0.06);
+  border-color: rgba(45, 212, 191, 0.25);
+  transform: translateX(6px);
+  color: #F8FAFC;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Check de Font Awesome como bullet */
+/* Icono de check interactivo */
 .legal-seccion-lista li::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f00c";
   color: var(--paleta-de-colores-accent);
   position: absolute;
-  left: var(--spacing-sm);
-  top: var(--spacing-sm);
-  font-size: var(--text-sizes-text-small);
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(45, 212, 191, 0.12);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.legal-seccion-lista li:hover::before {
+  background: var(--paleta-de-colores-accent);
+  color: #0A192F;
 }
 
 /* =========================================
@@ -244,55 +276,47 @@
 
 .legal-derechos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
   margin-top: var(--spacing-lg);
 }
 
-/* Cada derecho como tarjeta con degradado */
+/* Tarjeta individual de derecho */
 .legal-derecho-item {
-  font-size: var(--text-sizes-text-regular);
+  font-size: 14px;
   line-height: 1.5;
-  color: var(--color-texto);
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-xl);
+  color: #E2E8F0;
+  padding: 16px 18px 16px 46px;
   position: relative;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.06) 0%,
-    rgba(10, 25, 47, 0.4) 100%
-  );
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.7) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: all 0.35s ease;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
 }
 
 .legal-derecho-item:hover {
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-3px) scale(1.01);
   border-color: rgba(45, 212, 191, 0.35);
-  box-shadow: 0 10px 30px rgba(45, 212, 191, 0.1);
-  background: linear-gradient(
-    145deg,
-    rgba(45, 212, 191, 0.08) 0%,
-    rgba(10, 25, 47, 0.5) 100%
-  );
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(45, 212, 191, 0.15);
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(15, 23, 42, 0.85) 100%);
+  color: #F8FAFC;
 }
 
-/* Check turquesa como icono de derecho */
+/* Badge con icono de protección */
 .legal-derecho-item::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f058";
   color: var(--paleta-de-colores-accent);
   position: absolute;
-  left: var(--spacing-sm);
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 /* =========================================
@@ -307,196 +331,102 @@
   padding: 2px 4px;
   border-radius: 4px;
   transition: color 0.3s ease, background 0.3s ease;
-}
-
-/* Línea animada bajo los enlaces */
-.legal-contenido a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 4px;
-  width: calc(100% - 8px);
-  height: 2px;
-  background: var(--paleta-de-colores-accent);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.35s ease;
+  border-bottom: 1px dotted rgba(45, 212, 191, 0.4);
 }
 
 .legal-contenido a:hover {
-  background: rgba(45, 212, 191, 0.1);
+  background: rgba(45, 212, 191, 0.12);
   color: #5EEAD4;
+  border-bottom-color: #5EEAD4;
+  text-shadow: 0 0 8px rgba(45, 212, 191, 0.3);
 }
 
-.legal-contenido a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* Enlaces externos (target _blank) — icono de salida */
+/* Enlaces externos (target _blank) */
 .legal-contenido a[target="_blank"]::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f35d";
-  font-size: 0.7rem;
-  margin-right: 4px;
+  font-size: 0.75rem;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
 /* =========================================
-   RESPONSIVE - 768px
+   RESPONSIVE - TABLET (768px)
    ========================================= */
 
 @media (max-width: 768px) {
 
-  /* Hero */
   .legal-hero {
-    padding: 160px 20px 60px;
-  }
-
-  .legal-hero-titulo {
-    font-size: var(--text-sizes-titulo-principal);
-    letter-spacing: 2px;
+    padding: 150px 24px 60px;
   }
 
   .legal-hero-titulo::after {
-    width: 70px;
+    width: 60px;
     height: 3px;
   }
 
-  /* Contenido */
   .legal-contenido {
-    padding: 0 20px 64px;
+    padding: 32px 24px;
+    border-radius: 20px;
+    margin-bottom: 64px;
   }
 
-  /* Secciones */
   .legal-seccion {
-    padding: var(--spacing-md) var(--spacing-md);
-    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+
+  .legal-seccion:not(:last-child)::after {
+    margin-top: 32px;
   }
 
   .legal-seccion-titulo {
-    font-size: var(--text-sizes-h2);
-    padding-left: var(--spacing-sm);
+    font-size: calc(var(--text-sizes-h2) * 0.9);
+    padding-left: 14px;
   }
 
-  .legal-seccion-titulo::before {
-    width: 4px;
-    top: 2px;
-    height: calc(100% - 4px);
-  }
-
-  /* Subtítulos */
-  .legal-seccion-subtitulo {
-    font-size: var(--text-sizes-heading-3);
-  }
-
-  /* Grid derechos a 1 columna */
   .legal-derechos-grid {
     grid-template-columns: 1fr;
-  }
-
-  .legal-derecho-item {
-    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-xl);
-  }
-
-  /* Listas */
-  .legal-seccion-lista li {
-    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-xl);
-  }
-
-  .legal-seccion-lista li::before {
-    top: var(--spacing-xs);
   }
 }
 
 /* =========================================
-   RESPONSIVE - 480px
+   RESPONSIVE - MÓVIL (480px)
    ========================================= */
 
 @media (max-width: 480px) {
 
-  /* Hero */
   .legal-hero {
-    padding: 140px 16px 40px;
+    padding: 130px 16px 40px;
   }
 
-  .legal-hero-titulo {
-    letter-spacing: 1px;
-  }
-
-  .legal-hero-titulo::after {
-    width: 50px;
-    height: 3px;
-    margin-top: var(--spacing-sm);
-  }
-
-  /* Contenido */
   .legal-contenido {
-    padding: 0 16px 48px;
+    padding: 24px 18px;
+    border-radius: 16px;
+    margin-bottom: 48px;
   }
 
-  /* Secciones */
   .legal-seccion {
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 14px;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 24px;
   }
 
-  .legal-seccion::after {
-    width: 80%;
-    margin-top: var(--spacing-lg);
+  .legal-seccion:not(:last-child)::after {
+    margin-top: 24px;
   }
 
-  .legal-seccion-titulo {
-    font-size: var(--text-sizes-h2);
-    padding-left: var(--spacing-xs);
-  }
-
-  .legal-seccion-titulo::before {
-    width: 3px;
-  }
-
-  .legal-seccion-subtitulo {
-    font-size: var(--text-sizes-heading-3);
-  }
-
-  /* Ajustes de párrafos para mejor lectura */
   .legal-seccion p,
   .legal-seccion-texto {
-    font-size: var(--text-sizes-text-regular);
+    font-size: 14px;
     line-height: 1.7;
   }
 
-  /* Listas más compactas */
-  .legal-seccion-lista {
-    gap: 6px;
-  }
-
   .legal-seccion-lista li {
-    font-size: var(--text-sizes-text-regular);
-    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-lg);
+    font-size: 13px;
+    padding: 10px 14px 10px 38px;
   }
 
-  .legal-seccion-lista li::before {
-    left: 8px;
-    font-size: var(--text-sizes-text-tiny);
-  }
-
-  /* Grid derechos compacto */
   .legal-derecho-item {
-    font-size: var(--text-sizes-text-regular);
-    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-lg);
-    border-radius: 12px;
-  }
-
-  .legal-derecho-item::before {
-    left: 10px;
-    font-size: 1rem;
-  }
-
-  /* Enlaces */
-  .legal-contenido a {
-    font-size: var(--text-sizes-text-regular);
+    font-size: 13px;
+    padding: 14px 16px 14px 40px;
   }
 }
