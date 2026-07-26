@@ -4,4 +4,4 @@ Disallow: /openspec/
 Disallow: /SKILLS/
 Disallow: /Ficheros Proyecto/
 
-Sitemap: https://rubiqstudio.com/sitemap.xml
+Sitemap: https://rubiqstudio.vercel.app/sitemap.xml
