@@ -1,4 +1,4 @@
-# Design: RubiqStudio Home
+﻿# Design: Brummaa Home
 
 ## Technical Approach
 
@@ -66,7 +66,7 @@ Desarrollo de la web/
 ├── js/
 │   ├── global.js              # Shared: scroll header, hamburger toggle, dropdown
 │   └── index.js               # Home-specific: FAQ accordion, AOS init
-└── img/                       # Images (logo-rubiqstudio.png, mockups, etc.)
+└── img/                       # Images (logo-brummaa.png, mockups, etc.)
 ```
 
 ## File Changes

@@ -1,8 +1,8 @@
-# Proposal: rubiqstudio-home
+﻿# Proposal: brummaa-home
 
 ## Intent
 
-Build the Home page (index.html) for RubiqStudio — a web development agency in Córdoba, Spain — as a B2B conversion funnel. Every section drives visitors toward WhatsApp contact (+34 692 03 75 26). The page must communicate authority, transparency, and a sales-engine approach vs. "pretty websites."
+Build the Home page (index.html) for Brummaa — a web development agency in Córdoba, Spain — as a B2B conversion funnel. Every section drives visitors toward WhatsApp contact (+34 692 03 75 26). The page must communicate authority, transparency, and a sales-engine approach vs. "pretty websites."
 
 ## Scope
 

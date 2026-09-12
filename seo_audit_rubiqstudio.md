@@ -1,7 +1,7 @@
-# Auditoría SEO Completa — Rubiq Studio
+﻿# Auditoría SEO Completa — Brummaa
 
 **Fecha**: 25 de julio de 2026
-**Sitio**: rubiqstudio.com (análisis del código fuente del proyecto)
+**Sitio**: brummaa.com (análisis del código fuente del proyecto)
 **Tipo de sitio**: Agencia de desarrollo web / negocio local (Córdoba, España)
 **Páginas analizadas**: 8 (index, agencia, desarrollo-web-a-medida, mantenimiento-web-mensual, contacto, aviso-legal, politica-privacidad, politica-cookies)
 
@@ -52,7 +52,7 @@ Disallow: /openspec/
 Disallow: /SKILLS/
 Disallow: /Ficheros Proyecto/
 
-Sitemap: https://rubiqstudio.com/sitemap.xml
+Sitemap: https://brummaa.com/sitemap.xml
 ```
 
 **❌ P2 — Sin `sitemap.xml`**
@@ -61,7 +61,7 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 
 **❌ P3 — Sin etiquetas `canonical`**
 - **Impacto**: Riesgo de contenido duplicado si el sitio es accesible con/sin `www`, con/sin trailing slash, etc.
-- **Fix**: Añadir `<link rel="canonical" href="https://rubiqstudio.com/pagina.html">` en el `<head>` de CADA página.
+- **Fix**: Añadir `<link rel="canonical" href="https://brummaa.com/pagina.html">` en el `<head>` de CADA página.
 
 ---
 
@@ -80,7 +80,7 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 #### Problemas detectados
 
 **❌ P4 — CSS fantasma: `fondo-animado.css`**
-- **Evidencia**: [index.html:31](file:///c:/Users/usuario/Desktop/RubiqStudio/index.html#L31) → `<link rel="stylesheet" href="css/fondo-animado.css">`
+- **Evidencia**: [index.html:31](file:///c:/Users/usuario/Desktop/Brummaa/index.html#L31) → `<link rel="stylesheet" href="css/fondo-animado.css">`
 - **Archivo NO EXISTE** en `/css/`. Genera un error 404 silencioso en cada carga de la home.
 - **Impacto**: Error 404 de recurso, bloquea brevemente el renderizado, afecta TTFB percibido.
 - **Fix**: Crear el archivo o eliminar la referencia si los estilos están integrados en otro CSS.
@@ -92,18 +92,18 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 
 **⚠️ P6 — Imágenes sin dimensiones explícitas (CLS)**
 - Las imágenes de hero, mockups y CTA no tienen `width`/`height` en el HTML.
-- **Evidencia**: [agencia.html:85](file:///c:/Users/usuario/Desktop/RubiqStudio/agencia.html#L85), [desarrollo-web-a-medida.html:86](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L86), [mantenimiento-web-mensual.html:84](file:///c:/Users/usuario/Desktop/RubiqStudio/mantenimiento-web-mensual.html#L84), entre otras.
+- **Evidencia**: [agencia.html:85](file:///c:/Users/usuario/Desktop/Brummaa/agencia.html#L85), [desarrollo-web-a-medida.html:86](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L86), [mantenimiento-web-mensual.html:84](file:///c:/Users/usuario/Desktop/Brummaa/mantenimiento-web-mensual.html#L84), entre otras.
 - **Impacto**: Contribuye directamente al CLS (Cumulative Layout Shift). Si la imagen tarda en cargar, el contenido salta.
 - **Fix**: Añadir `width` y `height` reales a cada `<img>` para que el navegador reserve espacio.
 
 **⚠️ P7 — Formatos de imagen inconsistentes**
-- Logo principal: `logo-rubiqstudio.png` → **391 KB** para un logo de 70×70px. Excesivo.
+- Logo principal: `logo-brummaa.png` → **391 KB** para un logo de 70×70px. Excesivo.
 - Imágenes hero en JPEG sin comprimir: `img-hero-ebo-estilistas.jpeg` (373 KB), `img-hero-mantenimiento-web-medida.png` (381 KB), `mockup-mobile-mantenimiento-web.png` (420 KB).
 - Otras imágenes ya están en WebP optimizado (~70-80 KB). Bien.
 - **Fix**: Convertir TODAS las imágenes a WebP. El logo debería ser SVG (vectorial, <5 KB).
 
 **❌ P8 — Doble barra en ruta de imagen**
-- [mantenimiento-web-mensual.html:84](file:///c:/Users/usuario/Desktop/RubiqStudio/mantenimiento-web-mensual.html#L84): `src="img//img-hero-mantenimiento-web-medida.png"` (doble `//`).
+- [mantenimiento-web-mensual.html:84](file:///c:/Users/usuario/Desktop/Brummaa/mantenimiento-web-mensual.html#L84): `src="img//img-hero-mantenimiento-web-medida.png"` (doble `//`).
 - Funciona en la mayoría de servidores, pero es un error que puede causar problemas en algunos hosting.
 - **Fix**: Cambiar a `src="img/img-hero-mantenimiento-web-medida.png"`.
 
@@ -154,21 +154,21 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 
 | Página | Title | Chars | Evaluación |
 |---|---|---|---|
-| index.html | `Rubiq Studio — Diseño web en Córdoba para captar más clientes` | 62 | ✅ Excelente, keyword al inicio, CTA implícito |
-| agencia.html | `Agencia — Rubiq Studio: Tu socio tecnológico en Córdoba` | 56 | ✅ Bien |
-| desarrollo-web-a-medida.html | `Rubiq Studio — Desarrollo web a medida en Córdoba \| Webs orientadas a la conversión de clientes potenciales.` | **110** | ❌ **Demasiado largo**, truncado en SERP |
-| mantenimiento-web-mensual.html | `Rubiq Studio — Mantenimiento web mensual en Córdoba \| Protege tu sitio web` | 76 | ⚠️ Algo largo (>60), riesgo de truncado |
-| contacto.html | `Contacto — Rubiq Studio: Hablemos de tu negocio` | 49 | ✅ Bien |
-| aviso-legal.html | `Aviso Legal — RubiqStudio` | 26 | ⚠️ Muy corto, oportunidad desaprovechada |
-| politica-privacidad.html | `Política de Privacidad — RubiqStudio` | 37 | ✅ Aceptable para legal |
-| politica-cookies.html | `Política de Cookies — RubiqStudio` | 34 | ✅ Aceptable para legal |
+| index.html | `Brummaa — Diseño web en Córdoba para captar más clientes` | 62 | ✅ Excelente, keyword al inicio, CTA implícito |
+| agencia.html | `Agencia — Brummaa: Tu socio tecnológico en Córdoba` | 56 | ✅ Bien |
+| desarrollo-web-a-medida.html | `Brummaa — Desarrollo web a medida en Córdoba \| Webs orientadas a la conversión de clientes potenciales.` | **110** | ❌ **Demasiado largo**, truncado en SERP |
+| mantenimiento-web-mensual.html | `Brummaa — Mantenimiento web mensual en Córdoba \| Protege tu sitio web` | 76 | ⚠️ Algo largo (>60), riesgo de truncado |
+| contacto.html | `Contacto — Brummaa: Hablemos de tu negocio` | 49 | ✅ Bien |
+| aviso-legal.html | `Aviso Legal — Brummaa` | 26 | ⚠️ Muy corto, oportunidad desaprovechada |
+| politica-privacidad.html | `Política de Privacidad — Brummaa` | 37 | ✅ Aceptable para legal |
+| politica-cookies.html | `Política de Cookies — Brummaa` | 34 | ✅ Aceptable para legal |
 
 **❌ P9 — Title de desarrollo-web demasiado largo**
-- **Fix**: Acortar a ~60 chars: `Desarrollo web a medida en Córdoba — Rubiq Studio`
+- **Fix**: Acortar a ~60 chars: `Desarrollo web a medida en Córdoba — Brummaa`
 
 **⚠️ P10 — Inconsistencia en marca**
-- Unas páginas usan "Rubiq Studio" (con espacio) y otras "RubiqStudio" (sin espacio).
-- **Fix**: Unificar a "Rubiq Studio" en todos los titles.
+- Unas páginas usan "Brummaa" (con espacio) y otras "Brummaa" (sin espacio).
+- **Fix**: Unificar a "Brummaa" en todos los titles.
 
 ---
 
@@ -199,13 +199,13 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 | agencia.html | `La agencia de desarrollo web en Córdoba enfocada en tu rentabilidad` | ✅ Excelente |
 | desarrollo-web.html | `Desarrollo web a medida en Córdoba para multiplicar tus clientes` | ✅ Excelente |
 | mantenimiento.html | `Mantenimiento web mensual para estar siempre visible` | ✅ Bien |
-| contacto.html | `Hablemos de tu negocio. Contacta con RubiqStudio` | ✅ Bien |
+| contacto.html | `Hablemos de tu negocio. Contacta con Brummaa` | ✅ Bien |
 | aviso-legal.html | `Aviso Legal` | ✅ Correcto |
 | politica-privacidad.html | `Política de Privacidad` | ✅ Correcto |
 | politica-cookies.html | `Política de Cookies` | ✅ Correcto |
 
 **⚠️ P11 — H1/H2 invertidos en la home**
-- [index.html:84-86](file:///c:/Users/usuario/Desktop/RubiqStudio/index.html#L84-L86): El `<h1>` es el **pretítulo** visual ("Diseño web en Córdoba") y el `<h2>` es el **título grande** visual ("webs a medida que generan clientes en automático").
+- [index.html:84-86](file:///c:/Users/usuario/Desktop/Brummaa/index.html#L84-L86): El `<h1>` es el **pretítulo** visual ("Diseño web en Córdoba") y el `<h2>` es el **título grande** visual ("webs a medida que generan clientes en automático").
 - El H1 debería ser el texto visualmente más prominente y contener la keyword principal completa.
 - **Fix**: Intercambiar — hacer `<h1>` el texto principal del hero y `<h2>` (o `<p>`) el pretítulo. O bien unificar en un solo H1.
 
@@ -218,7 +218,7 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 > 
 > No hay ningún `<script type="application/ld+json">` en ninguna página. Esto es probablemente el **hallazgo más impactante** de toda la auditoría.
 
-**Lo que DEBERÍA tener Rubiq Studio:**
+**Lo que DEBERÍA tener Brummaa:**
 
 | Schema | Página | Beneficio en SERP |
 |---|---|---|
@@ -239,14 +239,14 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 
 > **❌ P13 — No hay Open Graph ni Twitter Cards en ninguna página**
 > 
-> Cuando alguien comparte rubiqstudio.com en WhatsApp, LinkedIn, Twitter o Facebook, la preview será genérica o directamente no mostrará imagen.
+> Cuando alguien comparte brummaa.com en WhatsApp, LinkedIn, Twitter o Facebook, la preview será genérica o directamente no mostrará imagen.
 
 **Fix**: Añadir a cada `<head>`:
 ```html
 <meta property="og:title" content="...">
 <meta property="og:description" content="...">
-<meta property="og:image" content="https://rubiqstudio.com/img/og-image.webp">
-<meta property="og:url" content="https://rubiqstudio.com/pagina.html">
+<meta property="og:image" content="https://brummaa.com/img/og-image.webp">
+<meta property="og:url" content="https://brummaa.com/pagina.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 ```
@@ -299,12 +299,12 @@ Sitemap: https://rubiqstudio.com/sitemap.xml
 | Señal | Estado | Notas |
 |---|---|---|
 | **Experience** (Experiencia demostrada) | ⚠️ Parcial | Portfolio limitado (3 imágenes de proyectos en el carrusel hero, sin páginas de caso de estudio) |
-| **Expertise** (Credenciales del autor) | ✅ Bien | Rubén identificado como fundador con foto y bio en [agencia.html](file:///c:/Users/usuario/Desktop/RubiqStudio/agencia.html#L107-L142) |
+| **Expertise** (Credenciales del autor) | ✅ Bien | Rubén identificado como fundador con foto y bio en [agencia.html](file:///c:/Users/usuario/Desktop/Brummaa/agencia.html#L107-L142) |
 | **Authoritativeness** | ⚠️ Débil | "+10 proyectos" y "+1 año de experiencia" — son métricas muy bajas. Mejor omitir que mostrar números que debilitan autoridad |
 | **Trustworthiness** | ✅ Bien | Aviso legal, privacidad, cookies presentes. Dirección y teléfono visibles. HTTPS (asumido) |
 
 **⚠️ P16 — Métricas de autoridad que debilitan**
-- [agencia.html:131-137](file:///c:/Users/usuario/Desktop/RubiqStudio/agencia.html#L131-L137): "+10 proyectos" y "+1 año de experiencia" puede jugar en contra. Un potencial cliente comparando agencias verá esos números como señal de inexperiencia.
+- [agencia.html:131-137](file:///c:/Users/usuario/Desktop/Brummaa/agencia.html#L131-L137): "+10 proyectos" y "+1 año de experiencia" puede jugar en contra. Un potencial cliente comparando agencias verá esos números como señal de inexperiencia.
 - **Fix**: Considerar reformular ("Proyectos entregados" sin número exacto) o reemplazar por testimonios/resultados concretos.
 
 ---
@@ -356,18 +356,18 @@ graph TD
 ### 5.1 Errores Técnicos Menores
 
 **⚠️ P19 — Typo "desarollo" (falta una R)**
-- [desarrollo-web-a-medida.html:139](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L139): `"Diseño y desarollo profesional"` → debería ser "desarrollo".
-- [desarrollo-web-a-medida.html:158](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L158): Mismo typo repetido.
-- [desarrollo-web-a-medida.html:290](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L290): `"...antes de pasar al desarollo"`.
+- [desarrollo-web-a-medida.html:139](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L139): `"Diseño y desarollo profesional"` → debería ser "desarrollo".
+- [desarrollo-web-a-medida.html:158](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L158): Mismo typo repetido.
+- [desarrollo-web-a-medida.html:290](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L290): `"...antes de pasar al desarollo"`.
 
 **⚠️ P20 — `home.js` cargado en TODAS las páginas**
-- [agencia.html:437](file:///c:/Users/usuario/Desktop/RubiqStudio/agencia.html#L437), [desarrollo-web-a-medida.html:414](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L414), [mantenimiento-web-mensual.html:482](file:///c:/Users/usuario/Desktop/RubiqStudio/mantenimiento-web-mensual.html#L482), [contacto.html:317](file:///c:/Users/usuario/Desktop/RubiqStudio/contacto.html#L317): Todas cargan `js/home.js` (10.8 KB).
+- [agencia.html:437](file:///c:/Users/usuario/Desktop/Brummaa/agencia.html#L437), [desarrollo-web-a-medida.html:414](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L414), [mantenimiento-web-mensual.html:482](file:///c:/Users/usuario/Desktop/Brummaa/mantenimiento-web-mensual.html#L482), [contacto.html:317](file:///c:/Users/usuario/Desktop/Brummaa/contacto.html#L317): Todas cargan `js/home.js` (10.8 KB).
 - Si `home.js` contiene lógica específica de la home (carrusel, FAQ), se está cargando JS innecesario en páginas donde no se usa.
 - **Fix**: Extraer la lógica compartida (nav hamburguesa, scroll-top, flotantes) a un `global.js` y dejar `home.js` solo para la home.
 
 **⚠️ P21 — Comentario HTML huérfano en desarrollo-web y contacto**
-- [desarrollo-web-a-medida.html:30](file:///c:/Users/usuario/Desktop/RubiqStudio/desarrollo-web-a-medida.html#L30): `<!-- AOS se añadirá al final del desarrollo -->`
-- [contacto.html:29](file:///c:/Users/usuario/Desktop/RubiqStudio/contacto.html#L29): `<!-- AOS: Animate On Scroll -->`
+- [desarrollo-web-a-medida.html:30](file:///c:/Users/usuario/Desktop/Brummaa/desarrollo-web-a-medida.html#L30): `<!-- AOS se añadirá al final del desarrollo -->`
+- [contacto.html:29](file:///c:/Users/usuario/Desktop/Brummaa/contacto.html#L29): `<!-- AOS: Animate On Scroll -->`
 - No hay AOS cargado en ninguna parte. Limpiar comentarios obsoletos.
 
 ---
@@ -401,7 +401,7 @@ graph TD
 | # | Acción | Esfuerzo | Impacto |
 |---|---|---|---|
 | P8 | Corregir doble barra `img//` en mantenimiento | 2 min | Correctitud |
-| P10 | Unificar marca "Rubiq Studio" vs "RubiqStudio" | 10 min | Consistencia |
+| P10 | Unificar marca "Brummaa" vs "Brummaa" | 10 min | Consistencia |
 | P19 | Corregir typos "desarollo" → "desarrollo" | 5 min | Profesionalidad |
 | P20 | Separar `home.js` → `global.js` + `home.js` | 30 min | Rendimiento |
 | P21 | Limpiar comentarios HTML huérfanos (AOS) | 5 min | Limpieza de código |

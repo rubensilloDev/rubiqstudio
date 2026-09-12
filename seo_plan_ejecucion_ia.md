@@ -1,4 +1,4 @@
-# Plan de Ejecución SEO Optimizado para IA — Rubiq Studio
+﻿# Plan de Ejecución SEO Optimizado para IA — Brummaa
 
 Este documento organiza los 21 hallazgos de la auditoría SEO en **5 fases secuenciales** estructuradas para que un modelo de IA ejecute las modificaciones de forma batch, rápida y con cero regresiones.
 
@@ -21,15 +21,15 @@ graph TD
 > **Objetivo:** Resolver bloqueos críticos de rastreo y recursos 404 creando archivos independientes sin tocar HTML existente.
 
 ### Tarea 1.1: Crear `robots.txt`
-- **Ubicación:** `c:\Users\usuario\Desktop\RubiqStudio\robots.txt`
+- **Ubicación:** `c:\Users\usuario\Desktop\Brummaa\robots.txt`
 - **Acción:** Crear archivo indicando reglas de rastreo y puntero al sitemap.
 
 ### Tarea 1.2: Crear `sitemap.xml`
-- **Ubicación:** `c:\Users\usuario\Desktop\RubiqStudio\sitemap.xml`
+- **Ubicación:** `c:\Users\usuario\Desktop\Brummaa\sitemap.xml`
 - **Acción:** Incluir las 8 URLs públicas con fecha `<lastmod>` actualizada y prioridades.
 
 ### Tarea 1.3: Resolver CSS faltante `fondo-animado.css`
-- **Ubicación:** `c:\Users\usuario\Desktop\RubiqStudio\css\fondo-animado.css`
+- **Ubicación:** `c:\Users\usuario\Desktop\Brummaa\css\fondo-animado.css`
 - **Acción:** Crear el archivo con los estilos del fondo animado de la home (extraídos/asegurados) para corregir el error 404 en `index.html`.
 
 ---
@@ -40,7 +40,7 @@ graph TD
 
 ### Tarea 2.1: Inyección de Etiquetas `<link rel="canonical">`
 - **Archivos a modificar:** Las 8 páginas `.html`.
-- **Acción:** Insertar canonical apuntando a dominio absoluto (`https://rubiqstudio.com/pagina.html`).
+- **Acción:** Insertar canonical apuntando a dominio absoluto (`https://brummaa.com/pagina.html`).
 
 ### Tarea 2.2: Implementación de Open Graph y Twitter Cards
 - **Archivos a modificar:** Las 8 páginas `.html`.
@@ -53,7 +53,7 @@ graph TD
 
 ### Tarea 2.4: Optimización y Unificación de Titles & Descriptions
 - **`desarrollo-web-a-medida.html`:** Acortar `<title>` a ~60 caracteres.
-- **Todas:** Unificar nombre de marca a `"Rubiq Studio"` en titles.
+- **Todas:** Unificar nombre de marca a `"Brummaa"` en titles.
 - **`index.html` y `mantenimiento-web-mensual.html`:** Ajustar `<meta name="description">` a ≤160 caracteres.
 
 ---
@@ -98,7 +98,7 @@ graph TD
 
 ### Tarea 4.2: Optimización de Imágenes Pesadas
 - **Acción:**
-  - Reemplazar / optimizar `logo-rubiqstudio.png` (391 KB) o convertir a SVG vectorial.
+  - Reemplazar / optimizar `logo-brummaa.png` (391 KB) o convertir a SVG vectorial.
   - Comprimir imágenes JPEG/PNG principales de hero a formato WebP optimizado (<100 KB).
 
 ---

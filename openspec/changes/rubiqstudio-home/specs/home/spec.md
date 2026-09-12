@@ -1,8 +1,8 @@
-# Home Specification
+﻿# Home Specification
 
 ## Purpose
 
-RubiqStudio Home is a single-page B2B conversion funnel in vanilla HTML5+CSS3+JS. Every section drives visitors toward WhatsApp contact at `wa.me/34692037526`.
+Brummaa Home is a single-page B2B conversion funnel in vanilla HTML5+CSS3+JS. Every section drives visitors toward WhatsApp contact at `wa.me/34692037526`.
 
 ## Requirements
 
