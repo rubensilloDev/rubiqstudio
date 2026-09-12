@@ -29,12 +29,6 @@
       }
     });
   </script>
-  <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGLC3EGKG4"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-FGLC3EGKG4');
-  </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -87,8 +81,47 @@
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/legales.css">
-  <link rel="stylesheet" href="css/cookie-banner.css">
-</head>
+<style>
+/* COOKIE BANNER & MODAL */
+.rubiq-cookie-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,25,47,.7);backdrop-filter:blur(4px);z-index:99998;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
+.rubiq-cookie-overlay.activo{opacity:1;visibility:visible}
+.rubiq-cookie-banner{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);width:calc(100% - 32px);max-width:960px;background:#0A192F;border:1px solid rgba(45,212,191,.25);box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 20px rgba(45,212,191,.1);border-radius:16px;padding:24px 28px;z-index:99999;opacity:0;visibility:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .4s ease,visibility .4s ease;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
+.rubiq-cookie-banner.activo{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
+.rubiq-cookie-contenido{display:flex;flex-direction:column;gap:16px}
+@media(min-width:768px){.rubiq-cookie-contenido{flex-direction:row;align-items:center;justify-content:space-between;gap:28px}}
+.rubiq-cookie-texto{font-size:.9375rem;line-height:1.5;color:#94A3B8;margin:0}
+.rubiq-cookie-texto strong{color:#fff}
+.rubiq-cookie-texto a{color:#2DD4BF;text-decoration:underline;text-underline-offset:3px;transition:color .2s ease}
+.rubiq-cookie-texto a:hover{color:#5EEAD4}
+.rubiq-cookie-botones{display:flex;flex-wrap:wrap;align-items:center;gap:10px;flex-shrink:0}
+.rubiq-cookie-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;font-size:.875rem;font-weight:600;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;white-space:nowrap;font-family:inherit}
+.rubiq-cookie-btn--aceptar{background:#2DD4BF;color:#0A192F}
+.rubiq-cookie-btn--aceptar:hover{background:#5EEAD4;box-shadow:0 0 12px rgba(45,212,191,.4)}
+.rubiq-cookie-btn--rechazar{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)}
+.rubiq-cookie-btn--rechazar:hover{background:rgba(255,255,255,.15)}
+.rubiq-cookie-btn--config{background:transparent;color:#94A3B8;border-color:rgba(148,163,184,.3)}
+.rubiq-cookie-btn--config:hover{color:#fff;border-color:#2DD4BF}
+.rubiq-cookie-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:calc(100% - 32px);max-width:600px;max-height:85vh;background:#0A192F;border:1px solid rgba(45,212,191,.3);box-shadow:0 25px 50px -12px rgba(0,0,0,.6);border-radius:16px;z-index:99999;opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s ease,visibility .3s ease;display:flex;flex-direction:column;overflow:hidden;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
+.rubiq-cookie-modal.activo{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible}
+.rubiq-cookie-modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
+.rubiq-cookie-modal-titulo{font-size:1.25rem;font-weight:700;color:#fff;margin:0}
+.rubiq-cookie-modal-cerrar{background:transparent;border:none;color:#94A3B8;font-size:1.25rem;cursor:pointer;padding:4px;line-height:1;border-radius:4px;transition:color .2s ease}
+.rubiq-cookie-modal-cerrar:hover{color:#fff}
+.rubiq-cookie-modal-body{padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:20px}
+.rubiq-cookie-categoria{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.rubiq-cookie-cat-header{display:flex;align-items:center;justify-content:space-between}
+.rubiq-cookie-cat-nombre{font-weight:600;font-size:1rem;color:#fff}
+.rubiq-cookie-cat-desc{font-size:.875rem;color:#94A3B8;line-height:1.4;margin:0}
+.rubiq-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}
+.rubiq-switch input{opacity:0;width:0;height:0}
+.rubiq-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:rgba(255,255,255,.2);transition:.3s;border-radius:24px}
+.rubiq-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:#fff;transition:.3s;border-radius:50%}
+input:checked+.rubiq-slider{background-color:#2DD4BF}
+input:focus+.rubiq-slider{box-shadow:0 0 1px #2DD4BF}
+input:checked+.rubiq-slider:before{transform:translateX(20px)}
+input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
+.rubiq-cookie-modal-footer{padding:16px 24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:flex-end;gap:12px;background:rgba(10,25,47,.95)}
+</style></head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -321,12 +354,12 @@
   </div>
 
   <!-- GSAP + ScrollTrigger (animaciones scroll) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
-  <script src="js/politica-cookies.js"></script>
-  <script src="js/cookie-banner.js"></script>
-  <script src="js/global.js"></script>
+  <script src="js/politica-cookies.js" defer></script>
+  <script src="js/cookie-banner.js" defer></script>
+  <script src="js/global.js" defer></script>
 </body>
 
 </html>
