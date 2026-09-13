@@ -353,7 +353,6 @@
    ========================================= */
 
 /* Contenedor principal de la sección — hereda padding de .contenido-seccion */
-.proceso-contacto {}
 
 /* Contenedor interno — centrado */
 .proceso-contacto-contenedor {
@@ -371,6 +370,7 @@
 .proceso-contacto-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 0 0 3% 0;
   gap: var(--spacing-xl);
 }
 
