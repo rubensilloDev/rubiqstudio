@@ -686,6 +686,10 @@
     line-height: 150%;
   }
 
+  .hero-titulo-base {
+    font-size: 3.2rem;
+  }
+
   .hero-contenido {
     font-size: var(--text-sizes-text-small);
   }
