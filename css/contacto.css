@@ -143,9 +143,184 @@
   color: var(--paleta-de-colores-azul-marino);
 }
 
-/* Asterisco de campo obligatorio */
+/* Asterisco de campo obligatorio y texto opcional */
 .obligatorio {
   color: var(--paleta-de-colores-accent);
+}
+
+.opcional {
+  font-size: var(--text-sizes-text-tiny);
+  color: var(--paleta-de-colores-azul-marino);
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+/* Selector de servicios (Radio buttons estilizados como tarjetas / píldoras) */
+.formulario-contacto-servicios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+@media (min-width: 600px) {
+  .formulario-contacto-servicios {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .formulario-servicio-opcion:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.formulario-servicio-opcion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(10, 25, 47, 0.03);
+  border: 1.5px solid rgba(10, 25, 47, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.formulario-servicio-opcion:hover {
+  background: rgba(45, 212, 191, 0.08);
+  border-color: rgba(45, 212, 191, 0.5);
+}
+
+.formulario-servicio-opcion input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.servicio-radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(10, 25, 47, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.servicio-radio-custom::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--paleta-de-colores-azul-marino);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.formulario-servicio-opcion input[type="radio"]:checked + .servicio-radio-custom {
+  border-color: var(--paleta-de-colores-accent);
+  background: var(--paleta-de-colores-accent);
+}
+
+.formulario-servicio-opcion input[type="radio"]:checked + .servicio-radio-custom::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.formulario-servicio-opcion:has(input[type="radio"]:checked) {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: var(--paleta-de-colores-accent);
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.15);
+}
+
+.servicio-texto {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-small);
+  font-weight: 600;
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+/* Extra SEO mensual */
+.formulario-extra-seo {
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.formulario-servicio-extra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(45, 212, 191, 0.08));
+  border: 1.5px dashed rgba(37, 99, 235, 0.35);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.formulario-servicio-extra:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(45, 212, 191, 0.15));
+  border-color: var(--paleta-de-colores-azul-electrico);
+}
+
+.formulario-servicio-extra input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.servicio-check-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(10, 25, 47, 0.3);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.servicio-check-custom::after {
+  content: "✓";
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.formulario-servicio-extra input[type="checkbox"]:checked + .servicio-check-custom {
+  background: var(--paleta-de-colores-azul-electrico);
+  border-color: var(--paleta-de-colores-azul-electrico);
+}
+
+.formulario-servicio-extra input[type="checkbox"]:checked + .servicio-check-custom::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.formulario-servicio-extra:has(input[type="checkbox"]:checked) {
+  background: rgba(37, 99, 235, 0.14);
+  border-style: solid;
+  border-color: var(--paleta-de-colores-azul-electrico);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.extra-texto {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--text-sizes-text-small);
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+.extra-texto strong {
+  color: var(--paleta-de-colores-azul-cobalto);
 }
 
 /* Campos de texto — bordes sutiles, focus con color accent */

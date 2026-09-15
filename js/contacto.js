@@ -139,6 +139,31 @@
   });
 
   // =========================================
+  // INTERACCIÓN: SELECTOR DE SERVICIO Y EXTRA SEO
+  // =========================================
+  const contenedorExtraSeo = document.getElementById('contenedor-extra-seo');
+  const radiosServicio = document.querySelectorAll('input[name="servicio_tipo"]');
+  const checkboxExtraSeo = document.getElementById('contacto-extra-seo');
+
+  function actualizarVisibilidadExtraSeo() {
+    const servicioSeleccionado = document.querySelector('input[name="servicio_tipo"]:checked');
+    if (!servicioSeleccionado || !contenedorExtraSeo) return;
+
+    // Si ya selecciona "Auditoría SEO + Plan Mensual", ocultamos/desactivamos el extra SEO adicional para evitar redundancia
+    if (servicioSeleccionado.value === 'Auditoría SEO + Plan Mensual') {
+      contenedorExtraSeo.style.display = 'none';
+      if (checkboxExtraSeo) checkboxExtraSeo.checked = false;
+    } else {
+      contenedorExtraSeo.style.display = 'block';
+    }
+  }
+
+  radiosServicio.forEach(radio => {
+    radio.addEventListener('change', actualizarVisibilidadExtraSeo);
+  });
+  actualizarVisibilidadExtraSeo();
+
+  // =========================================
   // ENVÍO DE FORMULARIO A WHATSAPP
   // =========================================
   const formContacto = document.getElementById('form-contacto-whatsapp');
@@ -150,21 +175,23 @@
       const nombre = document.getElementById('contacto-nombre').value.trim();
       const email = document.getElementById('contacto-email').value.trim();
       const telefono = document.getElementById('contacto-telefono').value.trim();
-      const objetivo = document.getElementById('contacto-objetivo').value.trim();
 
-      // Construir la estructura del mensaje de forma natural
-      let mensaje = `Hola Rubén, soy ${nombre}. Te escribo desde el formulario de la web de RubiqStudio.\n\n`;
-      mensaje += `Mis datos de contacto son:\n`;
+      const radioServicio = document.querySelector('input[name="servicio_tipo"]:checked');
+      const servicio = radioServicio ? radioServicio.value : 'No especificado';
+
+      const extraSeo = checkboxExtraSeo && checkboxExtraSeo.checked;
+
+      // Construir la estructura del mensaje de forma clara y profesional
+      let mensaje = `Hola, soy ${nombre}. Te contacto desde el formulario de la web de Brummaa.\n\n`;
+      mensaje += `- *Servicio de interés:* ${servicio}\n`;
+      if (extraSeo) {
+        mensaje += `- *Extra añadido:* Servicio de SEO mensual (+200€/mes)\n`;
+      }
+      mensaje += `\n - *Mis datos de contacto:*\n`;
       mensaje += `- Email: ${email}\n`;
       mensaje += `- Teléfono: ${telefono}`;
 
-      // Incluir la sección del proyecto únicamente si contiene texto
-      if (objetivo) {
-        mensaje += `\n\nTe cuento un poco sobre mi proyecto:\n${objetivo}`;
-      }
-
-      // Despedida final natural al cierre del mensaje
-      mensaje += `\n\n¡Un saludo!`;
+      mensaje += `\n\n¡Espero vuestra respuesta con el presupuesto!`;
 
       // Número de WhatsApp destino de la agencia
       const numeroTelefono = '34692037526';

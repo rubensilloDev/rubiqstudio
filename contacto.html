@@ -246,10 +246,32 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
               </div>
 
               <div class="formulario-contacto-campo-grupo">
-                <label class="formulario-contacto-label" for="contacto-objetivo">¿Qué objetivo comercial necesitas
-                  conseguir?</label>
-                <textarea class="formulario-contacto-textarea" id="contacto-objetivo" name="objetivo" rows="5"
-                  placeholder="Describe tu proyecto o necesidad (opcional)..."></textarea>
+                <label class="formulario-contacto-label">¿Qué servicio necesitas? <span class="obligatorio">*</span></label>
+                <div class="formulario-contacto-servicios">
+                  <label class="formulario-servicio-opcion">
+                    <input type="radio" name="servicio_tipo" value="Landing Page" required checked>
+                    <span class="servicio-radio-custom"></span>
+                    <span class="servicio-texto">Landing Page</span>
+                  </label>
+                  <label class="formulario-servicio-opcion">
+                    <input type="radio" name="servicio_tipo" value="Sitio Web Corporativo" required>
+                    <span class="servicio-radio-custom"></span>
+                    <span class="servicio-texto">Sitio Web Corporativo</span>
+                  </label>
+                  <label class="formulario-servicio-opcion">
+                    <input type="radio" name="servicio_tipo" value="Auditoría SEO + Plan Mensual" required>
+                    <span class="servicio-radio-custom"></span>
+                    <span class="servicio-texto">Auditoría SEO + Plan Mensual</span>
+                  </label>
+                </div>
+
+                <div class="formulario-extra-seo" id="contenedor-extra-seo">
+                  <label class="formulario-servicio-extra">
+                    <input type="checkbox" id="contacto-extra-seo" name="extra_seo" value="Sí (+200€/mes)">
+                    <span class="servicio-check-custom"></span>
+                    <span class="extra-texto">Añadir <strong>Servicio de SEO mensual</strong> como extra</span>
+                  </label>
+                </div>
               </div>
 
               <div class="formulario-contacto-checkbox">

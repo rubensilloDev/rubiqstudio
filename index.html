@@ -5,14 +5,14 @@
   <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied'
     });
-    window.addEventListener('rubiqCookieConsent', function(e) {
+    window.addEventListener('rubiqCookieConsent', function (e) {
       var consent = e.detail;
       var updates = {};
       if (consent.analiticas) {
@@ -25,16 +25,19 @@
       }
       if (Object.keys(updates).length > 0) {
         gtag('consent', 'update', updates);
-        window.dataLayer.push({'event': 'cookie_consent_update', 'consent': consent});
+        window.dataLayer.push({ 'event': 'cookie_consent_update', 'consent': consent });
       }
     });
   </script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MVJXL22M');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MVJXL22M');</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
@@ -200,8 +203,11 @@
 
 
   <!-- Fuentes Google -->
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap"
     rel="stylesheet">
@@ -215,63 +221,395 @@
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/home.css">
-<style>
-/* FONDO ANIMADO CON CUADRADOS FLOTANTES */
-.fondo-animado{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:-1;pointer-events:none}
-.fondo-cuadrado{position:absolute;display:block;list-style:none;width:20px;height:20px;background:rgba(45,212,191,.05);border:1px solid rgba(45,212,191,.1);border-radius:8px;bottom:-150px;animation:flotarCuadrado 25s linear infinite}
-.fondo-cuadrado:nth-child(1){left:25%;width:80px;height:80px;animation-delay:0s}
-.fondo-cuadrado:nth-child(2){left:10%;width:40px;height:40px;animation-delay:2s;animation-duration:12s}
-.fondo-cuadrado:nth-child(3){left:70%;width:50px;height:50px;animation-delay:4s}
-.fondo-cuadrado:nth-child(4){left:40%;width:60px;height:60px;animation-delay:0s;animation-duration:18s}
-.fondo-cuadrado:nth-child(5){left:65%;width:30px;height:30px;animation-delay:0s}
-.fondo-cuadrado:nth-child(6){left:85%;width:110px;height:110px;animation-delay:3s}
-@keyframes flotarCuadrado{0%{transform:translateY(0) rotate(0deg);opacity:1;border-radius:8px}100%{transform:translateY(-1000px) rotate(720deg);opacity:0;border-radius:50%}}
-</style><style>
-/* COOKIE BANNER & MODAL */
-.rubiq-cookie-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,25,47,.7);backdrop-filter:blur(4px);z-index:99998;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
-.rubiq-cookie-overlay.activo{opacity:1;visibility:visible}
-.rubiq-cookie-banner{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);width:calc(100% - 32px);max-width:960px;background:#0A192F;border:1px solid rgba(45,212,191,.25);box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 20px rgba(45,212,191,.1);border-radius:16px;padding:24px 28px;z-index:99999;opacity:0;visibility:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .4s ease,visibility .4s ease;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
-.rubiq-cookie-banner.activo{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
-.rubiq-cookie-contenido{display:flex;flex-direction:column;gap:16px}
-@media(min-width:768px){.rubiq-cookie-contenido{flex-direction:row;align-items:center;justify-content:space-between;gap:28px}}
-.rubiq-cookie-texto{font-size:.9375rem;line-height:1.5;color:#94A3B8;margin:0}
-.rubiq-cookie-texto strong{color:#fff}
-.rubiq-cookie-texto a{color:#2DD4BF;text-decoration:underline;text-underline-offset:3px;transition:color .2s ease}
-.rubiq-cookie-texto a:hover{color:#5EEAD4}
-.rubiq-cookie-botones{display:flex;flex-wrap:wrap;align-items:center;gap:10px;flex-shrink:0}
-.rubiq-cookie-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;font-size:.875rem;font-weight:600;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;white-space:nowrap;font-family:inherit}
-.rubiq-cookie-btn--aceptar{background:#2DD4BF;color:#0A192F}
-.rubiq-cookie-btn--aceptar:hover{background:#5EEAD4;box-shadow:0 0 12px rgba(45,212,191,.4)}
-.rubiq-cookie-btn--rechazar{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)}
-.rubiq-cookie-btn--rechazar:hover{background:rgba(255,255,255,.15)}
-.rubiq-cookie-btn--config{background:transparent;color:#94A3B8;border-color:rgba(148,163,184,.3)}
-.rubiq-cookie-btn--config:hover{color:#fff;border-color:#2DD4BF}
-.rubiq-cookie-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:calc(100% - 32px);max-width:600px;max-height:85vh;background:#0A192F;border:1px solid rgba(45,212,191,.3);box-shadow:0 25px 50px -12px rgba(0,0,0,.6);border-radius:16px;z-index:99999;opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s ease,visibility .3s ease;display:flex;flex-direction:column;overflow:hidden;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
-.rubiq-cookie-modal.activo{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible}
-.rubiq-cookie-modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
-.rubiq-cookie-modal-titulo{font-size:1.25rem;font-weight:700;color:#fff;margin:0}
-.rubiq-cookie-modal-cerrar{background:transparent;border:none;color:#94A3B8;font-size:1.25rem;cursor:pointer;padding:4px;line-height:1;border-radius:4px;transition:color .2s ease}
-.rubiq-cookie-modal-cerrar:hover{color:#fff}
-.rubiq-cookie-modal-body{padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:20px}
-.rubiq-cookie-categoria{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
-.rubiq-cookie-cat-header{display:flex;align-items:center;justify-content:space-between}
-.rubiq-cookie-cat-nombre{font-weight:600;font-size:1rem;color:#fff}
-.rubiq-cookie-cat-desc{font-size:.875rem;color:#94A3B8;line-height:1.4;margin:0}
-.rubiq-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}
-.rubiq-switch input{opacity:0;width:0;height:0}
-.rubiq-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:rgba(255,255,255,.2);transition:.3s;border-radius:24px}
-.rubiq-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:#fff;transition:.3s;border-radius:50%}
-input:checked+.rubiq-slider{background-color:#2DD4BF}
-input:focus+.rubiq-slider{box-shadow:0 0 1px #2DD4BF}
-input:checked+.rubiq-slider:before{transform:translateX(20px)}
-input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
-.rubiq-cookie-modal-footer{padding:16px 24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:flex-end;gap:12px;background:rgba(10,25,47,.95)}
-</style></head>
+  <style>
+    /* FONDO ANIMADO CON CUADRADOS FLOTANTES */
+    .fondo-animado {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none
+    }
+
+    .fondo-cuadrado {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(45, 212, 191, .05);
+      border: 1px solid rgba(45, 212, 191, .1);
+      border-radius: 8px;
+      bottom: -150px;
+      animation: flotarCuadrado 25s linear infinite
+    }
+
+    .fondo-cuadrado:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s
+    }
+
+    .fondo-cuadrado:nth-child(2) {
+      left: 10%;
+      width: 40px;
+      height: 40px;
+      animation-delay: 2s;
+      animation-duration: 12s
+    }
+
+    .fondo-cuadrado:nth-child(3) {
+      left: 70%;
+      width: 50px;
+      height: 50px;
+      animation-delay: 4s
+    }
+
+    .fondo-cuadrado:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s
+    }
+
+    .fondo-cuadrado:nth-child(5) {
+      left: 65%;
+      width: 30px;
+      height: 30px;
+      animation-delay: 0s
+    }
+
+    .fondo-cuadrado:nth-child(6) {
+      left: 85%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s
+    }
+
+    @keyframes flotarCuadrado {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 8px
+      }
+
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%
+      }
+    }
+  </style>
+  <style>
+    /* COOKIE BANNER & MODAL */
+    .rubiq-cookie-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 25, 47, .7);
+      backdrop-filter: blur(4px);
+      z-index: 99998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease, visibility .3s ease
+    }
+
+    .rubiq-cookie-overlay.activo {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      width: calc(100% - 32px);
+      max-width: 960px;
+      background: #0A192F;
+      border: 1px solid rgba(45, 212, 191, .25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4), 0 0 20px rgba(45, 212, 191, .1);
+      border-radius: 16px;
+      padding: 24px 28px;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .4s cubic-bezier(.16, 1, .3, 1), opacity .4s ease, visibility .4s ease;
+      color: #E2E8F0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif
+    }
+
+    .rubiq-cookie-banner.activo {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    @media(min-width:768px) {
+      .rubiq-cookie-contenido {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px
+      }
+    }
+
+    .rubiq-cookie-texto {
+      font-size: .9375rem;
+      line-height: 1.5;
+      color: #94A3B8;
+      margin: 0
+    }
+
+    .rubiq-cookie-texto strong {
+      color: #fff
+    }
+
+    .rubiq-cookie-texto a {
+      color: #2DD4BF;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s ease
+    }
+
+    .rubiq-cookie-texto a:hover {
+      color: #5EEAD4
+    }
+
+    .rubiq-cookie-botones {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0
+    }
+
+    .rubiq-cookie-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      font-size: .875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all .2s ease;
+      white-space: nowrap;
+      font-family: inherit
+    }
+
+    .rubiq-cookie-btn--aceptar {
+      background: #2DD4BF;
+      color: #0A192F
+    }
+
+    .rubiq-cookie-btn--aceptar:hover {
+      background: #5EEAD4;
+      box-shadow: 0 0 12px rgba(45, 212, 191, .4)
+    }
+
+    .rubiq-cookie-btn--rechazar {
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .15)
+    }
+
+    .rubiq-cookie-btn--rechazar:hover {
+      background: rgba(255, 255, 255, .15)
+    }
+
+    .rubiq-cookie-btn--config {
+      background: transparent;
+      color: #94A3B8;
+      border-color: rgba(148, 163, 184, .3)
+    }
+
+    .rubiq-cookie-btn--config:hover {
+      color: #fff;
+      border-color: #2DD4BF
+    }
+
+    .rubiq-cookie-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.95);
+      width: calc(100% - 32px);
+      max-width: 600px;
+      max-height: 85vh;
+      background: #0A192F;
+      border: 1px solid rgba(45, 212, 191, .3);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .6);
+      border-radius: 16px;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .3s cubic-bezier(.16, 1, .3, 1), opacity .3s ease, visibility .3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      color: #E2E8F0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif
+    }
+
+    .rubiq-cookie-modal.activo {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .rubiq-cookie-modal-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0
+    }
+
+    .rubiq-cookie-modal-cerrar {
+      background: transparent;
+      border: none;
+      color: #94A3B8;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      border-radius: 4px;
+      transition: color .2s ease
+    }
+
+    .rubiq-cookie-modal-cerrar:hover {
+      color: #fff
+    }
+
+    .rubiq-cookie-modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .rubiq-cookie-categoria {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .06);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .rubiq-cookie-cat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .rubiq-cookie-cat-nombre {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff
+    }
+
+    .rubiq-cookie-cat-desc {
+      font-size: .875rem;
+      color: #94A3B8;
+      line-height: 1.4;
+      margin: 0
+    }
+
+    .rubiq-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0
+    }
+
+    .rubiq-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0
+    }
+
+    .rubiq-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, .2);
+      transition: .3s;
+      border-radius: 24px
+    }
+
+    .rubiq-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #fff;
+      transition: .3s;
+      border-radius: 50%
+    }
+
+    input:checked+.rubiq-slider {
+      background-color: #2DD4BF
+    }
+
+    input:focus+.rubiq-slider {
+      box-shadow: 0 0 1px #2DD4BF
+    }
+
+    input:checked+.rubiq-slider:before {
+      transform: translateX(20px)
+    }
+
+    input:disabled+.rubiq-slider {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .rubiq-cookie-modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: rgba(10, 25, 47, .95)
+    }
+  </style>
+</head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVJXL22M"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVJXL22M" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Fondo animado con cuadrados flotantes -->
@@ -322,15 +660,15 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-contenedor">
-        <h1 class="hero-pretitulo">Diseño web en Córdoba</h1>
-        <h2 class="hero-titulo"><span class="hero-titulo-base">webs a medida que generan </span><span
-            class="hero-titulo-destacado">clientes en automático</span></h2>
-        <p class="hero-contenido">No hacemos páginas para que simplemente queden bonitas. Creamos herramientas de venta
-          rápidas y estratégicas para que tus visitas dejen de ser simples curiosos y se conviertan en solicitudes de
-          presupuesto reales.</p>
+        <h1 class="hero-pretitulo">DISEÑO WEB PARA EMPRESAS</h1>
+        <h2 class="hero-titulo"><span class="hero-titulo-base">Diseño web para empresas</span><span
+            class="hero-titulo-destacado">que atrae clientes, no solo bonita</span></h2>
+        <p class="hero-contenido">En Brummaa diseñamos páginas web pensadas para tu negocio, con el posicionamiento SEO
+          integrado desde el primer día. No hacemos solo una web bonita: hacemos una web profesional en diseño y
+          optimizada para atraer clientes.</p>
         <div class="hero-botones">
-          <a href="contacto.html" class="boton boton--azul-marino">Consigue tu web ahora</a>
-          <a href="#servicios" class="boton boton--blanco">Ver servicios</a>
+          <a href="contacto.html" class="boton boton--azul-marino">Pide tu presupuesto</a>
+          <a href="#metodologia" class="boton boton--blanco">Ver cómo trabajamos</a>
         </div>
 
         <!-- Doble marquesina de proyectos destacados -->
@@ -340,41 +678,53 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
           <div class="hero-marquesina-fila hero-marquesina-fila--derecha">
             <div class="hero-marquesina-pista">
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp" alt="Web diseñada para EBO Estilistas" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp"
+                  alt="Web diseñada para EBO Estilistas" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp" alt="Web para Cerrajería Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp"
+                  alt="Web para Cerrajería Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp" alt="Web para Electricista Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp"
+                  alt="Web para Electricista Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp" alt="Web Portfolio Creativo" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp"
+                  alt="Web Portfolio Creativo" loading="lazy">
               </div>
               <!-- Duplicado para loop continuo sin saltos -->
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp" alt="Web diseñada para EBO Estilistas" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp"
+                  alt="Web diseñada para EBO Estilistas" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp" alt="Web para Cerrajería Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp"
+                  alt="Web para Cerrajería Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp" alt="Web para Electricista Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp"
+                  alt="Web para Electricista Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp" alt="Web Portfolio Creativo" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp"
+                  alt="Web Portfolio Creativo" loading="lazy">
               </div>
             </div>
           </div>
@@ -383,41 +733,53 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
           <div class="hero-marquesina-fila hero-marquesina-fila--izquierda">
             <div class="hero-marquesina-pista">
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp" alt="Web Portfolio Creativo" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp"
+                  alt="Web Portfolio Creativo" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp" alt="Web para Electricista Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp"
+                  alt="Web para Electricista Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp" alt="Web para Cerrajería Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp"
+                  alt="Web para Cerrajería Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp" alt="Web diseñada para EBO Estilistas" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp"
+                  alt="Web diseñada para EBO Estilistas" loading="lazy">
               </div>
               <!-- Duplicado para loop continuo sin saltos -->
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp" alt="Web Portfolio Creativo" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto.portfolio-creativo.webp"
+                  alt="Web Portfolio Creativo" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-team-ruben.webp" alt="Web diseñada para Team Rubén"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp" alt="Web para Electricista Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-electricista.webp"
+                  alt="Web para Electricista Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-nutrifit.webp" alt="Web diseñada para Nutrifit"
+                  loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp" alt="Web para Cerrajería Profesional" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-proyecto-cerrajeria.webp"
+                  alt="Web para Cerrajería Profesional" loading="lazy">
               </div>
               <div class="hero-marquesina-tarjeta">
-                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp" alt="Web diseñada para EBO Estilistas" loading="lazy">
+                <img class="hero-marquesina-img" src="img/img-hero-ebo-estilistas.webp"
+                  alt="Web diseñada para EBO Estilistas" loading="lazy">
               </div>
             </div>
           </div>
@@ -430,12 +792,13 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== SECCIÓN 1: PROBLEMA ===== -->
     <section class="problema contenido-seccion" id="problema">
       <div class="problema-contenedor">
-        <h2 class="problema-titulo">¿Buscas un <span class="destacado">diseñador web en Córdoba</span> o un embudo de
-          ventas real?</h2>
-        <p class="problema-contenido">Una web espectacular que nadie encuentra no sirve de nada. Diseñar con plantillas
-          genéricas y sin estrategia te hace perder dinero cada día frente a tu competencia. Tu negocio exige un embudo
-          de ventas diseñado exclusivamente para que el cliente levante el teléfono.</p>
-        <a href="contacto.html" class="boton boton--blanco">Hablemos de tu proyecto</a>
+        <h2 class="problema-titulo">Una web a medida para tu negocio, <span class="destacado">no una plantilla
+            genérica</span></h2>
+        <p class="problema-contenido">Cada negocio es distinto, y su web también debería serlo. En Brummaa no partimos
+          de plantillas que ya usan otras cien empresas de tu sector: analizamos cómo funciona tu negocio, qué espera
+          ver un cliente que llega a tu web, y diseñamos en base a eso. El resultado es una web que se ve y se siente
+          como tuya, no como la de cualquiera.</p>
+        <a href="contacto.html" class="boton boton--blanco">Quiero mi web a medida</a>
       </div>
     </section>
 
@@ -444,43 +807,44 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
       <div class="beneficios-contenedor">
 
         <div class="beneficios-contenido">
-          <h2 class="beneficios-titulo">Por qué crear una <span class="destacado">página web profesional</span> con
-            Brummaa</h2>
-          <p class="beneficios-texto">Nos convertimos en tu socio tecnológico para encargarnos de todo el apartado
-            digital. Para que tú te centres exclusivamente en la operativa y las ventas de tu negocio.</p>
-          <a href="contacto.html" class="boton boton--blanco">Quiero mi web profesional</a>
+          <h2 class="beneficios-titulo">Diseño web + SEO local, la combinación que <span class="destacado">tu
+              competencia no tiene</span></h2>
+          <p class="beneficios-texto">La mayoría de agencias venden diseño por un lado y SEO por otro, como si fueran
+            dos cosas separadas. En Brummaa tu web se diseña y se construye ya pensando en cómo va a posicionar en
+            Google desde el primer día, no como un extra que se añade después. Mientras tu competencia sigue esperando a
+            "hacer SEO más adelante", tu web ya está trabajando para aparecer delante de ellos en las búsquedas de tu
+            zona.</p>
+          <a href="contacto.html" class="boton boton--blanco">Contáctanos</a>
         </div>
 
         <div class="beneficios-tarjetas">
 
           <article class="beneficio-tarjeta">
-            <i class="fas fa-chart-line beneficio-icono"></i>
-            <h3 class="beneficio-titulo">Estrategia y SEO claro</h3>
-            <p class="beneficio-texto">No diseñamos a ciegas. Investigamos cómo busca tu cliente ideal en Google antes
-              de tocar una sola línea de código para atraer visitas cualificadas desde el primer día.</p>
+            <i class="fas fa-sitemap beneficio-icono"></i>
+            <h3 class="beneficio-titulo">Estructura pensada para Google</h3>
+            <p class="beneficio-texto">Organizamos tu web para que Google la entienda e indexe correctamente desde el
+              primer rastreo, sin errores técnicos que te dejen fuera de las búsquedas.</p>
           </article>
 
           <article class="beneficio-tarjeta">
             <i class="fas fa-bolt beneficio-icono"></i>
-            <h3 class="beneficio-titulo">Buen Rendimiento</h3>
-            <p class="beneficio-texto">No entregamos páginas lentas ni mal optimizadas. Ajustamos el rendimiento al
-              milímetro para que tu web vuele en cualquier dispositivo. Una carga rápida evita el abandono de visitas
-              impacientes y mejora tu posicionamiento en Google.</p>
+            <h3 class="beneficio-titulo">Velocidad de carga optimizada</h3>
+            <p class="beneficio-texto">Una web lenta pierde clientes y Google la penaliza. Cuidamos el rendimiento en
+              cada proyecto para que no te falle ninguna de las dos cosas.</p>
           </article>
 
           <article class="beneficio-tarjeta">
-            <i class="fas fa-handshake beneficio-icono"></i>
-            <h3 class="beneficio-titulo">Transparencia y 100% tuya</h3>
-            <p class="beneficio-texto">Cero "efecto rehén". El desarrollo, el dominio y los accesos te pertenecen por
-              completo desde el inicio, con precios cerrados y sin contratos de permanencia ocultos.</p>
+            <i class="fas fa-search beneficio-icono"></i>
+            <h3 class="beneficio-titulo">Contenido en la web que buscan tus clientes</h3>
+            <p class="beneficio-texto">Redactamos cada sección con las palabras reales que tu cliente escribe en Google,
+              no con la jerga técnica del sector.</p>
           </article>
 
           <article class="beneficio-tarjeta">
-            <i class="fas fa-bullseye beneficio-icono"></i>
-            <h3 class="beneficio-titulo">Enfoque en ventas</h3>
-            <p class="beneficio-texto">No creamos simples folletos digitales. Estructuramos cada página con flujos de
-              usuario orientados a la conversión, diseñados psicológicamente para derribar objeciones y transformar los
-              usuarios en presupuestos reales.</p>
+            <i class="fas fa-map-marked-alt beneficio-icono"></i>
+            <h3 class="beneficio-titulo">Tu ficha de Google Business optimizada</h3>
+            <p class="beneficio-texto">Reforzamos tu presencia local desde el primer momento, optimizando también tu
+              perfil de negocio en Google.</p>
           </article>
 
         </div>
@@ -492,50 +856,53 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
       <div class="servicios-contenedor">
 
         <div class="servicios-encabezado">
-          <h2 class="servicios-titulo">Tu agencia de <span class="destacado">desarrollo web en Córdoba</span> enfocada
-            en rentabilidad</h2>
-          <p class="servicios-contenido">Cero "efecto rehén". El código, el dominio y los accesos te pertenecen por
-            completo desde el inicio, con precios cerrados y sin contratos de permanencia ocultos.</p>
+          <h2 class="servicios-titulo">Servicios que se ofrecen en Brummaa <span class="destacado">ideales para tu
+              negocio</span></h2>
+          <p class="servicios-contenido">Elige el formato que mejor encaja con lo que necesitas ahora. Si no lo tienes
+            claro, te ayudamos a decidirlo sin compromiso.</p>
         </div>
 
         <div class="servicios-tarjetas">
 
           <article class="servicio-tarjeta">
-            <h3 class="servicio-tarjeta-titulo">Landing Page</h3>
+            <h3 class="servicio-tarjeta-titulo">LANDING PAGE</h3>
             <div class="servicio-tarjeta-precio">
-              <span class="precio-anterior">300€</span>
-              <span class="precio-actual">200€</span>
+              <span class="precio-anterior">400€</span>
+              <span class="precio-actual">250€</span>
             </div>
             <hr class="servicio-tarjeta-divisor">
-            <p class="servicio-tarjeta-descripcion">Una página de aterrizaje con un único objetivo: maximizar el retorno
-              de tu inversión captando leads y llamadas de clientes directos.</p>
-            <a href="contacto.html" class="boton boton--blanco-borde">Quiero mi landing</a>
+            <p class="servicio-tarjeta-descripcion">Ideal si ofreces un único servicio o solo necesitas una página en tu
+              web. Una sola página, diseñada para convertir visitas en clientes de forma directa, sin distracciones.</p>
+            <a href="contacto.html" class="boton boton--blanco-borde">Quiero mi landing page</a>
           </article>
 
           <article class="servicio-tarjeta servicio-tarjeta--destacada">
-            <span class="servicio-tarjeta-etiqueta">Más popular</span>
-            <h3 class="servicio-tarjeta-titulo">Web Corporativa</h3>
+            <span class="servicio-tarjeta-etiqueta">MÁS CONTRATADO</span>
+            <h3 class="servicio-tarjeta-titulo">SITIO WEB CORPORATIVO</h3>
             <div class="servicio-tarjeta-precio">
-              <span class="precio-anterior">500€</span>
+              <span class="precio-anterior">600€</span>
               <span class="precio-actual">350€</span>
             </div>
             <hr class="servicio-tarjeta-divisor">
-            <p class="servicio-tarjeta-descripcion">Tu presencia digital completa, profesional y escalable. Diseñamos
-              una arquitectura web sólida para posicionar a tu empresa como la principal autoridad de tu sector local.
-            </p>
-            <a href="contacto.html" class="boton boton--turquesa">Solicitar presupuesto</a>
+            <p class="servicio-tarjeta-descripcion">La opción perfecta si tu negocio tiene varios servicios y necesitas
+              una presencia completa en internet: quiénes sois, qué ofrecéis y cómo contactar, todo con SEO local
+              incluido desde el diseño.</p>
+            <a href="contacto.html" class="boton boton--turquesa">Quiero mi web corporativa</a>
           </article>
 
           <article class="servicio-tarjeta">
-            <h3 class="servicio-tarjeta-titulo">Rediseño Web</h3>
-            <div class="servicio-tarjeta-precio">
-              <span class="precio-actual precio-actual--unico">Estratégico</span>
+            <h3 class="servicio-tarjeta-titulo">SEO PARA TU WEB ACTUAL</h3>
+            <div class="servicio-tarjeta-precio servicio-tarjeta-precio--seo">
+              <span class="precio-prefijo">desde</span>
+              <span class="precio-actual">150€</span>
+              <span class="precio-frecuencia">+ 200€/mes</span>
+              <span class="precio-subtexto">Auditoría según proyecto</span>
             </div>
             <hr class="servicio-tarjeta-divisor">
-            <p class="servicio-tarjeta-descripcion">Si tu página actual no te trae clientes, no necesita parches.
-              Auditamos tu web actual, limpiamos su desarrollo y creamos una nueva estructura para transformarla en un
-              embudo de ventas real.</p>
-            <a href="contacto.html" class="boton boton--blanco-borde">Auditar mi web</a>
+            <p class="servicio-tarjeta-descripcion">¿Ya tienes una web pero no te encuentran en Google? Auditamos tu web
+              actual, detectamos qué le falta y aplicamos un plan de posicionamiento mensual sin necesidad de rehacerla
+              desde cero.</p>
+            <a href="contacto.html" class="boton boton--blanco-borde">Quiero mi auditoría SEO</a>
           </article>
 
         </div>
@@ -547,11 +914,11 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
       <div class="metodologia-contenedor">
 
         <div class="metodologia-contenido">
-          <h2 class="metodologia-titulo">Nuestro método: <span class="destacado">Diseño web a medida</span> estructurado
-            para vender</h2>
-          <p class="metodologia-texto">No improvisamos. Aplicamos un proceso riguroso de 5 fases para garantizar una
-            entrega sin retrasos ni sorpresas técnicas.</p>
-          <a href="contacto.html" class="boton boton--blanco">Empezamos</a>
+          <h2 class="metodologia-titulo">Cómo trabajamos: <span class="destacado">desde la primera llamada</span> hasta
+            tu web publicada</h2>
+          <p class="metodologia-texto">Sin procesos eternos ni letra pequeña. Un método claro, pensado para que sepas en
+            todo momento en qué fase está tu proyecto y qué viene después.</p>
+          <a href="contacto.html" class="boton boton--blanco">Empezar mi proyecto</a>
         </div>
 
         <div class="metodologia-pasos">
@@ -559,46 +926,30 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
           <article class="metodologia-paso">
             <span class="metodologia-paso-numero">01</span>
             <div class="metodologia-paso-contenido">
-              <h3 class="metodologia-paso-titulo">Auditoría de negocio</h3>
-              <p class="metodologia-paso-texto">Hacemos una llamada inicial, estudiamos a fondo tu servicio, tu
-                competencia directa y la intención de búsqueda real de tu comprador.</p>
+              <h3 class="metodologia-paso-titulo">Analizamos tu negocio y tu competencia local</h3>
+              <p class="metodologia-paso-texto">Antes de diseñar nada, analizamos tu sector, tu zona y cómo posicionan
+                actualmente tus competidores en Google. Esto nos dice qué palabras clave debe atacar tu web y qué
+                necesita tu negocio concretamente para destacar.</p>
             </div>
           </article>
 
           <article class="metodologia-paso">
             <span class="metodologia-paso-numero">02</span>
             <div class="metodologia-paso-contenido">
-              <h3 class="metodologia-paso-titulo">Estructura y diseño</h3>
-              <p class="metodologia-paso-texto">Diseñamos un esqueleto visual inicial de la web para guiar la mirada del
-                usuario de forma intuitiva hacia el botón de contacto. Y luego le damos el diseño final tras la
-                aprobación del cliente.</p>
+              <h3 class="metodologia-paso-titulo">Diseñamos tu web a medida</h3>
+              <p class="metodologia-paso-texto">Con esa información, creamos la estructura y el diseño de tu página
+                adaptado a tu negocio y a tu sector. Revisamos contigo cada fase para que el resultado final sea
+                exactamente lo que necesitas, sin sorpresas de última hora.</p>
             </div>
           </article>
 
           <article class="metodologia-paso">
             <span class="metodologia-paso-numero">03</span>
             <div class="metodologia-paso-contenido">
-              <h3 class="metodologia-paso-titulo">Copywriting Persuasivo</h3>
-              <p class="metodologia-paso-texto">Redactamos textos directos que atacan los puntos de dolor de tus
-                clientes y derriban sus objeciones de compra.</p>
-            </div>
-          </article>
-
-          <article class="metodologia-paso">
-            <span class="metodologia-paso-numero">04</span>
-            <div class="metodologia-paso-contenido">
-              <h3 class="metodologia-paso-titulo">Desarrollo Técnico</h3>
-              <p class="metodologia-paso-texto">Desarrollamos tu sitio asegurando limpieza, velocidad de carga inmediata
-                y adaptación perfecta a todos los dispositivos.</p>
-            </div>
-          </article>
-
-          <article class="metodologia-paso">
-            <span class="metodologia-paso-numero">05</span>
-            <div class="metodologia-paso-contenido">
-              <h3 class="metodologia-paso-titulo">Lanzamiento y Soporte</h3>
-              <p class="metodologia-paso-texto">Publicamos la página, la indexamos correctamente en los buscadores y te
-                ofrecemos soporte continuo para proteger tu inversión.</p>
+              <h3 class="metodologia-paso-titulo">Publicamos y empezamos a posicionar en Google</h3>
+              <p class="metodologia-paso-texto">Lanzamos tu web ya optimizada técnicamente y con el SEO activo desde el
+                primer día. A partir de ahí, monitorizamos su evolución y mejoramos y te informamos de cómo va
+                progresando en las búsquedas.</p>
             </div>
           </article>
 
@@ -610,154 +961,118 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== SECCIÓN 5: FAQ ===== -->
     <section class="faq contenido-seccion" id="faq">
       <div class="faq-contenedor">
-        <h2 class="faq-titulo">Preguntas frecuentes sobre nuestro diseño y desarrollo web</h2>
-        <p class="faq-intro">Resolvemos las dudas más comunes sobre cómo trabajamos y qué puedes esperar de tu proyecto
-          web.</p>
+        <h2 class="faq-titulo">Preguntas frecuentes sobre diseño web para empresas</h2>
+        <p class="faq-intro">Resolvemos las dudas más habituales antes de que las tengas que preguntar.</p>
 
         <div class="faq-lista">
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">1. ¿Cuánto cuesta hacer una página web a medida en Córdoba?</h3>
+              <h3 class="faq-pregunta">1. ¿Cuánto cuesta una página web para mi empresa?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Nos gusta ser 100% transparentes y no escondernos detrás de un "pide presupuesto". Si necesitas una
-                Landing Page (una página de un solo objetivo para captar clientes rápidos), el precio es desde 200€. Si
-                buscas una Web Corporativa completa para tu negocio, los precios parten desde los 350€. Son precios
-                cerrados, sin sorpresas ni cuotas ocultas al final del proyecto.</p>
+              <p>Depende de lo que necesites. En Brummaa una landing page (una sola página, ideal si ofreces un servicio concreto) cuesta 250€, y un sitio web corporativo completo (varias secciones: quiénes sois, servicios, contacto) cuesta 350€. Si ya tienes web y solo necesitas SEO, la auditoría es desde 150€ más 200€/mes de seguimiento.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">2. ¿Hacéis las webs desde cero o usáis plantillas de WordPress?</h3>
+              <h3 class="faq-pregunta">2. ¿Qué diferencia hay entre una landing page y una web corporativa?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Depende de lo que sea más rentable para tu negocio. No usamos plantillas prefabricadas ni constructores
-                visuales pesados que hacen que la web cargue lento y espante a tus clientes. Si necesitas algo súper
-                rápido y personalizado, desarrollamos a medida con código puro (HTML, CSS y JavaScript). Si prefieres
-                poder gestionar el contenido tú mismo en el futuro, te creamos un WordPress limpio y ultra optimizado.
-              </p>
+              <p>Una landing page es una sola página, pensada para un único servicio o un negocio más local, sin distracciones. Una web corporativa tiene varias páginas y sirve para presentar todo tu negocio: quién eres, qué ofreces y cómo contactarte. Si tienes un solo producto o servicio o u negocio local pequeño, la landing suele bastar; si tienes varios, la web corporativa da mejor resultado.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">3. Si quiero cambiar de agencia en el futuro, ¿la web es mía?</h3>
+              <h3 class="faq-pregunta">3. ¿El SEO va incluido en el precio del diseño web?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Por supuesto. Odiamos el "efecto rehén" que usan otras agencias. El código, el dominio y tu negocio
-                digital te pertenecen al 100% desde el primer minuto. No te atamos a ningún software cerrado de terceros
-                ni a sistemas propios que no puedas llevarte a otro lado. Te entregamos las llaves de tu negocio.</p>
+              <p>Sí. En Brummaa toda web se diseña ya con el SEO local integrado desde el primer día: estructura pensada para Google, velocidad de carga optimizada y textos con las palabras que tus clientes realmente buscan. No es un extra que se cobra aparte para empezar a posicionar.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">4. ¿Podré cambiar las fotos y los textos yo mismo sin saber programar?</h3>
+              <h3 class="faq-pregunta">4. Ya tengo una página web, ¿puedo mejorar solo el SEO sin rehacerla?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Sí, totalmente. Si acordamos desarrollarte la página en un sistema autogestionable (como WordPress), te
-                lo dejamos todo preparado y súper intuitivo para que puedas cambiar un texto, subir un artículo de un
-                blog o modificar una foto sin tener que llamarnos ni depender de nosotros.</p>
+              <p>Sí, es uno de nuestros servicios. Auditamos tu web actual, detectamos qué le está fallando para posicionar y aplicamos un plan de SEO mensual sin tocar el diseño desde cero. La auditoría parte de 150€ (según el proyecto) más 200€/mes.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">5. ¿Tengo que pagar un mantenimiento todos los meses por obligación?</h3>
+              <h3 class="faq-pregunta">5. ¿Cómo hacéis que mi web aparezca antes que la de mi competencia en Google?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>No hay ningún compromiso de permanencia ni estás obligado a pagar nada mes a mes. Ahora bien, nosotros
-                siempre recomendamos nuestro servicio de mantenimiento web (que ronda los 50€ para landings y 75€ para
-                webs corporativas). Funciona como tu escudo técnico: hacemos copias de seguridad diarias, bloqueamos
-                ataques de hackers y nos aseguramos de que tu web nunca se caiga. Tú te centras en vender y nosotros en
-                que tu escaparate esté siempre abierto.</p>
+              <p>Trabajando el SEO desde el diseño: analizamos tu sector y cómo posiciona tu competencia en tu zona, y construimos la web con esa información — estructura, velocidad, textos y también tu ficha de Google Business optimizada, para reforzar tu presencia en las búsquedas locales.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">6. Ya tengo una web, pero está vieja y no me trae clientes. ¿Se puede arreglar?
-              </h3>
+              <h3 class="faq-pregunta">6. ¿Cómo es el proceso de trabajo con Brummaa?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Sí, para eso tenemos nuestro servicio de Rediseño Web Estratégico. No hace falta tirar tu web actual a
-                la basura de primeras. Lo que hacemos es auditar qué frenos técnicos y de diseño te están haciendo
-                perder clientes, limpiamos la estructura y la reprogramamos para transformarla en un embudo de ventas
-                real que empiece a dar resultados.</p>
+              <p>Son tres pasos. Primero analizamos tu negocio y tu competencia local para saber qué necesita tu web. Después la diseñamos a medida, revisando contigo cada fase. Y por último la publicamos ya optimizada, y empezamos a monitorizar cómo posiciona en Google.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">7. ¿Por qué decís que vuestras webs "se estructuran para vender"?</h3>
+              <h3 class="faq-pregunta">7. ¿Trabajáis solo con negocios locales o también a nivel nacional?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Porque no somos artistas, somos tu socio tecnológico. Muchas agencias te hacen una web muy bonita pero
-                que no recibe visitas ni llamadas. En Brummaa, antes de tocar un solo color o programar una línea de
-                código, hacemos una auditoría y una estrategia SEO. Estudiamos cómo busca tu cliente ideal en Google y
-                redactamos textos persuasivos que atacan sus problemas para guiarle directo hacia el botón de contacto.
-              </p>
+              <p>Trabajamos sobre todo con negocios y empresas locales, pero también con clientes de fuera de nuestra zona. El servicio y el proceso son los mismos, cambia solo el enfoque del SEO según si compites en tu ciudad o a nivel más amplio.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">8. ¿Qué pasos seguís para hacer una página web?</h3>
+              <h3 class="faq-pregunta">8. ¿Qué incluye exactamente el diseño de mi web?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Tenemos un método súper estructurado de 5 fases para que no haya caos técnico ni dolores de cabeza para
-                ti. Empezamos con una Auditoría de tu negocio y competencia, luego creamos la Estructura (Wireframes) de
-                la web, pasamos al Copywriting (escribir los textos que venden), hacemos el Desarrollo Técnico y, por
-                último, hacemos el Lanzamiento asegurándonos de que Google la indexe correctamente.</p>
+              <p>Cada web se adapta a tu sector y a tus necesidades, no partimos de plantillas genéricas. Analizamos cómo funciona tu negocio y qué espera ver un cliente al llegar a tu página, y diseñamos en base a eso, siempre con el SEO local incorporado desde el principio.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">9. ¿Una web me va a traer clientes si ya tengo perfil en redes sociales?</h3>
+              <h3 class="faq-pregunta">9. ¿También optimizáis mi ficha de Google (Google Business Profile)?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Las redes sociales son un terreno alquilado (mañana te pueden cerrar la cuenta o cambiar el algoritmo).
-                Tu página web es tu casa propia y tu comercial trabajando 24/7. Además, cuando alguien en Córdoba
-                necesita urgentemente tus servicios (por ejemplo, un dentista, un abogado o una reforma), no va a
-                Instagram a buscar fotos; entra en Google con intención real de comprar. Si no tienes una web rápida y
-                optimizada, ese cliente se lo lleva tu competencia.</p>
+              <p>Sí, es parte de nuestro servicio. Optimizamos tu perfil de negocio en Google para que aparezcas en el mapa y en las búsquedas locales desde el primer momento, en línea con el SEO que trabajamos en tu web.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">10. No tengo tiempo para reuniones largas o papeleos. ¿Me vais a quitar mucho
-                tiempo?</h3>
+              <h3 class="faq-pregunta">10. ¿Qué necesito para empezar mi proyecto con Brummaa?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Ese es precisamente nuestro mayor valor. Nuestro cliente ideal es el dueño de negocio que está saturado
-                gestionando su empresa y no quiere perder tiempo con tecnicismos informáticos. En Brummaa te hablamos
-                claro, sin jerga rara, y nos encargamos de absolutamente todo el apartado digital. Nos das la
-                información básica de tu empresa y nosotros construimos tu "máquina de ventas" mientras tú sigues
-                facturando.</p>
+              <p>Solo contarnos qué necesita tu negocio. Con esa información te devolvemos un presupuesto claro y sin compromiso en menos de 48 horas, y a partir de ahí te explicamos el proceso a seguir y comenzamos lo antes posible.</p>
             </div>
           </article>
 
@@ -770,15 +1085,16 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
       <div class="cta-contenedor">
 
         <div class="cta-contenido">
-          <h2 class="cta-titulo">Escala tus ventas hoy. Contacta con Brummaa Córdoba</h2>
-          <p class="cta-texto">Olvídate de formularios largos o tickets de espera. Escríbenos directamente por WhatsApp
-            y hablemos sobre cómo hacer que tu presencia digital empiece a generar clientes reales.</p>
+          <h2 class="cta-titulo">Empieza tu proyecto web hoy mismo</h2>
+          <p class="cta-texto">Cuéntanos qué necesita tu negocio y te devolvemos un presupuesto claro, sin compromiso y
+            en menos de 48 horas.</p>
           <a href="https://wa.me/34692037526" class="boton boton--azul-marino" target="_blank"
-            rel="noopener noreferrer">Consigue tu web ahora</a>
+            rel="noopener noreferrer">Pide tu presupuesto gratis</a>
         </div>
 
         <div class="cta-imagen">
-          <img src="img/mockup-laptop-tarjetas-clientes.webp" alt="Mockup laptop y tarjetas de clientes Brummaa" loading="lazy">
+          <img src="img/mockup-laptop-tarjetas-clientes.webp" alt="Mockup laptop y tarjetas de clientes Brummaa"
+            loading="lazy">
         </div>
 
       </div>
@@ -817,7 +1133,8 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
             <li><a href="aviso-legal.html">Aviso Legal</a></li>
             <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
             <li><a href="politica-cookies.html">Política de Cookies</a></li>
-            <li><a href="#" onclick="event.preventDefault(); window.openRubiqCookieConfig();">Configurar cookies</a></li>
+            <li><a href="#" onclick="event.preventDefault(); window.openRubiqCookieConfig();">Configurar cookies</a>
+            </li>
           </ul>
         </div>
 

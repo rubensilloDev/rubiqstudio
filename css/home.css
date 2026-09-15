@@ -443,6 +443,38 @@
   opacity: 1;
 }
 
+.servicio-tarjeta-precio--seo {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.precio-prefijo {
+  font-size: var(--text-sizes-text-small);
+  text-transform: lowercase;
+  opacity: 0.8;
+  color: inherit;
+}
+
+.precio-frecuencia {
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-large);
+  letter-spacing: 0.5px;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.precio-subtexto {
+  width: 100%;
+  text-align: center;
+  font-size: var(--text-sizes-text-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.65;
+  margin-top: -4px;
+}
+
 /* ---- Divisor ---- */
 .servicio-tarjeta-divisor {
   width: 80%;
