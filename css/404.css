@@ -1,0 +1,150 @@
+/* =========================================
+   PÁGINA DE ERROR 404 - ESTILOS EXCLUSIVOS
+========================================= */
+
+/* =========================================
+   SECCIÓN PRINCIPAL: ERROR 404
+========================================= */
+
+/* Contenedor principal que centra vertical y horizontalmente la sección */
+.error404-principal {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px 20px;
+}
+
+/* Sección contenedora del mensaje de error */
+.error404-seccion {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Bloque de contenido centrado sin fondo de tarjeta */
+.error404-contenido {
+  text-align: center;
+}
+
+/* Número 404 destacado en tipografía Anton */
+.error404-numero {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  line-height: 0.9;
+  letter-spacing: 2px;
+  color: var(--paleta-de-colores-accent, #2DD4BF);
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+/* Título principal H1 del error */
+.error404-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--paleta-de-colores-neutral-bg, #FFFFFF);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+/* Descripción del error */
+.error404-descripcion {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--color-texto, #D1D5DB);
+  max-width: 480px;
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+}
+
+/* Contenedor de botones de acción */
+.error404-acciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Botón principal para volver al inicio */
+.error404-boton-inicio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--degradado-blanco-azul-turquesa, linear-gradient(to right, #FFFFFF 0%, #2DD4BF 100%));
+  color: var(--paleta-de-colores-azul-marino, #0A192F);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(45, 212, 191, 0.3);
+}
+
+/* Botón secundario para ir a contacto */
+.error404-boton-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--paleta-de-colores-neutral-bg, #FFFFFF);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================
+   ADAPTABILIDAD RESPONSIVE
+========================================= */
+
+/* Ajustes para tabletas y móviles */
+@media (max-width: 768px) {
+
+  /* Reducción de relleno en el área principal */
+  .error404-principal {
+    padding: 100px 16px 60px 16px;
+  }
+
+  /* Reducción de tamaño del número 404 */
+  .error404-numero {
+    font-size: 5.5rem;
+  }
+
+  /* Reducción del tamaño del título */
+  .error404-titulo {
+    font-size: 1.75rem;
+  }
+
+  /* Botones en columna en móviles */
+  .error404-acciones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Botones a ancho completo */
+  .error404-boton-inicio,
+  .error404-boton-secundario {
+    width: 100%;
+  }
+}
+
+/* Ajustes para móviles muy pequeños */
+@media (max-width: 380px) {
+
+  /* Ajuste de escala para pantallas ultra compactas */
+  .error404-numero {
+    font-size: 4.2rem;
+  }
+
+  /* Título reducido para móviles pequeños */
+  .error404-titulo {
+    font-size: 1.4rem;
+  }
+}

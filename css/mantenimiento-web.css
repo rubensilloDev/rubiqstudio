@@ -280,9 +280,10 @@
   align-items: stretch;
 }
 
-/* Tarjeta de precio individual — degradado turquesa (sup-izq) → blanco (inf-dcha) */
+/* Tarjeta de precio individual — degradado sutil (blanco a azul marino suave en la esquina) */
 .precios-mantenimiento-tarjeta {
-  background: linear-gradient(135deg, rgba(45, 212, 191, 1) 0%, var(--paleta-de-colores-neutral-bg) 100%);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 55%, rgba(200, 225, 245, 0.5) 85%, rgba(10, 25, 47, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: var(--spacing-lg);
   display: flex;
@@ -292,12 +293,69 @@
   color: var(--paleta-de-colores-azul-marino);
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+}
+
+/* Tarjeta destacada (SEO MENSUAL) — degradado sutil turquesa a azul marino */
+.precios-mantenimiento-tarjeta--destacada {
+  background: linear-gradient(130deg, rgba(45, 212, 191, 0.95) 15%, rgba(20, 60, 100, 0.95) 55%, rgba(10, 25, 47, 1) 100%);
+  border: 2px solid var(--paleta-de-colores-accent);
+  box-shadow: 0px 15px 40px rgba(45, 212, 191, 0.25);
+  color: var(--paleta-de-colores-neutral-bg);
+  transform: scale(1.05);
+  padding-top: calc(var(--spacing-xl) + 10px);
+}
+
+.precios-mantenimiento-tarjeta--destacada .boton {
+  background: var(--degradado-blanco-azul-turquesa);
+  color: var(--paleta-de-colores-azul-marino);
+}
+
+.precios-mantenimiento-tarjeta--destacada .boton:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.precios-mantenimiento-tarjeta--destacada .precio-periodo {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.precios-mantenimiento-tarjeta--destacada .precios-tarjeta-divisor {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.precios-mantenimiento-tarjeta--destacada .precios-tarjeta-lista li {
+  color: var(--paleta-de-colores-neutral-bg);
+  opacity: 0.9;
+}
+
+/* Etiqueta "Más recomendado" */
+.precios-tarjeta-etiqueta {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--paleta-de-colores-accent);
+  color: var(--paleta-de-colores-azul-marino);
+  font-family: 'Anton', sans-serif;
+  font-size: var(--text-sizes-text-small);
+  letter-spacing: 1.5px;
+  padding: 4px 18px;
+  border-radius: 50px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.4);
 }
 
 /* Hover tarjeta de precio */
 .precios-mantenimiento-tarjeta:hover {
   transform: translateY(-8px);
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.precios-mantenimiento-tarjeta--destacada:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0px 25px 60px rgba(45, 212, 191, 0.35);
 }
 
 /* Título de tarjeta de precio */
@@ -552,10 +610,20 @@
   .precios-mantenimiento-tarjetas {
     grid-template-columns: 1fr;
     max-width: 100%;
+    gap: var(--spacing-xl);
   }
 
   .precios-mantenimiento-tarjeta {
     padding: var(--spacing-md);
+  }
+
+  .precios-mantenimiento-tarjeta--destacada {
+    transform: none;
+    padding-top: calc(var(--spacing-md) + 10px);
+  }
+
+  .precios-mantenimiento-tarjeta--destacada:hover {
+    transform: translateY(-8px);
   }
 
   .precios-mantenimiento-titulo {

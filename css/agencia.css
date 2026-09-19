@@ -63,7 +63,7 @@
 .hero-agencia-img {
   position: relative;
   z-index: 1;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
@@ -786,9 +786,9 @@
 /* Sección contenedora con fondo destacado tipo card */
 .cta-final-agencia {
   background: var(--degradado-fondo-faq);
-  margin: 100px 50px;
+  margin: 0 auto 100px;
   border-radius: 40px;
-  padding: 20px;
+  padding: 10px 30px;
   overflow: hidden;
   border: 2px solid var(--paleta-de-colores-accent);
   box-shadow: 0 20px 60px rgba(45, 212, 191, 0.25), 0 0 40px rgba(45, 212, 191, 0.1);

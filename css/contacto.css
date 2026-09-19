@@ -220,12 +220,12 @@
   transition: all 0.2s ease;
 }
 
-.formulario-servicio-opcion input[type="radio"]:checked + .servicio-radio-custom {
+.formulario-servicio-opcion input[type="radio"]:checked+.servicio-radio-custom {
   border-color: var(--paleta-de-colores-accent);
   background: var(--paleta-de-colores-accent);
 }
 
-.formulario-servicio-opcion input[type="radio"]:checked + .servicio-radio-custom::after {
+.formulario-servicio-opcion input[type="radio"]:checked+.servicio-radio-custom::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -296,12 +296,12 @@
   transition: all 0.2s ease;
 }
 
-.formulario-servicio-extra input[type="checkbox"]:checked + .servicio-check-custom {
+.formulario-servicio-extra input[type="checkbox"]:checked+.servicio-check-custom {
   background: var(--paleta-de-colores-azul-electrico);
   border-color: var(--paleta-de-colores-azul-electrico);
 }
 
-.formulario-servicio-extra input[type="checkbox"]:checked + .servicio-check-custom::after {
+.formulario-servicio-extra input[type="checkbox"]:checked+.servicio-check-custom::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -551,7 +551,7 @@
 
 /* Tarjeta individual de proceso */
 .proceso-contacto-tarjeta {
-  background: linear-gradient(to bottom, var(--paleta-de-colores-neutral-bg) 40%, var(--paleta-de-colores-azul-marino) 100%);
+  background: linear-gradient(to bottom, var(--paleta-de-colores-neutral-bg) 40%, var(--paleta-de-colores-accent) 100%);
   border-radius: 20px;
   padding: var(--spacing-xl) var(--spacing-lg);
   display: flex;
