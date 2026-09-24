@@ -177,6 +177,10 @@
    SECCIÓN 3: TARJETAS DE PRECIOS
    ========================================= */
 
+.presupuesto-contenedor {
+  margin: 0 auto;
+}
+
 /* Título de la sección */
 .presupuesto-titulo {
   text-align: center;
@@ -195,10 +199,14 @@
 
 /* Grid de tarjetas */
 .presupuesto-tarjetas {
-  max-width: 70%;
+  width: 100%;
+  max-width: 1400px;
+  /* o el ancho máximo que quieras menor a 1400px */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
   gap: var(--spacing-lg);
   align-items: stretch;
 }

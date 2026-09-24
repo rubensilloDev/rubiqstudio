@@ -5,14 +5,14 @@
   <!-- Google Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied'
     });
-    window.addEventListener('rubiqCookieConsent', function(e) {
+    window.addEventListener('rubiqCookieConsent', function (e) {
       var consent = e.detail;
       var updates = {};
       if (consent.analiticas) {
@@ -25,16 +25,19 @@
       }
       if (Object.keys(updates).length > 0) {
         gtag('consent', 'update', updates);
-        window.dataLayer.push({'event': 'cookie_consent_update', 'consent': consent});
+        window.dataLayer.push({ 'event': 'cookie_consent_update', 'consent': consent });
       }
     });
   </script>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MVJXL22M');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MVJXL22M');</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
@@ -44,140 +47,35 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="manifest" href="img/favicon/site.webmanifest">
-  <title>Desarrollo web a medida en Córdoba — Brummaa</title>
+  <title>Empresa de desarrollo web a medida para tu negocio — Brummaa</title>
   <meta name="description"
-    content="Brummaa: desarrollo web a medida en Córdoba. Creamos Landing Pages y webs corporativas profesionales, rápidas y orientadas a captar clientes.">
+    content="Una web pensada para tu negocio, sin nada al azar. Diseño profesional y a medida, y SEO desde el primer día, para que tu página no solo se vea bien, sino que atraiga clientes reales en tu zona.">
   <link rel="canonical" href="https://brummaa.es/desarrollo-web-a-medida.html">
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://brummaa.es/desarrollo-web-a-medida.html">
-  <meta property="og:title" content="Desarrollo web a medida en Córdoba — Brummaa">
-  <meta property="og:description" content="Creamos Landing Pages y webs corporativas profesionales, rápidas y orientadas a captar clientes en Córdoba.">
+  <meta property="og:title" content="Empresa de desarrollo web a medida para tu negocio — Brummaa">
+  <meta property="og:description"
+    content="Una web pensada para tu negocio, sin nada al azar. Diseño profesional y a medida, y SEO desde el primer día, para que tu página no solo se vea bien, sino que atraiga clientes reales en tu zona.">
   <meta property="og:image" content="https://brummaa.es/img/img-hero-desarrollo-medida.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Brummaa">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Desarrollo web a medida en Córdoba — Brummaa">
-  <meta name="twitter:description" content="Creamos Landing Pages y webs corporativas profesionales, rápidas y orientadas a captar clientes en Córdoba.">
+  <meta name="twitter:title" content="Empresa de desarrollo web a medida para tu negocio — Brummaa">
+  <meta name="twitter:description"
+    content="Una web pensada para tu negocio, sin nada al azar. Diseño profesional y a medida, y SEO desde el primer día, para que tu página no solo se vea bien, sino que atraiga clientes reales en tu zona.">
   <meta name="twitter:image" content="https://brummaa.es/img/img-hero-desarrollo-medida.webp">
-
-  <!-- Datos Estructurados JSON-LD (Schema.org) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://brummaa.es/desarrollo-web-a-medida.html#service",
-        "name": "Desarrollo Web a Medida en Córdoba",
-        "serviceType": "Web Development",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "Brummaa",
-          "url": "https://brummaa.es/"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Córdoba"
-        },
-        "description": "Desarrollo de páginas web y Landing Pages a medida optimizadas para conversión y velocidad."
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Cuánto cuesta un desarrollo web a medida?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Somos 100% transparentes desde el principio. Una Landing Page cuesta desde 250€ y una web corporativa completa parte desde 350€ o 400€ según requerimientos, sin cuotas sorpresa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué pasa si mi empresa crece y necesito añadir nuevas opciones en el futuro?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tu web nace siendo 100% escalable. Podemos añadir reservas, tiendas o áreas privadas sin tener que rehacer la página."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Si me hacéis la web a medida, ¿el código y el dominio son míos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí, absolutamente todo es tuyo desde el minuto uno. Cero efecto rehén."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Mi web actual es muy lenta y no me trae clientes, ¿hay que hacerla de cero?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Auditamos tu sitio actual, limpiamos código pesado y reprogramamos la estructura para convertirla en un embudo rentable."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿El desarrollo a medida incluye SEO para salir en Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Totalmente. No programamos sin investigar primero cómo buscan tus servicios los clientes en tu ciudad."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Si es a medida, ¿podré cambiar textos o fotos yo mismo luego?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí. Si necesitas cambios frecuentes podemos desarrollarte un WordPress limpio con panel intuitivo."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Estoy muy liado con mi negocio, ¿me vais a quitar mucho tiempo?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Actuamos como tu socio tecnológico. Solo necesitamos una charla inicial y revisiones puntuales."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Estoy obligado a pagar una cuota de mantenimiento mensual?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No hay permanencia. Tú decides si contratar nuestro soporte o no."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿La web a medida cargará rápido en teléfonos móviles?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Es nuestra máxima prioridad. Garantizamos velocidad extrema en cualquier dispositivo."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Hacéis las páginas web con Inteligencia Artificial?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Usamos la IA como herramienta de apoyo, pero la arquitectura, estrategia y código final siempre tienen dirección y revisión humana."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 
 
   <!-- Fuentes Google -->
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap"
     rel="stylesheet">
@@ -191,52 +89,311 @@
 
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/desarrollo-web.css">
-<style>
-/* COOKIE BANNER & MODAL */
-.rubiq-cookie-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(10,25,47,.7);backdrop-filter:blur(4px);z-index:99998;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
-.rubiq-cookie-overlay.activo{opacity:1;visibility:visible}
-.rubiq-cookie-banner{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);width:calc(100% - 32px);max-width:960px;background:#0A192F;border:1px solid rgba(45,212,191,.25);box-shadow:0 20px 40px rgba(0,0,0,.4),0 0 20px rgba(45,212,191,.1);border-radius:16px;padding:24px 28px;z-index:99999;opacity:0;visibility:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .4s ease,visibility .4s ease;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
-.rubiq-cookie-banner.activo{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
-.rubiq-cookie-contenido{display:flex;flex-direction:column;gap:16px}
-@media(min-width:768px){.rubiq-cookie-contenido{flex-direction:row;align-items:center;justify-content:space-between;gap:28px}}
-.rubiq-cookie-texto{font-size:.9375rem;line-height:1.5;color:#94A3B8;margin:0}
-.rubiq-cookie-texto strong{color:#fff}
-.rubiq-cookie-texto a{color:#2DD4BF;text-decoration:underline;text-underline-offset:3px;transition:color .2s ease}
-.rubiq-cookie-texto a:hover{color:#5EEAD4}
-.rubiq-cookie-botones{display:flex;flex-wrap:wrap;align-items:center;gap:10px;flex-shrink:0}
-.rubiq-cookie-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;font-size:.875rem;font-weight:600;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:all .2s ease;white-space:nowrap;font-family:inherit}
-.rubiq-cookie-btn--aceptar{background:#2DD4BF;color:#0A192F}
-.rubiq-cookie-btn--aceptar:hover{background:#5EEAD4;box-shadow:0 0 12px rgba(45,212,191,.4)}
-.rubiq-cookie-btn--rechazar{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)}
-.rubiq-cookie-btn--rechazar:hover{background:rgba(255,255,255,.15)}
-.rubiq-cookie-btn--config{background:transparent;color:#94A3B8;border-color:rgba(148,163,184,.3)}
-.rubiq-cookie-btn--config:hover{color:#fff;border-color:#2DD4BF}
-.rubiq-cookie-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:calc(100% - 32px);max-width:600px;max-height:85vh;background:#0A192F;border:1px solid rgba(45,212,191,.3);box-shadow:0 25px 50px -12px rgba(0,0,0,.6);border-radius:16px;z-index:99999;opacity:0;visibility:hidden;transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s ease,visibility .3s ease;display:flex;flex-direction:column;overflow:hidden;color:#E2E8F0;font-family:'Inter',system-ui,-apple-system,sans-serif}
-.rubiq-cookie-modal.activo{transform:translate(-50%,-50%) scale(1);opacity:1;visibility:visible}
-.rubiq-cookie-modal-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
-.rubiq-cookie-modal-titulo{font-size:1.25rem;font-weight:700;color:#fff;margin:0}
-.rubiq-cookie-modal-cerrar{background:transparent;border:none;color:#94A3B8;font-size:1.25rem;cursor:pointer;padding:4px;line-height:1;border-radius:4px;transition:color .2s ease}
-.rubiq-cookie-modal-cerrar:hover{color:#fff}
-.rubiq-cookie-modal-body{padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:20px}
-.rubiq-cookie-categoria{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
-.rubiq-cookie-cat-header{display:flex;align-items:center;justify-content:space-between}
-.rubiq-cookie-cat-nombre{font-weight:600;font-size:1rem;color:#fff}
-.rubiq-cookie-cat-desc{font-size:.875rem;color:#94A3B8;line-height:1.4;margin:0}
-.rubiq-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}
-.rubiq-switch input{opacity:0;width:0;height:0}
-.rubiq-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:rgba(255,255,255,.2);transition:.3s;border-radius:24px}
-.rubiq-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:#fff;transition:.3s;border-radius:50%}
-input:checked+.rubiq-slider{background-color:#2DD4BF}
-input:focus+.rubiq-slider{box-shadow:0 0 1px #2DD4BF}
-input:checked+.rubiq-slider:before{transform:translateX(20px)}
-input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
-.rubiq-cookie-modal-footer{padding:16px 24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:flex-end;gap:12px;background:rgba(10,25,47,.95)}
-</style></head>
+  <style>
+    /* COOKIE BANNER & MODAL */
+    .rubiq-cookie-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 25, 47, .7);
+      backdrop-filter: blur(4px);
+      z-index: 99998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease, visibility .3s ease
+    }
+
+    .rubiq-cookie-overlay.activo {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      width: calc(100% - 32px);
+      max-width: 960px;
+      background: #0A192F;
+      border: 1px solid rgba(45, 212, 191, .25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4), 0 0 20px rgba(45, 212, 191, .1);
+      border-radius: 16px;
+      padding: 24px 28px;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .4s cubic-bezier(.16, 1, .3, 1), opacity .4s ease, visibility .4s ease;
+      color: #E2E8F0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif
+    }
+
+    .rubiq-cookie-banner.activo {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    @media(min-width:768px) {
+      .rubiq-cookie-contenido {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px
+      }
+    }
+
+    .rubiq-cookie-texto {
+      font-size: .9375rem;
+      line-height: 1.5;
+      color: #94A3B8;
+      margin: 0
+    }
+
+    .rubiq-cookie-texto strong {
+      color: #fff
+    }
+
+    .rubiq-cookie-texto a {
+      color: #2DD4BF;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s ease
+    }
+
+    .rubiq-cookie-texto a:hover {
+      color: #5EEAD4
+    }
+
+    .rubiq-cookie-botones {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0
+    }
+
+    .rubiq-cookie-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      font-size: .875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all .2s ease;
+      white-space: nowrap;
+      font-family: inherit
+    }
+
+    .rubiq-cookie-btn--aceptar {
+      background: #2DD4BF;
+      color: #0A192F
+    }
+
+    .rubiq-cookie-btn--aceptar:hover {
+      background: #5EEAD4;
+      box-shadow: 0 0 12px rgba(45, 212, 191, .4)
+    }
+
+    .rubiq-cookie-btn--rechazar {
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .15)
+    }
+
+    .rubiq-cookie-btn--rechazar:hover {
+      background: rgba(255, 255, 255, .15)
+    }
+
+    .rubiq-cookie-btn--config {
+      background: transparent;
+      color: #94A3B8;
+      border-color: rgba(148, 163, 184, .3)
+    }
+
+    .rubiq-cookie-btn--config:hover {
+      color: #fff;
+      border-color: #2DD4BF
+    }
+
+    .rubiq-cookie-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.95);
+      width: calc(100% - 32px);
+      max-width: 600px;
+      max-height: 85vh;
+      background: #0A192F;
+      border: 1px solid rgba(45, 212, 191, .3);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .6);
+      border-radius: 16px;
+      z-index: 99999;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform .3s cubic-bezier(.16, 1, .3, 1), opacity .3s ease, visibility .3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      color: #E2E8F0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif
+    }
+
+    .rubiq-cookie-modal.activo {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible
+    }
+
+    .rubiq-cookie-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .rubiq-cookie-modal-titulo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0
+    }
+
+    .rubiq-cookie-modal-cerrar {
+      background: transparent;
+      border: none;
+      color: #94A3B8;
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      border-radius: 4px;
+      transition: color .2s ease
+    }
+
+    .rubiq-cookie-modal-cerrar:hover {
+      color: #fff
+    }
+
+    .rubiq-cookie-modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .rubiq-cookie-categoria {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .06);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .rubiq-cookie-cat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .rubiq-cookie-cat-nombre {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff
+    }
+
+    .rubiq-cookie-cat-desc {
+      font-size: .875rem;
+      color: #94A3B8;
+      line-height: 1.4;
+      margin: 0
+    }
+
+    .rubiq-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0
+    }
+
+    .rubiq-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0
+    }
+
+    .rubiq-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, .2);
+      transition: .3s;
+      border-radius: 24px
+    }
+
+    .rubiq-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #fff;
+      transition: .3s;
+      border-radius: 50%
+    }
+
+    input:checked+.rubiq-slider {
+      background-color: #2DD4BF
+    }
+
+    input:focus+.rubiq-slider {
+      box-shadow: 0 0 1px #2DD4BF
+    }
+
+    input:checked+.rubiq-slider:before {
+      transform: translateX(20px)
+    }
+
+    input:disabled+.rubiq-slider {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .rubiq-cookie-modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: rgba(10, 25, 47, .95)
+    }
+  </style>
+</head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVJXL22M"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVJXL22M" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ===== HEADER / NAVEGACIÓN ===== -->
@@ -280,15 +437,14 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
       <div class="hero-desarrollo-contenedor">
         <!-- Columna izquierda -->
         <div class="hero-desarrollo-texto">
-          <h1>Desarrollo web a medida en Córdoba para <span class="destacado">multiplicar tus clientes</span></h1>
-          <p>En Córdoba hay muchas webs bonitas que no generan un solo cliente. Brummaa ademas de webs bonitas construye
-            para generar clientes: diseños profesionales, bonitos y orientados a convertir visitas en dinero real para
-            tu negocio.</p>
-          <a href="#contacto" class="boton boton--blanco">Empecemos a trabajar</a>
+          <h1>Empresa de desarrollo web a medida para <span class="destacado">tu negocio</span></h1>
+          <p>Una web pensada para tu negocio, sin nada al azar. Diseño profesional y a medida, y SEO desde el primer
+            día, para que tu página no solo se vea bien, sino que atraiga clientes reales en tu zona.</p>
+          <a href="#contacto" class="boton boton--blanco">Pide presupuesto sin compromiso</a>
         </div>
         <!-- Columna derecha -->
         <div class="hero-desarrollo-imagen">
-          <img src="img/img-hero-desarrollo-medida.webp" alt="Desarrollo web a medida - Mockup proyecto Brummaa">
+          <img src="img/img-hero-desarrollo-medida.webp" alt="Empresa de desarrollo web a medida para tu negocio">
 
           <!-- Tarjetas flotantes -->
           <div class="hero-tarjeta hero-tarjeta--superior-izq">
@@ -314,40 +470,38 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== SECCIÓN 2: ESTRATEGIA ===== -->
     <section class="estrategia contenido-seccion">
       <div class="estrategia-contenedor">
-        <h2 class="estrategia-titulo">Crear una página web profesional <span class="destacado">requiere
-            estrategia,</span> no atajos rápidos</h2>
-        <p class="estrategia-parrafo">Una web no se hace por hacer ni consiste solo desarrollarla. Crear una página web
-          profesional exige
-          investigar a tu mercado, trazar una estrategia previa y estructurar un sistema enfocado en captar clientes; un
-          proceso técnico que asumimos para que tú te centres exclusivamente en facturar.</p>
-        <a href="#contacto" class="boton boton--blanco">Quiero mi web profesional</a>
+        <h2 class="estrategia-titulo">Diseño y desarrollo web a medida profesional estratégico, <span
+            class="destacado">sin plantillas genéricas ni atajos.</span></h2>
+        <p class="estrategia-parrafo">En Brummaa no partimos de plantillas genéricas: analizamos tu negocio y tu sector,
+          y diseñamos y desarrollamos tu web desde cero, con el SEO integrado desde el primer momento.</p>
       </div>
     </section>
 
     <!-- ===== SECCIÓN 3: TARJETAS DE PRECIOS ===== -->
     <section class="presupuesto contenido-seccion" id="presupuesto">
       <div class="presupuesto-contenedor">
-        <h2 class="presupuesto-titulo">Presupuesto de <span class="destacado">desarrollo web a medida</span></h2>
-        <p class="presupuesto-texto">Huye de las sorpresas: conoce tu presupuesto de desarrollo web a medida desde el
-          primer minuto, con precios claros y la propiedad total de tu código (cero "efecto rehén").</p>
+        <h2 class="presupuesto-titulo">Precios de página web <span class="destacado">para tu empresa</span></h2>
+        <p class="presupuesto-texto">Dos formatos según lo que necesite tu negocio ahora mismo: una landing page es una
+          sola página optimizada para la conversión, o una web corporativa para dar una mayor autoridad de marca en
+          varias páginas. Precio cerrado, sin sorpresas.</p>
 
-        <div class="presupuesto-tarjetas">
+        <div class="presupuesto-tarjetas presupuesto-tarjetas-precios-desarrollo">
           <!-- Tarjeta 1: Landing Page -->
           <article class="presupuesto-tarjeta">
             <h3 class="presupuesto-tarjeta-titulo">Landing Page de alta conversión</h3>
             <div class="presupuesto-tarjeta-precio">
-              <span class="precio-anterior">300€</span>
-              <span class="precio-actual">200€</span>
+              <span class="precio-anterior">360€</span>
+              <span class="precio-actual">250€</span>
             </div>
             <hr class="presupuesto-tarjeta-divisor">
             <ul class="presupuesto-tarjeta-lista">
-              <li>Diseño y desarrollo profesional y a medida.</li>
-              <li>SEO Friendly.</li>
-              <li>Adaptada 100% a todos los dispositivos.</li>
-              <li>Una Página principal + páginas legales</li>
-              <li>*Hosting y Dominio aparte</li>
+              <li>Diseño y desarrollo 100% a medida</li>
+              <li>Optimizada para SEO desde el primer día</li>
+              <li>Adaptada a móvil, tablet y escritorio</li>
+              <li>Una página principal + páginas legales</li>
+              <li>Enfocada y optimizada a una única acción de conversión</li>
             </ul>
-            <a href="#contacto" class="boton boton--blanco-borde">Quiero mi landing</a>
+            <a href="#contacto" class="boton boton--blanco-borde">Quiero mi landing page</a>
           </article>
 
           <!-- Tarjeta 2: Corporativo -->
@@ -355,39 +509,86 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
             <span class="presupuesto-tarjeta-etiqueta">Más popular</span>
             <h3 class="presupuesto-tarjeta-titulo">Sitio Web Corporativo</h3>
             <div class="presupuesto-tarjeta-precio">
-              <span class="precio-anterior">450€</span>
+              <span class="precio-anterior">500€</span>
               <span class="precio-actual">350€</span>
             </div>
             <hr class="presupuesto-tarjeta-divisor">
             <ul class="presupuesto-tarjeta-lista">
-              <li>Diseño y desarrollo profesional y a medida.</li>
-              <li>SEO Friendly.</li>
-              <li>Adaptada 100% a todos los dispositivos.</li>
+              <li>Diseño y desarrollo 100% a medida</li>
+              <li>Optimizado para SEO desde el primer día</li>
+              <li>Adaptado a móvil, tablet y escritorio</li>
               <li>5 páginas + páginas legales</li>
+              <li>Pensado para dar autoridad y credibilidad de marca, no solo conversión puntual</li>
             </ul>
-            <a href="#contacto" class="boton boton--turquesa">Solicitar presupuesto</a>
+            <a href="#contacto" class="boton boton--turquesa">Quiero mi web corporativa</a>
+          </article>
+
+          <!-- Tarjeta 3: Ficha de Google -->
+          <article class="presupuesto-tarjeta">
+            <h3 class="presupuesto-tarjeta-titulo">Optimización de Ficha de Google (Google Maps)</h3>
+            <div class="presupuesto-tarjeta-precio">
+              <span class="precio-anterior">110€</span>
+              <span class="precio-actual">75€</span>
+            </div>
+            <hr class="presupuesto-tarjeta-divisor">
+            <ul class="presupuesto-tarjeta-lista">
+              <li>Configuración y optimización completa de tu ficha de Google</li>
+              <li>Categoría, descripción y datos de contacto correctamente estructurados</li>
+              <li>Fotos y horarios actualizados</li>
+              <li>Pensado para reforzar tu SEO local junto a tu web</li>
+            </ul>
+            <a href="#contacto" class="boton boton--blanco-borde">Quiero optimizar mi ficha de Google</a>
           </article>
         </div>
 
         <div class="presupuesto-nota">
+          <i class="fas fa-exclamation-circle"></i>
+          <p><strong>Importante:</strong> El hosting y dominio de la web estará a nombre del cliente y lo pagará el cliente.</p>
+        </div>
+
+        <div class="presupuesto-nota">
           <i class="fas fa-info-circle"></i>
-          <p>Mantenimiento web, dominio y hosting se pagan aparte de lo que cuesta la web</p>
+          <p>Tu web se entrega optimizada para SEO desde el día uno. El mantenimiento y posicionamiento continuo mes a
+            mes se contrata aparte, según las necesidades de tu negocio.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECCIÓN 4: REDISEÑO CTA ===== -->
-    <section class="rediseño contenido-seccion">
-      <div class="rediseño-contenedor">
-        <div class="rediseño-texto">
-          <h2 class="rediseño-titulo">¿Tu página no vende? <span class="destacado">Rediseño de página web
-              estratégico</span></h2>
-          <p class="rediseño-parrafo">Tener una web bonita pero invisible en Google que no genera llamadas es tirar el
-            dinero. Con nuestro servicio de rediseño de página web, eliminamos los fallos técnicos y reprogramamos la
-            estructura para transformar tu sitio de un simple folleto a un embudo de ventas 24/7.</p>
-        </div>
-        <div class="container-cta">
-          <a href="#contacto" class="boton boton--blanco">Empecemos a trabajar</a>
+    <!-- ===== SECCIÓN 4: DIFERENCIACIÓN ===== -->
+    <section class="diferenciacion contenido-seccion" id="diferenciacion">
+      <div class="diferenciacion-contenedor rediseño-texto">
+        <h2 class="diferenciacion-titulo">Qué diferencia a nuestra <span class="destacado">agencia de desarrollo
+            web</span> de otras empresas de desarrollo de páginas web</h2>
+
+        <div class="diferenciacion-grid container-cta">
+          <article class="diferenciacion-tarjeta">
+            <div class="diferenciacion-icono"><i class="fas fa-chart-line"></i></div>
+            <h3 class="diferenciacion-tarjeta-titulo">SEO trabajado desde el primer momento</h3>
+            <p class="diferenciacion-tarjeta-texto">En muchas agencias el SEO se añade al final, si sobra tiempo. En
+              Brummaa forma parte del proceso desde el primer momento que se empieza a trabajar la web, porque una web
+              sin SEO es una web que no va a traer clientes.</p>
+          </article>
+
+          <article class="diferenciacion-tarjeta">
+            <div class="diferenciacion-icono"><i class="fas fa-layer-group"></i></div>
+            <h3 class="diferenciacion-tarjeta-titulo">Cero plantillas</h3>
+            <p class="diferenciacion-tarjeta-texto">No usamos constructores genéricos ni plantillas reutilizadas. Cada
+              web se programa a medida, adaptada a tu negocio, sector y a cómo buscan tus clientes en Google.</p>
+          </article>
+
+          <article class="diferenciacion-tarjeta">
+            <div class="diferenciacion-icono"><i class="fas fa-bullseye"></i></div>
+            <h3 class="diferenciacion-tarjeta-titulo">Foco en tu competencia</h3>
+            <p class="diferenciacion-tarjeta-texto">Antes de diseñar nada, analizamos qué está haciendo la competencia y
+              dónde puedes ganarles terreno. La web se construye con esa ventaja en mente, no en el vacío.</p>
+          </article>
+
+          <article class="diferenciacion-tarjeta">
+            <div class="diferenciacion-icono"><i class="fas fa-file-invoice-dollar"></i></div>
+            <h3 class="diferenciacion-tarjeta-titulo">Presupuesto claro desde el primer minuto</h3>
+            <p class="diferenciacion-tarjeta-texto">Precios cerrados y sin letra pequeña. Sabes exactamente qué incluye
+              tu web y cuánto cuesta antes de empezar.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -395,146 +596,148 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== SECCIÓN 5: FAQ ===== -->
     <section class="faq contenido-seccion" id="faq">
       <div class="faq-contenedor">
-        <h2 class="faq-titulo">Preguntas frecuentes sobre nuestro desarrollo web a medida</h2>
-        <p class="faq-intro">Resolvemos las dudas más comunes sobre nuestro desarrollo web a medida y qué puedes esperar
-          de tu proyecto.</p>
+        <h2 class="faq-titulo">Preguntas frecuentes sobre nuestra <span class="destacado">empresa de desarrollo
+            web</span></h2>
 
         <div class="faq-lista">
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">1. ¿Cuánto cuesta un desarrollo web a medida?</h3>
+              <h3 class="faq-pregunta">1. ¿Cuánto cuesta una página web para una empresa?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Somos 100% transparentes desde el principio. Si necesitas una Landing Page (sitio web de una sola
-                página) para captar clientes, el precio es de 250€ (dominio y hosting aparte). Si buscas crear una web
-                corporativa completa y a medida para tu empresa, los precios parten desde los 350€ (dominio y hosting
-                aparte). Sin letras pequeñas ni cuotas sorpresa al terminar.</p>
+              <p>Depende de lo que necesites. Una landing page de alta conversión (una sola página enfocada a que te
+                contacten, reserven o compren) tiene un precio distinto a un sitio web corporativo de varias páginas
+                (inicio, servicios, sobre nosotros, contacto...). En Brummaa trabajamos con precio cerrado desde el
+                primer minuto: sabes exactamente qué incluye tu web y cuánto cuesta antes de empezar, sin sorpresas a
+                mitad de proyecto.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">2. ¿Qué pasa si mi empresa crece y necesito añadir nuevas opciones en el futuro?
+              <h3 class="faq-pregunta">2. ¿Qué diferencia hay entre una landing page y una web corporativa?</h3>
+              <i class="fas fa-plus faq-icono"></i>
+            </div>
+            <div class="faq-divisor"></div>
+            <div class="faq-respuesta">
+              <p>La landing page está pensada para un único objetivo: que el visitante haga una acción concreta
+                (contacto, reserva o venta) en una sola página, sin distracciones. La web corporativa tiene varias
+                páginas —normalmente cinco más las legales— y busca dar autoridad y credibilidad de marca a largo plazo,
+                no solo generar una conversión puntual. Si vendes un servicio muy definido, suele bastar con la landing.
+                Si tienes varias líneas de negocio o quieres transmitir solidez, la corporativa encaja mejor.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <div class="faq-fila-superior">
+              <h3 class="faq-pregunta">3. ¿Mi web nueva vendrá optimizada para SEO o eso hay que contratarlo aparte?
               </h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Esa es la mayor ventaja de un desarrollo a medida: tu web nace siendo 100% escalable. Si el día de
-                mañana quieres añadir un sistema de reservas automático, una tienda online o una zona privada para tus
-                clientes, podemos programarlo e integrarlo directamente. No tendrás que tirar la página y empezar de
-                cero; tu ecosistema digital crece al mismo ritmo que tu negocio.</p>
+              <p>Toda web que hacemos en Brummaa se entrega optimizada para SEO desde el diseño inicial: estructura,
+                contenido, velocidad de carga y adaptación a móvil pensadas para que Google pueda posicionarla. Lo que
+                se contrata aparte es el mantenimiento y posicionamiento SEO mes a mes, que es un trabajo continuo
+                (contenido, seguimiento de posiciones, ajustes) distinto a la optimización de base que ya trae la web.
+              </p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">3. Si me hacéis la web a medida, ¿el código y el dominio son míos?</h3>
+              <h3 class="faq-pregunta">4. ¿Trabajáis con plantillas o la web es realmente a medida?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Sí, absolutamente todo es tuyo. Odiamos el "efecto rehén". Te entregamos la propiedad total del código,
-                tu dominio y tus contraseñas desde el minuto uno. Eres 100% libre de llevarte tu web a otro lado cuando
-                quieras sin depender de nosotros.</p>
+              <p>Cero plantillas. No usamos constructores genéricos ni diseños reciclados de otros clientes. Cada web se
+                programa desde cero, adaptada a tu sector concreto y a cómo buscan tus clientes en Google, porque una
+                plantilla rellenada con tu logo no te diferencia de tu competencia.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">4. Mi web actual es muy lenta y no me trae clientes, ¿hay que hacerla de cero?
-              </h3>
+              <h3 class="faq-pregunta">5. ¿Cómo afecta el diseño de mi web a que aparezca en Google?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>No siempre hay que tirarla a la basura. Contamos con un servicio de rediseño estratégico. Entramos a tu
-                web, auditamos qué frenos técnicos la están bloqueando, limpiamos el código pesado y reprogramamos su
-                estructura para transformarla en un embudo de ventas que funcione.</p>
+              <p>Mucho más de lo que la gente cree. El SEO no es algo que se "añade" al final sobre una web ya
+                terminada: en Brummaa forma parte de la estructura desde el primer boceto. Eso incluye cómo se organizan
+                los contenidos, la velocidad de carga, y que la web esté bien adaptada a móvil. Una web bonita pero mal
+                estructurada por dentro es una web que Google no sabe dónde colocar.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">5. ¿El desarrollo a medida incluye SEO para salir en Google?</h3>
+              <h3 class="faq-pregunta">6. ¿Podéis optimizar también la ficha de Google de mi negocio?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Totalmente. De hecho, no programamos ni una línea de código sin hacer SEO primero. Investigamos
-                exactamente cómo buscan tus servicios los clientes en tu ciudad, y construimos la arquitectura web desde
-                los cimientos para que posiciones bien y atraigas tráfico cualificado.</p>
+              <p>Sí. La optimización de tu ficha de Google (Google Business Profile) es un servicio adicional que
+                ofrecemos junto al desarrollo web, especialmente recomendable si tu negocio depende de clientes de tu
+                zona, ya que es uno de los factores que más influye en el SEO local.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">6. Si es a medida, ¿podré cambiar textos o fotos yo mismo luego?</h3>
+              <h3 class="faq-pregunta">7. Ya tengo una página web, ¿puedo mejorar solo el SEO sin rehacerla entera?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Claro que sí. Si necesitas actualizar contenidos en el futuro de forma frecuente, en lugar de usar
-                código puro te desarrollamos un WordPress limpio, totalmente optimizado. Te dejamos un panel de control
-                súper intuitivo y explicado para que hagas cambios sin saber programar y sin tener que llamarnos.</p>
+              <p>Sí, no hace falta tirar tu web actual para mejorar su posicionamiento. En Brummaa ofrecemos un servicio
+                de auditoría SEO y optimización independiente para webs ya existentes, sin necesidad de rediseñarlas
+                desde cero.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">7. Estoy muy liado con mi negocio, ¿me vais a quitar mucho tiempo?</h3>
+              <h3 class="faq-pregunta">8. ¿Cuánto tiempo se tarda en tener la web lista?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Para nada, ese es nuestro mayor valor. Actuamos como tu socio tecnológico para que tú te desentiendas
-                de la informática. Solo necesitamos que nos cuentes qué vendes en una charla inicial, y luego durante el
-                proceso revisar y confirmar por tu parte la estructura y diseño antes de pasar al desarrollo. Nosotros
-                asumimos toda la complejidad de crear tu web mientras tú sigues gestionando tu empresa.</p>
+              <p>Varía según el formato: una landing page, al ser una sola página con un objetivo concreto, se completa
+                antes que un sitio corporativo de varias páginas, que necesita más contenido y estructura. El plazo
+                exacto se concreta después de la primera llamada, en función de tu negocio y el material que ya tengas
+                preparado.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">8. ¿Estoy obligado a pagar una cuota de mantenimiento mensual?</h3>
+              <h3 class="faq-pregunta">9. ¿Puedo pedir cambios en el diseño que me proponéis?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>No hay ningún compromiso de permanencia. Tú decides. Eso sí, siempre recomendamos nuestro plan de
-                mantenimiento (entre 50€ y 75€ al mes). Funciona como un escudo técnico: nosotros hacemos copias de
-                seguridad, prevenimos hackeos, monitorizamos los resultados para actuar según ellos y actualizamos el
-                sistema para que tu web nunca se caiga y no pierdas ventas.</p>
+              <p>Sí, con margen real. Como no partimos de plantillas cerradas, el diseño se adapta a tu gusto y a lo que
+                mejor funcione para tu sector, dentro de la propuesta que analizamos según tu negocio y tu competencia
+                local.</p>
             </div>
           </article>
 
           <article class="faq-item">
             <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">9. ¿La web a medida cargará rápido en teléfonos móviles?</h3>
+              <h3 class="faq-pregunta">10. ¿Necesito contratar el SEO mensual si mi web ya viene optimizada?</h3>
               <i class="fas fa-plus faq-icono"></i>
             </div>
             <div class="faq-divisor"></div>
             <div class="faq-respuesta">
-              <p>Es nuestra máxima prioridad. Hoy en día, casi todos tus clientes te van a buscar desde el móvil. Al
-                desarrollar con código limpio y sin plugins innecesarios, garantizamos una velocidad de carga extrema en
-                cualquier dispositivo para evitar que los usuarios impacientes abandonen tu página.</p>
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <div class="faq-fila-superior">
-              <h3 class="faq-pregunta">10. ¿Hacéis las páginas web con Inteligencia Artificial?</h3>
-              <i class="fas fa-plus faq-icono"></i>
-            </div>
-            <div class="faq-divisor"></div>
-            <div class="faq-respuesta">
-              <p>Usamos la IA como una herramienta de apoyo para agilizar procesos (como perfilar textos o automatizar
-                tareas técnicas), pero nunca entregamos webs clónicas generadas con un clic. La estrategia comercial, la
-                arquitectura SEO y el código final siempre tienen dirección y revisión humana para garantizar resultados
-                reales. Todo nuestro proceso se revisa detenidamente se haga donde y con quien se haga.</p>
+              <p>No es obligatorio. Tu web sale de fábrica bien construida a nivel técnico y de estructura. El SEO
+                mensual está pensado para negocios que quieren seguir ganando posiciones frente a su competencia con el
+                tiempo —contenido nuevo, seguimiento de resultados, ajustes según cambios en Google—, no simplemente
+                para mantener lo que ya hay.</p>
             </div>
           </article>
 
@@ -545,14 +748,11 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
     <!-- ===== SECCIÓN 6: CTA FINAL ===== -->
     <section class="cta-final contenido-seccion" id="contacto">
       <div class="cta-final-contenedor">
-        <h2 class="cta-final-titulo">Rentabiliza tu negocio hoy. <span class="destacado">Contacta con Brummaa
-            Córdoba</span></h2>
-        <p class="cta-final-texto">Delega el caos técnico en manos profesionales y vuelve a enfocarte en gestionar tu
-          empresa. Habla con un experto y en menos de 24 horas evaluaremos tu proyecto para empezar a
-          estructurar tus ventas.</p>
+        <h2 class="cta-final-titulo">Contacta con nuestra <span class="destacado">empresa de desarrollo web</span></h2>
+        <p class="cta-final-texto">Cuéntanos qué necesita tu negocio y te decimos, sin compromiso, qué formato de web te
+          conviene más y qué presupuesto tendría.</p>
         <div class="cta-final-acciones">
-          <a href="https://wa.me/34692037526" target="_blank" rel="noopener noreferrer"
-            class="boton boton--turquesa">Empecemos con tu web</a>
+          <a href="contacto.html" class="boton boton--turquesa">Solicitar presupuesto</a>
         </div>
       </div>
     </section>
@@ -590,7 +790,8 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
             <li><a href="aviso-legal.html">Aviso Legal</a></li>
             <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
             <li><a href="politica-cookies.html">Política de Cookies</a></li>
-            <li><a href="#" onclick="event.preventDefault(); window.openRubiqCookieConfig();">Configurar cookies</a></li>
+            <li><a href="#" onclick="event.preventDefault(); window.openRubiqCookieConfig();">Configurar cookies</a>
+            </li>
           </ul>
         </div>
 
