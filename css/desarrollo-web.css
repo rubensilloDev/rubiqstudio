@@ -384,40 +384,99 @@
 }
 
 /* =========================================
-   SECCIÓN 4: REDISEÑO CTA
+   SECCIÓN 4: DIFERENCIACIÓN
    ========================================= */
 
-/* 2 columnas */
-.rediseño-contenedor {
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  gap: var(--spacing-lg);
-  text-align: left;
-}
-
-/* Columna del texto */
-.rediseño-texto {
+/* Contenedor principal de la sección */
+.diferenciacion-contenedor {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  align-items: center;
+  gap: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* Título con efecto 3D */
-.rediseño-titulo {
+/* Título de la sección */
+.diferenciacion-titulo {
   font-family: 'Anton', sans-serif;
   font-size: var(--text-sizes-h2);
   line-height: 0.9;
   text-transform: uppercase;
   color: var(--paleta-de-colores-neutral-bg);
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
+  text-align: center;
+  max-width: 850px;
 }
 
-/* Párrafo */
-.rediseño-parrafo {
-  max-width: 65%;
+/* Grid dinámico asimétrico en PC (3 columnas) */
+.diferenciacion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Tarjeta ancha fila 1 (ocupa 2 columnas) */
+.diferenciacion-tarjeta:nth-child(1) {
+  grid-column: span 2;
+}
+
+/* Tarjeta compacta fila 1 (ocupa 1 columna) */
+.diferenciacion-tarjeta:nth-child(2) {
+  grid-column: span 1;
+}
+
+/* Tarjeta compacta fila 2 (ocupa 1 columna) */
+.diferenciacion-tarjeta:nth-child(3) {
+  grid-column: span 1;
+}
+
+/* Tarjeta ancha fila 2 (ocupa 2 columnas) */
+.diferenciacion-tarjeta:nth-child(4) {
+  grid-column: span 2;
+}
+
+/* Tarjeta con fondo blanco y borde accent */
+.diferenciacion-tarjeta {
+  background: var(--paleta-de-colores-neutral-bg);
+  border: 2px solid var(--paleta-de-colores-accent);
+  border-radius: 14px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover en la tarjeta */
+.diferenciacion-tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 15px 30px rgba(45, 212, 191, 0.25);
+}
+
+/* Icono de la tarjeta */
+.diferenciacion-icono {
+  font-size: 1.5rem;
+  color: var(--paleta-de-colores-azul-normal);
+}
+
+/* Título dentro de la tarjeta */
+.diferenciacion-tarjeta-titulo {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.35rem;
+  color: var(--paleta-de-colores-azul-marino);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+/* Texto descriptivo de la tarjeta */
+.diferenciacion-tarjeta-texto {
+  font-size: var(--text-sizes-text-small);
+  color: #334155;
+  line-height: 1.6;
 }
 
 /* =========================================
@@ -557,6 +616,15 @@
   .hero-desarrollo {
     padding: 120px 40px 60px 40px;
   }
+
+  /* Diferenciación en tablet */
+  .diferenciacion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diferenciacion-tarjeta {
+    grid-column: auto !important;
+  }
 }
 
 /* ---- 764px: Menú hamburguesa y hero ajustados ---- */
@@ -645,36 +713,19 @@
     max-width: 90%;
   }
 
-  /* Rediseño */
-  .rediseño-contenedor {
-    padding: 0;
-    max-width: 100%;
-    width: 100%;
+  /* Diferenciación */
+  .diferenciacion-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: var(--spacing-md);
   }
 
-  .rediseño-texto {
-    max-width: 100%;
-    width: 100%;
-    align-items: center;
-  }
-
-  .rediseño-titulo {
+  .diferenciacion-titulo {
     font-size: var(--text-sizes-h2);
     max-width: 100%;
-    margin: 0 auto;
-    width: 100%;
   }
 
-  .rediseño-parrafo {
-    max-width: 95%;
-    margin: 0 auto;
-  }
-
-  .container-cta {
-    display: flex;
-    justify-content: center;
+  .diferenciacion-tarjeta {
+    padding: var(--spacing-md);
   }
 
   /* CTA Final */
