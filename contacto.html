@@ -249,28 +249,50 @@ input:disabled+.rubiq-slider{opacity:.6;cursor:not-allowed}
                 <label class="formulario-contacto-label">¿Qué servicio necesitas? <span class="obligatorio">*</span></label>
                 <div class="formulario-contacto-servicios">
                   <label class="formulario-servicio-opcion">
-                    <input type="radio" name="servicio_tipo" value="Landing Page" required checked>
+                    <input type="radio" name="servicio_tipo" value="Landing Page" data-precio-unico="250" data-precio-mensual="0" required checked>
                     <span class="servicio-radio-custom"></span>
-                    <span class="servicio-texto">Landing Page</span>
+                    <span class="servicio-texto">Landing Page <span class="servicio-precio">(250€)</span></span>
                   </label>
                   <label class="formulario-servicio-opcion">
-                    <input type="radio" name="servicio_tipo" value="Sitio Web Corporativo" required>
+                    <input type="radio" name="servicio_tipo" value="Sitio Web Corporativo" data-precio-unico="350" data-precio-mensual="0" required>
                     <span class="servicio-radio-custom"></span>
-                    <span class="servicio-texto">Sitio Web Corporativo</span>
+                    <span class="servicio-texto">Sitio Web Corporativo <span class="servicio-precio">(350€)</span></span>
                   </label>
                   <label class="formulario-servicio-opcion">
-                    <input type="radio" name="servicio_tipo" value="Auditoría SEO + Plan Mensual" required>
+                    <input type="radio" name="servicio_tipo" value="Auditoría SEO + Plan Mensual" data-precio-unico="0" data-precio-mensual="200" required>
                     <span class="servicio-radio-custom"></span>
-                    <span class="servicio-texto">Auditoría SEO + Plan Mensual</span>
+                    <span class="servicio-texto">Auditoría SEO + Plan Mensual <span class="servicio-precio">(200€/mes)</span></span>
                   </label>
                 </div>
 
-                <div class="formulario-extra-seo" id="contenedor-extra-seo">
-                  <label class="formulario-servicio-extra">
-                    <input type="checkbox" id="contacto-extra-seo" name="extra_seo" value="Sí (+200€/mes)">
-                    <span class="servicio-check-custom"></span>
-                    <span class="extra-texto">Añadir <strong>Servicio de SEO mensual</strong> como extra</span>
-                  </label>
+                <!-- Extras opcionales -->
+                <div class="formulario-contacto-extras">
+                  <!-- Extra Ficha de Google -->
+                  <div class="formulario-extra-item" id="contenedor-extra-gmaps">
+                    <label class="formulario-servicio-extra">
+                      <input type="checkbox" id="contacto-extra-gmaps" name="extra_gmaps" value="Sí (+75€)" data-precio-unico="75" data-precio-mensual="0">
+                      <span class="servicio-check-custom"></span>
+                      <span class="extra-texto">Añadir <strong>Optimización de Ficha de Google</strong> (+75€)</span>
+                    </label>
+                  </div>
+
+                  <!-- Extra SEO mensual -->
+                  <div class="formulario-extra-item" id="contenedor-extra-seo">
+                    <label class="formulario-servicio-extra">
+                      <input type="checkbox" id="contacto-extra-seo" name="extra_seo" value="Sí (+200€/mes)" data-precio-unico="0" data-precio-mensual="200">
+                      <span class="servicio-check-custom"></span>
+                      <span class="extra-texto">Añadir <strong>Servicio de SEO mensual</strong> (+200€/mes)</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Caja de Presupuesto Estimado en Tiempo Real -->
+                <div class="formulario-estimacion-precio" id="estimacion-precio-box">
+                  <div class="estimacion-precio-header">
+                    <span class="estimacion-precio-titulo">Presupuesto estimado:</span>
+                    <span class="estimacion-precio-valor" id="precio-estimado-total">250€</span>
+                  </div>
+                  <span class="estimacion-precio-nota">Precio cerrado sin costes ocultos. Confirmación en menos de 24h.</span>
                 </div>
               </div>
 

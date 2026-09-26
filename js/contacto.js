@@ -139,29 +139,74 @@
   });
 
   // =========================================
-  // INTERACCIÓN: SELECTOR DE SERVICIO Y EXTRA SEO
+  // INTERACCIÓN: SELECTOR DE SERVICIOS, EXTRAS Y CÁLCULO DE PRECIO
   // =========================================
   const contenedorExtraSeo = document.getElementById('contenedor-extra-seo');
   const radiosServicio = document.querySelectorAll('input[name="servicio_tipo"]');
   const checkboxExtraSeo = document.getElementById('contacto-extra-seo');
+  const checkboxExtraGmaps = document.getElementById('contacto-extra-gmaps');
+  const precioEstimadoEl = document.getElementById('precio-estimado-total');
 
-  function actualizarVisibilidadExtraSeo() {
+  function calcularPresupuestoTexto() {
+    let totalUnico = 0;
+    let totalMensual = 0;
+
     const servicioSeleccionado = document.querySelector('input[name="servicio_tipo"]:checked');
-    if (!servicioSeleccionado || !contenedorExtraSeo) return;
+    if (servicioSeleccionado) {
+      totalUnico += parseInt(servicioSeleccionado.dataset.precioUnico || 0, 10);
+      totalMensual += parseInt(servicioSeleccionado.dataset.precioMensual || 0, 10);
+    }
+
+    if (checkboxExtraGmaps && checkboxExtraGmaps.checked) {
+      totalUnico += parseInt(checkboxExtraGmaps.dataset.precioUnico || 0, 10);
+    }
+
+    if (checkboxExtraSeo && checkboxExtraSeo.checked && servicioSeleccionado && servicioSeleccionado.value !== 'Auditoría SEO + Plan Mensual') {
+      totalMensual += parseInt(checkboxExtraSeo.dataset.precioMensual || 0, 10);
+    }
+
+    if (totalUnico > 0 && totalMensual > 0) {
+      return `${totalUnico}€ + ${totalMensual}€/mes`;
+    } else if (totalUnico > 0) {
+      return `${totalUnico}€`;
+    } else if (totalMensual > 0) {
+      return `${totalMensual}€/mes`;
+    }
+    return 'A consultar';
+  }
+
+  function actualizarFormularioYPrecio() {
+    const servicioSeleccionado = document.querySelector('input[name="servicio_tipo"]:checked');
+    if (!servicioSeleccionado) return;
 
     // Si ya selecciona "Auditoría SEO + Plan Mensual", ocultamos/desactivamos el extra SEO adicional para evitar redundancia
     if (servicioSeleccionado.value === 'Auditoría SEO + Plan Mensual') {
-      contenedorExtraSeo.style.display = 'none';
+      if (contenedorExtraSeo) contenedorExtraSeo.style.display = 'none';
       if (checkboxExtraSeo) checkboxExtraSeo.checked = false;
     } else {
-      contenedorExtraSeo.style.display = 'block';
+      if (contenedorExtraSeo) contenedorExtraSeo.style.display = 'block';
+    }
+
+    // Actualizar visualización del precio estimado en pantalla
+    if (precioEstimadoEl) {
+      const precioTexto = calcularPresupuestoTexto();
+      precioEstimadoEl.textContent = precioTexto;
     }
   }
 
   radiosServicio.forEach(radio => {
-    radio.addEventListener('change', actualizarVisibilidadExtraSeo);
+    radio.addEventListener('change', actualizarFormularioYPrecio);
   });
-  actualizarVisibilidadExtraSeo();
+
+  if (checkboxExtraSeo) {
+    checkboxExtraSeo.addEventListener('change', actualizarFormularioYPrecio);
+  }
+
+  if (checkboxExtraGmaps) {
+    checkboxExtraGmaps.addEventListener('change', actualizarFormularioYPrecio);
+  }
+
+  actualizarFormularioYPrecio();
 
   // =========================================
   // ENVÍO DE FORMULARIO A WHATSAPP
@@ -179,19 +224,27 @@
       const radioServicio = document.querySelector('input[name="servicio_tipo"]:checked');
       const servicio = radioServicio ? radioServicio.value : 'No especificado';
 
-      const extraSeo = checkboxExtraSeo && checkboxExtraSeo.checked;
+      const extraGmaps = checkboxExtraGmaps && checkboxExtraGmaps.checked;
+      const extraSeo = checkboxExtraSeo && checkboxExtraSeo.checked && servicio !== 'Auditoría SEO + Plan Mensual';
 
-      // Construir la estructura del mensaje de forma clara y profesional
-      let mensaje = `Hola, soy ${nombre}. Te contacto desde el formulario de la web de Brummaa.\n\n`;
-      mensaje += `- *Servicio de interés:* ${servicio}\n`;
-      if (extraSeo) {
-        mensaje += `- *Extra añadido:* Servicio de SEO mensual (+200€/mes)\n`;
+      const presupuestoEstimado = calcularPresupuestoTexto();
+
+      // Construir la estructura del mensaje de forma clara, directa y atractiva
+      let mensaje = `Hola buenas, soy ${nombre}. Te contacto desde el formulario web de Brummaa.\n\n`;
+      mensaje += `*Servicio solicitado:* ${servicio}\n`;
+
+      if (extraGmaps) {
+        mensaje += `*Extra añadido:* Optimización de Ficha de Google Maps (+75€)\n`;
       }
-      mensaje += `\n - *Mis datos de contacto:*\n`;
-      mensaje += `- Email: ${email}\n`;
-      mensaje += `- Teléfono: ${telefono}`;
+      if (extraSeo) {
+        mensaje += `*Extra añadido:* Servicio de SEO mensual (+200€/mes)\n`;
+      }
 
-      mensaje += `\n\n¡Espero vuestra respuesta con el presupuesto!`;
+      mensaje += `*Presupuesto estimado:* ${presupuestoEstimado}\n\n`;
+      mensaje += `*Datos de contacto:*\n`;
+      mensaje += `- Email: ${email}\n`;
+      mensaje += `- Teléfono: ${telefono}\n\n`;
+      mensaje += `¡Espero vuestra respuesta para revisar el proyecto!`;
 
       // Número de WhatsApp destino de la agencia
       const numeroTelefono = '34692037526';
