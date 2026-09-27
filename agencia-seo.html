@@ -75,20 +75,100 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "@id": "https://brummaa.es/agencia-seo.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://brummaa.es/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Agencia SEO",
+            "item": "https://brummaa.es/agencia-seo.html"
+          }
+        ]
+      },
+      {
         "@type": "Service",
         "@id": "https://brummaa.es/agencia-seo.html#service",
-        "name": "Agencia SEO y Posicionamiento Web en Córdoba",
-        "serviceType": "SEO Agency",
+        "name": "Agencia SEO y Posicionamiento Web",
+        "serviceType": "Search Engine Optimization",
+        "description": "Servicios de posicionamiento SEO: auditoría técnica completa y plan SEO mensual continuo para que tus clientes te encuentren antes que a tu competencia en Google.",
         "provider": {
-          "@type": "LocalBusiness",
-          "name": "Brummaa",
-          "url": "https://brummaa.es/"
+          "@id": "https://brummaa.es/#organization"
         },
-        "areaServed": {
-          "@type": "City",
-          "name": "Córdoba"
-        },
-        "description": "Servicios de posicionamiento SEO local, auditoría técnica y optimización mensual para empresas."
+        "url": "https://brummaa.es/agencia-seo.html",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Planes SEO",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Auditoría SEO",
+              "description": "Análisis completo de tu web actual, detección de errores técnicos, estudio de tu competencia local e informe con prioridades a corregir.",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "150",
+                "priceCurrency": "EUR"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "SEO Mensual",
+              "description": "Posicionamiento SEO local continuo, optimización de ficha de Google Business, seguimiento de resultados mes a mes y ajuste de estrategia según datos reales. Sin permanencia.",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "200",
+                "priceCurrency": "EUR",
+                "unitCode": "MON"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://brummaa.es/agencia-seo.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta vuestro servicio de SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos auditorías SEO técnicas y de competencia local desde 150€ según proyecto, y planes de posicionamiento SEO mensual continuo por 200€/mes con seguimiento constante y optimización de tu presencia local."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hay algún compromiso de permanencia en el SEO mensual?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ninguno. Puedes cancelar el servicio de SEO mensual cuando lo decidas, sin ataduras ni penalizaciones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacéis SEO de una web si no la habéis diseñado vosotros?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, precisamente para eso realizamos la auditoría SEO inicial: analizamos qué le está fallando a tu web actual para corregirlo y empezar a posicionar sin necesidad de rehacerla desde cero."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo se tarda en ver resultados con el SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El SEO es una estrategia progresiva. En el ámbito local se suelen notar mejoras desde las primeras semanas tras optimizar la ficha de Google Business y corregir errores técnicos, consolidándose con el plan mensual continuo."
+            }
+          }
+        ]
       }
     ]
   }
